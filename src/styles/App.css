@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+* {
+  font-family: 'Playfair Display', serif;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  color: inherit;
+}
+
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid var(--color-tan);
+  margin: 1em 0;
+  padding: 0;
+}
+
+/* This class will be added to the body when the modal is open */
+.body-overflow-hidden {
+  overflow: hidden;
+}
+
+/* ::-webkit-scrollbar {
+  height: 4px;
+  width: 4px;
+  background: var(--color-white);
+}
+::-webkit-scrollbar-thumb:horizontal {
+  background: var(--color-white);
+  border-radius: 10px;
+} */
+
+/* // CAROUSEL */
+/* ACTIVE DESIGN STATE */
+.AchievementsDot.active {
+  background-color: var(--color-tan);
+}
+
+/* // FAQS */
+/* OPEN STATE */
+
+.open .number,
+.open .title {
+  color: var(--color-tan);
+  font-size: var(--font-medium);
+}
