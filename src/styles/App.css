@@ -9,7 +9,7 @@
 
 hr {
   display: block;
-  height: 1px;
+  height: 6px;
   border: 0;
   border-top: 1px solid var(--color-tan);
   margin: 1em 0;
