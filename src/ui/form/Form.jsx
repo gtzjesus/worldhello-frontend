@@ -245,13 +245,16 @@ function Form({ closeModal }) {
 
     if (validateForm()) {
       try {
-        const response = await fetch('https://worldhello.us/api/sendEmail', {
-          method: 'POST',
-          body: JSON.stringify({ fullName, email, phoneNumber }),
-          headers: {
-            'Content-Type': 'application/json',
-          },
-        });
+        const response = await fetch(
+          'https://api.worldhello.us/api/sendEmail',
+          {
+            method: 'POST',
+            body: JSON.stringify({ fullName, email, phoneNumber }),
+            headers: {
+              'Content-Type': 'application/json',
+            },
+          }
+        );
 
         if (response.ok) {
           setSubmissionComplete(true);
