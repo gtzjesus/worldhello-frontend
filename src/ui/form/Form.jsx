@@ -246,7 +246,7 @@ function Form({ closeModal }) {
     if (validateForm()) {
       try {
         const response = await fetch(
-          'https://api.worldhello.us/api/sendEmail',
+          'https://worldhello-backend-fd375c76bbd5.herokuapp.com',
           {
             method: 'POST',
             body: JSON.stringify({ fullName, email, phoneNumber }),
