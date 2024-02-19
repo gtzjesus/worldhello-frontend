@@ -21,6 +21,7 @@ const StyledDesign = styled.div`
   height: fit-content;
   width: var(--width-filled-window);
   height: fit-content;
+  height: 45vh;
 
   // @MEDIAQUERY logic for smaller devices
   @media (min-width: 40.25em) {
