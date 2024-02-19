@@ -17,6 +17,7 @@ import styled from 'styled-components';
 
 const StyledFooter = styled.footer`
   // Code logic for arranging children
+
   display: flex;
   flex-direction: column;
   background-color: var(--color-black);
@@ -24,6 +25,9 @@ const StyledFooter = styled.footer`
   padding: var(--padding-large);
   gap: var(--gap-large);
 
+  position: fixed;
+  bottom: 0;
+  width: 100vw;
   // ------------------------------
   // @Media Queries
   // ------------------------------
@@ -33,7 +37,6 @@ const StyledFooter = styled.footer`
 
   @media (min-width: 78.15em) {
     padding: var(--padding-xlarge);
-
     gap: var(--gap-xxlarge);
   }
 
@@ -66,6 +69,7 @@ const Signature = styled.div`
   display: flex;
   margin: 0 auto;
   align-items: center;
+
   gap: var(--gap-small);
 `;
 
