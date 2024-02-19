@@ -8,7 +8,7 @@ import Business from '../../components/business/Business';
 import Footer from '../../components/footer/Footer';
 import Faqs from '../../components/faqs/Faqs';
 import Craft from '../../components/craft/Craft';
-import Contact from '../../components/contact/Contact';
+import Refer from '../../components/refer/Refer';
 import Landing from '../../components/landing/Landing';
 
 function Home() {
@@ -69,17 +69,13 @@ function Home() {
         closeModal={closeModal}
       />
       <Faqs />
-      <Contact
+      <Refer
         isModalOpen={isModalOpen}
         openModal={openModal}
         closeModal={closeModal}
       />
       <About />
-      <Footer
-        isModalOpen={isModalOpen}
-        openModal={openModal}
-        closeModal={closeModal}
-      />
+      <Footer />
     </>
   );
 }

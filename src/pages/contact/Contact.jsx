@@ -1,28 +1,39 @@
-import Form from '../../ui/form/Form';
+import { useEffect, useState } from 'react';
 import Footer from '../../components/footer/Footer';
-import styled from 'styled-components';
-const ContactContainer = styled.div`
-  max-height: 100vh;
-`;
+import Leads from '../../components/leads/Leads';
 
-const FormContainter = styled.div`
-  height: 80vh;
-  padding: var(--padding-small);
-`;
-
-const FooterContainer = styled.div`
-  height: 20vh;
-`;
 function Contact() {
+  // GRAB STATE for opening/closing modal component
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const openModal = () => {
+    setIsModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setIsModalOpen(false);
+  };
+
+  useEffect(() => {
+    if (isModalOpen) {
+      document.body.classList.add('modal-open');
+    } else {
+      document.body.classList.remove('modal-open');
+    }
+
+    return () => {
+      document.body.classList.remove('modal-open');
+    };
+  }, [isModalOpen]);
   return (
-    <ContactContainer>
-      <FormContainter>
-        <Form />
-      </FormContainter>
-      <FooterContainer>
-        <Footer />
-      </FooterContainer>
-    </ContactContainer>
+    <>
+      <Leads
+        isModalOpen={isModalOpen}
+        openModal={openModal}
+        closeModal={closeModal}
+      />
+      <Footer />
+    </>
   );
 }
 

@@ -18,7 +18,7 @@ import Modal from '../../ui/modals/Modal';
 // ------------------------------
 // This section has all CSS styles configured for every HTML element.
 
-const StyledContact = styled.div`
+const StyledRefer = styled.div`
   display: flex;
   flex-direction: column;
   background-image: url('/backgrounds/contact.png');
@@ -99,11 +99,11 @@ const Description = styled.span`
 // ------------------------------
 // This section has our React Component which handles the data
 
-function Contact({ isModalOpen, openModal, closeModal }) {
+function Refer({ isModalOpen, openModal, closeModal }) {
   return (
     <LazyLoad>
       {/* <!-- Main Container --> */}
-      <StyledContact>
+      <StyledRefer>
         {/* <!-- Information Big Container --> */}
         <Information>
           {/* <!-- All necessary info --> */}
@@ -133,10 +133,10 @@ function Contact({ isModalOpen, openModal, closeModal }) {
           <TriggerButton openModal={openModal} text={`Clicking here`} />
           {isModalOpen && <Modal closeModal={closeModal} />}
         </Information>
-      </StyledContact>
+      </StyledRefer>
     </LazyLoad>
   );
 }
 
 // Export reusable Component
-export default Contact;
+export default Refer;
