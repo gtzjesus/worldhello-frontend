@@ -2,7 +2,6 @@ import { useState } from 'react';
 import Navigation from '../../components/navigation/Navigation';
 import NavigationWBackground from '../../components/navigation/NavigationWBackground';
 import Footer from '../../components/footer/Footer';
-import Form from '../../ui/form/Form';
 
 function Contact() {
   // GRAB STATE for navigation scroll
@@ -20,7 +19,6 @@ function Contact() {
   return (
     <>
       {!header ? <Navigation /> : <NavigationWBackground />}
-      <Form />
       <Footer />
     </>
   );

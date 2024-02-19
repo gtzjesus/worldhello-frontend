@@ -32,25 +32,13 @@ const StyledNav = styled.nav`
   font-size: var(--font-xxxsmall);
 `;
 
-const Brand = styled.div`
+const Logo = styled.img`
   // Code logic to arrange children
-  display: flex;
-  align-items: center;
+
   padding: 0 0 0 var(--padding-small);
   gap: var(--gap-small);
-
-  // @MEDIAQUERY logic for bigger devices (responsive design)
-  @media (min-width: 61.25em) {
-  }
-`;
-
-const Logo = styled.img`
   // Code logic to modify logo
   height: var(--logo-height);
-`;
-
-const Title = styled.span`
-  // TODO: Code logic to modify brand title
 `;
 
 const Menu = styled.a`
@@ -76,11 +64,8 @@ function NavigationWBackground() {
   }
   return (
     <StyledNav>
-      {/* <!-- Brand Container for logo and title --> */}
-      <Brand onClick={handleHome}>
-        <Logo src="/logos/helloworld.png" alt="globe"></Logo>
-        <Title>WorldHello</Title>
-      </Brand>
+      {/* <!-- Container for logo and title --> */}
+      <Logo onClick={handleHome} src="/logos/helloworld.png" alt="globe"></Logo>
       {/* <!-- Menu Container for links --> */}
       <Menu onClick={handleContact}>Contact</Menu>
     </StyledNav>

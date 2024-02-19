@@ -32,21 +32,12 @@ const StyledNav = styled.nav`
   font-size: var(--font-xxxsmall);
 `;
 
-const Brand = styled.div`
-  // Code logic to arrange children
-  display: flex;
-  align-items: center;
-  padding: 0 0 0 var(--padding-small);
-  gap: var(--gap-small);
-`;
-
 const Logo = styled.img`
+  // Code logic to arrange children
+  padding: 0 0 0 var(--padding-small);
+
   // Code logic to modify logo
   height: var(--logo-height);
-`;
-
-const Title = styled.span`
-  // TODO: Code logic to modify brand title
 `;
 
 const Menu = styled.a`
@@ -74,11 +65,12 @@ function Navigation() {
     <LazyLoad>
       {/* <!-- Nav Container , the header --> */}
       <StyledNav>
-        {/* <!-- Brand Container for logo and title --> */}
-        <Brand onClick={handleHome}>
-          <Logo src="/logos/worldhello.png" alt="globe"></Logo>
-          <Title>WorldHello</Title>
-        </Brand>
+        {/* <!--  Container for logo and title --> */}
+        <Logo
+          onClick={handleHome}
+          src="/logos/worldhello.png"
+          alt="globe"
+        ></Logo>
         {/* <!-- Menu Container for links --> */}
         <Menu onClick={handleContact}>Contact</Menu>
       </StyledNav>
