@@ -172,21 +172,6 @@ const Caption = styled.div`
   }
 `;
 
-const MiniDescription = styled.span`
-  // Code logic to style span element
-  font-size: var(--font-xsmall);
-
-  // @MEDIAQUERY logic for small devices
-  @media (min-width: 40.25em) {
-    font-size: var(--font-small);
-  }
-
-  // @MEDIAQUERY logic for medium devices
-  @media (min-width: 78.15em) {
-    font-size: var(--font-small);
-  }
-`;
-
 // ------------------------------
 // Component
 // ------------------------------
@@ -237,12 +222,12 @@ function Achievements() {
         <ParentAchievements>
           {/* <!-- All information Container --> */}
           <Information>
-            <Intro>[ what we offer ]</Intro>
+            <Intro>[ we offer a way for you to ]</Intro>
             <SubTitle>
-              Connect with your desired audience with a customized website.
+              Connect with your desired audience with a website.
             </SubTitle>
 
-            <Caption>our achievements,</Caption>
+            <Caption>our highlights,</Caption>
           </Information>
 
           {/* <!-- Achivements HERE Container --> */}
@@ -273,16 +258,13 @@ function Achievements() {
         <Additional>
           <StyledFinish>
             <Intro>[ our approach ]</Intro>
-            Our focus is on optimizing conversions to elevate your
-            business&rsquo;s potential for success. <br />
+            Is on optimizing conversions to elevate your business&rsquo;s
+            potential for success. <br />
             <br />
             Transforming your clientele into loyal, paying customers through a
             top-performing website.
             <br />
             <br />
-            <MiniDescription>
-              Ultimately driving revenue growth and profitability.
-            </MiniDescription>
           </StyledFinish>
         </Additional>
       </StyledAchievements>
