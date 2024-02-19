@@ -34,7 +34,6 @@ const StyledFooter = styled.footer`
 
   @media (min-width: 78.15em) {
     padding: var(--padding-xlarge);
-    gap: var(--gap-xxlarge);
   }
 
   @media (min-width: 150.15em) {
@@ -47,7 +46,7 @@ const SocialMedia = styled.div`
   gap: var(--gap-large);
 
   @media (min-width: 78.15em) {
-    gap: var(--gap-giant);
+    gap: var(--gap-xlarge);
   }
 `;
 
@@ -57,7 +56,7 @@ const Icon = styled.img`
 
   @media (min-width: 78.15em) {
     // Code logic to modify logo
-    height: 2.5rem;
+    height: 2.25rem;
     cursor: pointer;
   }
 `;
