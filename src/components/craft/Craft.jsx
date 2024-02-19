@@ -123,20 +123,12 @@ function Craft({ isModalOpen, openModal, closeModal }) {
         <Information>
           <Title>
             Crafting websites with high conversion rates, <br />
-            <MiniDescription>
-              utilizing strategic designs, data & SEO.
-            </MiniDescription>
           </Title>
         </Information>
 
         {/* <!-- Information Container (need 2 for responsiveness) --> */}
         <Information>
           <Img src="/backgrounds/grow.jpg"></Img>
-          <Description>
-            Let&rsquo;s strive for greater success together.
-          </Description>
-          <br />
-          <br />
           <Description>Join us and grow!</Description>
           <MiniDescription>
             Expand your business by harnessing the full advantages of our
