@@ -58,6 +58,7 @@ const Icon = styled.img`
   @media (min-width: 78.15em) {
     // Code logic to modify logo
     height: 2.5rem;
+    cursor: pointer;
   }
 `;
 
@@ -73,7 +74,7 @@ const Logo = styled.img`
   height: var(--logo-height);
 `;
 
-const Brand = styled.span`
+const Brand = styled.a`
   font-size: var(--font-small);
   text-transform: uppercase;
   padding: 0 var(--padding-xxsmall);
@@ -98,7 +99,7 @@ function Footer() {
       <Signature>
         {/* <!-- Brand Container --> */}
         <Logo src="/logos/helloworld.png" alt="globe"></Logo>
-        <Brand>WorldHello </Brand>
+        <Brand href="https://worldhello.us">WorldHello </Brand>
       </Signature>
     </StyledFooter>
   );

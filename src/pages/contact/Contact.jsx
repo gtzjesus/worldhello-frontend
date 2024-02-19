@@ -1,26 +1,28 @@
-import { useState } from 'react';
-import Navigation from '../../components/navigation/Navigation';
-import NavigationWBackground from '../../components/navigation/NavigationWBackground';
+import Form from '../../ui/form/Form';
 import Footer from '../../components/footer/Footer';
+import styled from 'styled-components';
+const ContactContainer = styled.div`
+  max-height: 100vh;
+`;
 
+const FormContainter = styled.div`
+  height: 80vh;
+  padding: var(--padding-small);
+`;
+
+const FooterContainer = styled.div`
+  height: 20vh;
+`;
 function Contact() {
-  // GRAB STATE for navigation scroll
-  const [header, setHeader] = useState(false);
-  // FUNCTION TO change state on scroll
-  const changeHeader = () => {
-    if (window.scrollY >= 20) {
-      setHeader(true);
-    } else {
-      setHeader(false);
-    }
-  };
-  // CHECK for scroll with event listener
-  window.addEventListener('scroll', changeHeader);
   return (
-    <>
-      {!header ? <Navigation /> : <NavigationWBackground />}
-      <Footer />
-    </>
+    <ContactContainer>
+      <FormContainter>
+        <Form />
+      </FormContainter>
+      <FooterContainer>
+        <Footer />
+      </FooterContainer>
+    </ContactContainer>
   );
 }
 
