@@ -26,8 +26,7 @@ const GlobalStyles = createGlobalStyle`
     --height-navigation-padding: 5rem;
     --height-navigation-padding-40-em: 10rem;
 
-    --logo-height: 2rem;
-    --logo-height-big: 3.25rem;
+    --logo-height: 2.5rem;
 
 
     /* Backrounds */
