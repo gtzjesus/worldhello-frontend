@@ -32,10 +32,12 @@ const StyledFooter = styled.footer`
   }
 
   @media (min-width: 78.15em) {
+    padding: var(--padding-xlarge);
+
+    gap: var(--gap-xxlarge);
   }
 
   @media (min-width: 150.15em) {
-    padding: var(--padding-medium) var(--padding-giant);
   }
 `;
 
@@ -43,11 +45,20 @@ const SocialMedia = styled.div`
   display: flex;
   margin: 0 auto;
   gap: var(--gap-large);
+
+  @media (min-width: 78.15em) {
+    gap: var(--gap-giant);
+  }
 `;
 
 const Icon = styled.img`
   // Code logic to modify logo
   height: 1.5rem;
+
+  @media (min-width: 78.15em) {
+    // Code logic to modify logo
+    height: 2.5rem;
+  }
 `;
 
 const Signature = styled.div`
