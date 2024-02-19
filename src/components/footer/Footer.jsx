@@ -25,9 +25,6 @@ const StyledFooter = styled.footer`
   padding: var(--padding-large);
   gap: var(--gap-large);
 
-  position: fixed;
-  bottom: 0;
-  width: 100vw;
   // ------------------------------
   // @Media Queries
   // ------------------------------
