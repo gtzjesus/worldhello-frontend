@@ -6,7 +6,8 @@ const StyledLeads = styled.div`
   background-color: var(--color-black);
   color: var(--color-white);
   height: var(--height-full-window);
-  padding: var(--padding-medium);
+  padding: var(--padding-xlarge) var(--padding-medium) var(--padding-medium)
+    var(--padding-medium);
 `;
 
 const LeadsHook = styled.div`
