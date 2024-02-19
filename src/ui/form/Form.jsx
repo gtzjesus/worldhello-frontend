@@ -304,7 +304,10 @@ function Form({ closeModal }) {
           {autoCloseModal()}
         </>
       ) : (
-        <StyledForm action="https://worldhello.us/api/sendEmail" method="post">
+        <StyledForm
+          action="https://worldhello-backend-fd375c76bbd5.herokuapp.com/api/sendEmail"
+          method="POST"
+        >
           <FormGroup>
             <FormRow>
               <Label htmlFor="name">
