@@ -3,6 +3,8 @@ import TriggerButton from '../../ui/buttons/TriggerButton';
 import Modal from '../../ui/modals/Modal';
 
 const StyledLeads = styled.div`
+  background-color: var(--color-black);
+  color: var(--color-white);
   padding: var(--padding-medium);
 `;
 
