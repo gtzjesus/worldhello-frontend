@@ -246,10 +246,10 @@ function Form({ closeModal }) {
     if (validateForm()) {
       try {
         const response = await fetch(
-          'worldhello-backend-fd375c76bbd5.herokuapp.com/api/sendEmail',
+          'https://worldhello-backend-fd375c76bbd5.herokuapp.com/api/sendEmail',
           {
             method: 'POST',
-            body: JSON.stringify({ fullName, email, phoneNumber }),
+            body: JSON.stringify(formData), // Use formData instead of individual variables
             headers: {
               'Content-Type': 'application/json',
             },
