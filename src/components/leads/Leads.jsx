@@ -30,7 +30,7 @@ function Leads({ isModalOpen, openModal, closeModal }) {
         <Title>Contact a WorldHello Developer.</Title>
         <SubTitle>launch your website today!</SubTitle>
 
-        <TriggerButton openModal={openModal} text={`get launched`} />
+        <TriggerButton openModal={openModal} text={`click to make it real`} />
         {isModalOpen && <Modal closeModal={closeModal} />}
       </LeadsHook>
     </StyledLeads>
