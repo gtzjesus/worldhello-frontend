@@ -3,7 +3,7 @@ import TriggerButton from '../../ui/buttons/TriggerButton';
 import Modal from '../../ui/modals/Modal';
 
 const StyledLeads = styled.div`
-  padding: var(--padding-xlarge) var(--padding-medium);
+  padding: var(--padding-medium);
 `;
 
 const LeadsHook = styled.div`
@@ -24,8 +24,8 @@ function Leads({ isModalOpen, openModal, closeModal }) {
   return (
     <StyledLeads>
       <LeadsHook>
-        <Title>Contact a WorldHello Developer</Title>
-        <SubTitle>today to launch your website!</SubTitle>
+        <Title>Contact a WorldHello Developer.</Title>
+        <SubTitle>launch your website today!</SubTitle>
 
         <TriggerButton openModal={openModal} text={`Click to start for free`} />
         {isModalOpen && <Modal closeModal={closeModal} />}
