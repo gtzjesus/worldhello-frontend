@@ -5,7 +5,7 @@ import Modal from '../../ui/modals/Modal';
 const StyledLeads = styled.div`
   background-color: var(--color-black);
   color: var(--color-white);
-  height: var(--height-full-window);
+  height: fit-content;
   padding: var(--padding-xlarge) var(--padding-medium) var(--padding-medium)
     var(--padding-medium);
 `;
@@ -31,7 +31,7 @@ function Leads({ isModalOpen, openModal, closeModal }) {
         <Title>Contact a WorldHello Developer.</Title>
         <SubTitle>launch your website today!</SubTitle>
 
-        <TriggerButton openModal={openModal} text={`click to make it real`} />
+        <TriggerButton openModal={openModal} text={`click to start for free`} />
         {isModalOpen && <Modal closeModal={closeModal} />}
       </LeadsHook>
     </StyledLeads>

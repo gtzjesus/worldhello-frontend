@@ -3,8 +3,14 @@ import Footer from '../../components/footer/Footer';
 import Leads from '../../components/leads/Leads';
 import styled from 'styled-components';
 
+const StyledContact = styled.div`
+  height: 100vh;
+  background-color: var(--color-black);
+`;
+
 const Container = styled.div`
   position: absolute;
+
   bottom: 0;
   width: 100vw;
 `;
@@ -32,7 +38,7 @@ function Contact() {
     };
   }, [isModalOpen]);
   return (
-    <>
+    <StyledContact>
       <Leads
         isModalOpen={isModalOpen}
         openModal={openModal}
@@ -41,7 +47,7 @@ function Contact() {
       <Container>
         <Footer />
       </Container>
-    </>
+    </StyledContact>
   );
 }
 
