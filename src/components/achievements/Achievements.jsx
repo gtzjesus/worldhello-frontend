@@ -96,7 +96,7 @@ const Information = styled.div`
   // Code logic to arrange children (our information)
   display: flex;
   flex-direction: column;
-  gap: var(--gap-medium);
+  gap: var(--gap-xsmall);
   padding: var(--padding-app);
 
   // @MEDIAQUERY logic for medium devices
@@ -227,7 +227,7 @@ function Achievements() {
               Connect with your desired audience with a website.
             </SubTitle>
 
-            <Caption>our highlights,</Caption>
+            <Caption>Explore some of our websites,</Caption>
           </Information>
 
           {/* <!-- Achivements HERE Container --> */}
