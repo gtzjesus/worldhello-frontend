@@ -87,7 +87,7 @@ const AchievementsDot = styled.div`
 
 const Intro = styled.div`
   // Code logic to style div element
-  color: var(--color-tan);
+  color: var(--color-blue);
   font-size: var(--font-xxxsmall);
   padding: var(--padding-small) 0;
 `;
@@ -158,7 +158,7 @@ const Caption = styled.div`
   align-items: center;
   text-transform: uppercase;
 
-  padding: 0 var(--padding-xxsmall);
+  padding: var(--padding-large) 0 var(--padding-small) 0;
   width: fit-content;
 
   // @MEDIAQUERY logic for small devices

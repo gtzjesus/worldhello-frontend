@@ -17,15 +17,12 @@ const StyledDesign = styled.div`
   // Code logic to display every design side-by-side
   display: inline-block;
   overflow: hidden;
-  width: fit-content;
   height: fit-content;
   width: var(--width-filled-window);
-  height: fit-content;
 
   // @MEDIAQUERY logic for smaller devices
   @media (max-width: 39.25em) {
     width: 100vw;
-    height: 55vh;
   }
 
   // @MEDIAQUERY logic for smaller devices
