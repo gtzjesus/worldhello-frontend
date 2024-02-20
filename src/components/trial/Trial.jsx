@@ -83,6 +83,7 @@ const Description = styled.span`
 `;
 
 const Special = styled.a`
+  font-size: var(--font-xxsmall);
   color: var(--color-tan);
 
   // ------------------------------
