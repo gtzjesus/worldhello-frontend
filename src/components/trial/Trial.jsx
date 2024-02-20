@@ -52,31 +52,6 @@ const Information = styled.div`
   gap: var(--gap-large);
 `;
 
-const Extra = styled.div`
-  // Code logic for arranging children
-  display: flex;
-  flex-direction: column;
-  gap: var(--gap-large);
-
-  // ------------------------------
-  // @Media Queries
-  // ------------------------------
-  @media (min-width: 78.15em) {
-    padding-top: 35rem;
-  }
-
-  @media (min-width: 150.15em) {
-    padding-top: 45rem;
-  }
-`;
-
-const Intro = styled.div`
-  // Code logic to style div element
-  color: var(--color-purple);
-  font-size: var(--font-xxxsmall);
-  padding: var(--padding-small) 0;
-`;
-
 const Title = styled.span`
   font-size: var(--font-medium);
 
