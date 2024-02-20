@@ -97,8 +97,8 @@ const Description = styled.div`
 
 const Quote = styled.span`
   font-size: var(--font-small);
-  background-color: var(--color-white);
-  color: var(--color-black);
+  background-color: var(--color-black);
+  color: var(--color-white);
   padding: var(--padding-xxsmall);
   margin: var(--padding-medium) 0;
 
@@ -157,10 +157,8 @@ function Source() {
         {/* <!-- Information Big Container --> */}
         <Information>
           {/* <!-- All necessary info --> */}
-          <Intro>[ why it matters ]</Intro>
-          <Title>
-            Greet the world and establish your brand&rsquo;s presence.
-          </Title>
+          <Intro>[ a website that will serve as a ]</Intro>
+          <Title>Gateway to connect with the world.</Title>
           <Description>
             <Quote>
               <Quotation>&ldquo;</Quotation>80% of consumers are more likely to
@@ -172,14 +170,11 @@ function Source() {
               target="_blank"
               rel="noreferrer"
             >
-              <Button>view article</Button>
+              <Button>visit article</Button>
             </a>
           </Description>
           <Last>
-            <Ending>
-              Ensure your initial impression resonates long after the first
-              encounter, particularly online.
-            </Ending>
+            <Ending>Foster global reach and interaction!</Ending>
           </Last>
         </Information>
       </StyledSource>
