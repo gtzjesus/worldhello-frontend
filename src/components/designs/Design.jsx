@@ -23,7 +23,7 @@ const StyledDesign = styled.div`
   // @MEDIAQUERY logic for smaller devices
   @media (max-width: 39.25em) {
     width: 100vw;
-    height: 70vh;
+    height: 65vh;
   }
 
   // @MEDIAQUERY logic for smaller devices
