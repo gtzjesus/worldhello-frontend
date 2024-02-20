@@ -3,7 +3,7 @@ import Navigation from '../../components/navigation/Navigation';
 import NavigationWBackground from '../../components/navigation/NavigationWBackground';
 import Achievements from '../../components/achievements/Achievements';
 import Source from '../../components/source/Source';
-import About from '../../components/about/About';
+import Trial from '../../components/trial/trial';
 import Business from '../../components/business/Business';
 import Footer from '../../components/footer/Footer';
 import Faqs from '../../components/faqs/Faqs';
@@ -74,7 +74,12 @@ function Home() {
         openModal={openModal}
         closeModal={closeModal}
       />
-      <About />
+      <Trial
+        isModalOpen={isModalOpen}
+        openModal={openModal}
+        closeModal={closeModal}
+      />
+
       <Footer />
     </>
   );

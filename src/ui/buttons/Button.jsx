@@ -35,13 +35,6 @@ const variations = {
   primary: css`
     color: var(--color-black);
     background-color: var(--background-secondary);
-    width: fit-content;
-    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.5);
-  `,
-  secondary: css`
-    color: var(--color-black);
-    background-color: var(--background-secondary);
-    width: fit-content;
     box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.5);
   `,
 };
