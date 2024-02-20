@@ -75,7 +75,7 @@ const AchievementsDot = styled.div`
   border-radius: 50%;
   cursor: pointer;
   margin: 15px 7px 0px;
-  background-color: var(--color-white);
+  background-color: var(--color-black);
 
   // @MEDIAQUERY logic for bigger devices
   @media (min-width: 78.15em) {
@@ -87,7 +87,7 @@ const AchievementsDot = styled.div`
 
 const Intro = styled.div`
   // Code logic to style div element
-  color: var(--color-black);
+  color: var(--color-tan);
   font-size: var(--font-xxxsmall);
   padding: var(--padding-small) 0;
 `;
