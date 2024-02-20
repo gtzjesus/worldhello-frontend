@@ -19,6 +19,7 @@ const StyledDesign = styled.div`
   overflow: hidden;
   height: fit-content;
   width: var(--width-filled-window);
+  transform: rotate(90deg);
 
   // @MEDIAQUERY logic for smaller devices
   @media (max-width: 39.25em) {
