@@ -14,12 +14,13 @@
 import styled from 'styled-components';
 
 const StyledDesign = styled.div`
+  // Code logic to rotate videos that are horizontal for my designs
+  transform: rotate(90deg);
   // Code logic to display every design side-by-side
   display: inline-block;
   overflow: hidden;
   height: fit-content;
   width: var(--width-filled-window);
-  transform: rotate(90deg);
 
   // @MEDIAQUERY logic for smaller devices
   @media (max-width: 39.25em) {
