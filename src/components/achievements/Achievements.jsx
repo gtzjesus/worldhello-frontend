@@ -39,7 +39,7 @@ const ParentAchievements = styled.div`
 
 const StyledAchievements = styled.div`
   // Code logic for setting the background and overflow
-  background-color: var(--color-black);
+  background-color: var(--color-blue);
   color: var(--color-white);
   overflow: hidden;
 `;
@@ -87,7 +87,7 @@ const AchievementsDot = styled.div`
 
 const Intro = styled.div`
   // Code logic to style div element
-  color: var(--color-blue);
+  color: var(--color-black);
   font-size: var(--font-xxxsmall);
   padding: var(--padding-small) 0;
 `;
