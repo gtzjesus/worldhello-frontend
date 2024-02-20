@@ -142,9 +142,9 @@ function Business({ isModalOpen, openModal, closeModal }) {
         <Information>
           {/* <!-- All necessary info --> */}
           <Title>
-            <Intro>[ who we look for ]</Intro>
+            <Intro>[ We seek partnerships to ]</Intro>
             <br />
-            Seeking to enhance your products?
+            Enhance sales, drive lead generation, and expand customer reach.
           </Title>
           <Img src="/backgrounds/brand.jpg"></Img>
         </Information>
@@ -153,17 +153,9 @@ function Business({ isModalOpen, openModal, closeModal }) {
           {/* <!-- All necessary info --> */}
           <Description>
             Fully maximize the capabilities of your business with a strong
-            digital presence!
+            digital presence with <Special>WorldHello!</Special>
             <br />
             <br />
-            <br />
-            <Closing>
-              Boost sales, generate leads, or broaden your customer base with
-              <Special> WorldHello</Special>
-              .
-              <br />
-              <br />
-            </Closing>
             <TriggerButton openModal={openModal} text={`Click to begin`} />
             {isModalOpen && <Modal closeModal={closeModal} />}
           </Description>
