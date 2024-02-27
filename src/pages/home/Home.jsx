@@ -51,13 +51,12 @@ function Home() {
   return (
     <>
       {!header ? <Navigation /> : <NavigationWBackground />}
+      <Landing
+        isModalOpen={isModalOpen}
+        openModal={openModal}
+        closeModal={closeModal}
+      />
       <div className="responsive-container">
-        <Landing
-          isModalOpen={isModalOpen}
-          openModal={openModal}
-          closeModal={closeModal}
-        />
-
         <Achievements />
         <Craft
           isModalOpen={isModalOpen}

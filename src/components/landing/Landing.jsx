@@ -28,7 +28,11 @@ const StyledLanding = styled.div`
   // Code logic for covering full-screen devices
   min-height: 100vh;
 
-
+  // @MEDIAQUERY logic for bigger devices 980px
+  @media (min-width: 61.25em) {
+    // Design background from Figma software
+    background-image: url('backgrounds/landing_second.jpg');
+  }
 `;
 
 const Hook = styled.div`
@@ -38,8 +42,6 @@ const Hook = styled.div`
   flex-direction: column;
   justify-content: center;
   padding: var(--height-navigation-padding) var(--padding-small);
-
-
 `;
 
 const Title = styled.span`
@@ -50,8 +52,6 @@ const Title = styled.span`
   // Code logic shadow beneath text (more visibility)
   text-shadow: var(--text-shadow-font);
   text-transform: uppercase;
-
-
 `;
 
 const Subtitle = styled.span`
@@ -59,7 +59,6 @@ const Subtitle = styled.span`
   font-size: var(--font-xsmall);
   letter-spacing: var(--spacing-subtitle);
   line-height: var(--line-height-xsmall);
-
 `;
 
 // ------------------------------
