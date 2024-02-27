@@ -26,23 +26,6 @@ const StyledRefer = styled.div`
   color: var(--color-white);
   padding: var(--padding-xlarge) var(--padding-medium);
   gap: var(--gap-xlarge);
-
-  // ------------------------------
-  // @Media Queries
-  // ------------------------------
-  // These are used for responsive design, for all screens we can modify the web application based on the screen size
-  @media (min-width: 61.25em) {
-    padding: var(--padding-xxlarge) var(--padding-large);
-  }
-
-  @media (min-width: 78.15em) {
-    padding: var(--padding-xxxlarge) var(--padding-xxlarge);
-  }
-
-  @media (min-width: 150.15em) {
-    padding: var(--padding-giant) var(--padding-xxxlarge);
-    gap: var(--gap-giant);
-  }
 `;
 
 const Information = styled.div`
@@ -54,21 +37,6 @@ const Information = styled.div`
 
 const Title = styled.span`
   font-size: var(--font-large);
-
-  // ------------------------------
-  // @Media Queries
-  // ------------------------------
-  @media (min-width: 61.25em) {
-    font-size: var(--font-xlarge);
-  }
-
-  @media (min-width: 78.15em) {
-    font-size: var(--font-xlarge);
-  }
-
-  @media (min-width: 150.15em) {
-    font-size: var(--font-xxlarge);
-  }
 `;
 
 const Special = styled.span`
@@ -77,21 +45,6 @@ const Special = styled.span`
 
 const Description = styled.span`
   font-size: var(--font-xsmall);
-
-  // ------------------------------
-  // @Media Queries
-  // ------------------------------
-  @media (min-width: 61.25em) {
-    font-size: var(--font-small);
-  }
-
-  @media (min-width: 78.15em) {
-    font-size: var(--font-medium);
-  }
-
-  @media (min-width: 150.15em) {
-    font-size: var(--font-medium);
-  }
 `;
 
 // ------------------------------

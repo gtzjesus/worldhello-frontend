@@ -22,18 +22,6 @@ const StyledBusiness = styled.div`
   background: var(--color-black);
   color: var(--color-white);
   padding: var(--padding-medium);
-
-  // ------------------------------
-  // @Media Queries
-  // ------------------------------
-  // These are used for responsive design, for all screens we can modify the web application based on the screen size
-  @media (min-width: 40.25em) {
-    padding: 0 var(--padding-small);
-  }
-
-  @media (min-width: 150.15em) {
-    padding: var(--padding-xlarge) var(--padding-giant);
-  }
 `;
 
 const Information = styled.div`
@@ -41,13 +29,6 @@ const Information = styled.div`
   display: flex;
   flex-direction: column;
   gap: var(--gap-medium);
-
-  // ------------------------------
-  // @Media Queries
-  // ------------------------------
-  @media (min-width: 78.15em) {
-    flex-direction: row;
-  }
 `;
 const Intro = styled.div`
   // Code logic to style div element
@@ -62,70 +43,14 @@ const Special = styled.span`
 
 const Title = styled.span`
   font-size: var(--font-medium);
-
-  // ------------------------------
-  // @Media Queries
-  // ------------------------------
-  @media (min-width: 61.25em) {
-    font-size: var(--font-large);
-  }
-
-  @media (min-width: 150.15em) {
-    font-size: var(--font-xlarge);
-  }
-`;
-
-const Closing = styled.span`
-  font-size: var(--font-xsmall);
-
-  // ------------------------------
-  // @Media Queries
-  // ------------------------------
-  @media (min-width: 61.25em) {
-    font-size: var(--font-small);
-  }
-
-  @media (min-width: 150.15em) {
-    font-size: var(--font-medium);
-  }
 `;
 
 const Img = styled.img`
   padding: var(--padding-medium) 0;
-
-  // ------------------------------
-  // @Media Queries
-  // ------------------------------
-
-  @media (min-width: 78.15em) {
-    padding: var(--padding-xlarge);
-    width: 40vw;
-  }
-
-  @media (min-width: 100.15em) {
-    padding: var(--padding-xxlarge);
-    width: 30vw;
-  }
-
-  @media (min-width: 150.15em) {
-    padding: var(--padding-xxlarge);
-    width: 25vw;
-  }
 `;
 
 const Description = styled.span`
   font-size: var(--font-small);
-
-  // ------------------------------
-  // @Media Queries
-  // ------------------------------
-  @media (min-width: 61.25em) {
-    font-size: var(--font-medium);
-  }
-
-  @media (min-width: 150.15em) {
-    font-size: var(--font-large);
-  }
 `;
 
 // ------------------------------

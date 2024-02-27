@@ -51,37 +51,39 @@ function Home() {
   return (
     <>
       {!header ? <Navigation /> : <NavigationWBackground />}
-      <Landing
-        isModalOpen={isModalOpen}
-        openModal={openModal}
-        closeModal={closeModal}
-      />
+      <div className="responsive-container">
+        <Landing
+          isModalOpen={isModalOpen}
+          openModal={openModal}
+          closeModal={closeModal}
+        />
 
-      <Achievements />
-      <Craft
-        isModalOpen={isModalOpen}
-        openModal={openModal}
-        closeModal={closeModal}
-      />
-      <Source />
-      <Business
-        isModalOpen={isModalOpen}
-        openModal={openModal}
-        closeModal={closeModal}
-      />
-      <Faqs />
-      <Refer
-        isModalOpen={isModalOpen}
-        openModal={openModal}
-        closeModal={closeModal}
-      />
-      <Trial
-        isModalOpen={isModalOpen}
-        openModal={openModal}
-        closeModal={closeModal}
-      />
+        <Achievements />
+        <Craft
+          isModalOpen={isModalOpen}
+          openModal={openModal}
+          closeModal={closeModal}
+        />
+        <Source />
+        <Business
+          isModalOpen={isModalOpen}
+          openModal={openModal}
+          closeModal={closeModal}
+        />
+        <Faqs />
+        <Refer
+          isModalOpen={isModalOpen}
+          openModal={openModal}
+          closeModal={closeModal}
+        />
+        <Trial
+          isModalOpen={isModalOpen}
+          openModal={openModal}
+          closeModal={closeModal}
+        />
 
-      <Footer />
+        <Footer />
+      </div>
     </>
   );
 }

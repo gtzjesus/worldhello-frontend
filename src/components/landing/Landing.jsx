@@ -28,11 +28,7 @@ const StyledLanding = styled.div`
   // Code logic for covering full-screen devices
   min-height: 100vh;
 
-  // @MEDIAQUERY logic for bigger devices 980px
-  @media (min-width: 61.25em) {
-    // Design background from Figma software
-    background-image: url('backgrounds/landing_second.jpg');
-  }
+
 `;
 
 const Hook = styled.div`
@@ -43,15 +39,7 @@ const Hook = styled.div`
   justify-content: center;
   padding: var(--height-navigation-padding) var(--padding-small);
 
-  // @MEDIAQUERY logic for small devices 600px
-  @media (min-width: 40em) {
-    padding: var(--height-navigation-padding-40-em) var(--padding-large);
-  }
 
-  // @MEDIAQUERY logic for small devices 980px
-  @media (min-width: 61.25em) {
-    padding: var(--height-navigation-padding) var(--padding-large);
-  }
 `;
 
 const Title = styled.span`
@@ -63,11 +51,7 @@ const Title = styled.span`
   text-shadow: var(--text-shadow-font);
   text-transform: uppercase;
 
-  // @MEDIAQUERY logic for small devices 600px
-  @media (min-width: 40em) {
-    font-size: var(--font-xxlarge);
-    line-height: var(--line-height-medium);
-  }
+
 `;
 
 const Subtitle = styled.span`
@@ -76,10 +60,6 @@ const Subtitle = styled.span`
   letter-spacing: var(--spacing-subtitle);
   line-height: var(--line-height-xsmall);
 
-  @media (min-width: 40em) {
-    font-size: var(--font-medium);
-    line-height: var(--line-height-small);
-  }
 `;
 
 // ------------------------------

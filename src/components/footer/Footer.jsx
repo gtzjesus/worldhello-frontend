@@ -23,42 +23,19 @@ const StyledFooter = styled.footer`
   background-color: var(--color-black);
   color: var(--color-white);
   padding: var(--padding-large);
+  padding-bottom: var(--padding-small);
   gap: var(--gap-large);
-
-  // ------------------------------
-  // @Media Queries
-  // ------------------------------
-  // These are used for responsive design, for all screens we can modify the web application based on the screen size
-  @media (min-width: 61.25em) {
-  }
-
-  @media (min-width: 78.15em) {
-    padding: var(--padding-xlarge);
-  }
-
-  @media (min-width: 150.15em) {
-  }
 `;
 
 const SocialMedia = styled.div`
   display: flex;
   margin: 0 auto;
   gap: var(--gap-large);
-
-  @media (min-width: 78.15em) {
-    gap: var(--gap-xlarge);
-  }
 `;
 
 const Icon = styled.img`
   // Code logic to modify logo
   height: 1.5rem;
-
-  @media (min-width: 78.15em) {
-    // Code logic to modify logo
-    height: 2.25rem;
-    cursor: pointer;
-  }
 `;
 
 const Signature = styled.div`

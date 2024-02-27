@@ -9,10 +9,7 @@ const StyledLeads = styled.div`
   padding: var(--padding-xlarge) var(--padding-medium) var(--padding-medium)
     var(--padding-medium);
 
-  // @MEDIAQUERY logic for bigger devices
-  @media (min-width: 100.15em) {
-    padding: var(--padding-xxlarge);
-  }
+
 `;
 
 const LeadsHook = styled.div`

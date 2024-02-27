@@ -31,16 +31,6 @@ const StyledCraft = styled.div`
   background: var(--color-tan);
   padding: var(--padding-medium);
   color: var(--color-black);
-
-  // @MEDIAQUERY logic for small devices
-  @media (min-width: 40.25em) {
-  }
-
-  // @MEDIAQUERY logic for bigger devices
-  @media (min-width: 78.15em) {
-    justify-content: space-between;
-    flex-direction: row;
-  }
 `;
 
 const Information = styled.div`
@@ -52,61 +42,18 @@ const Information = styled.div`
 
 const Title = styled.span`
   font-size: var(--font-medium);
-
-  // @MEDIAQUERY logic for bigger devices 980px
-  @media (min-width: 61.25em) {
-    font-size: var(--font-large);
-  }
-  // @MEDIAQUERY logic for desktop devices
-  @media (min-width: 150.15em) {
-    font-size: var(--font-xlarge);
-  }
 `;
 
 const Description = styled.span`
   font-size: var(--font-medium);
-
-  // @MEDIAQUERY logic for bigger devices 980px
-  @media (min-width: 61.25em) {
-    font-size: var(--font-large);
-  }
-  // @MEDIAQUERY logic for desktop devices
-  @media (min-width: 150.15em) {
-    font-size: var(--font-xlarge);
-  }
 `;
 
 const MiniDescription = styled.span`
   font-size: var(--font-xsmall);
-
-  // @MEDIAQUERY logic for bigger devices 980px
-  @media (min-width: 61.25em) {
-    font-size: var(--font-small);
-  }
-  // @MEDIAQUERY logic for desktop devices
-  @media (min-width: 150.15em) {
-    font-size: var(--font-medium);
-  }
 `;
 
 const Img = styled.img`
   padding: var(--padding-medium) 0;
-  @media (min-width: 40.25em) {
-    padding: var(--padding-large);
-  }
-
-  // @MEDIAQUERY logic for bigger devices 980px
-  @media (min-width: 61.25em) {
-    width: 60vw;
-  }
-
-  @media (min-width: 78.15em) {
-    width: 35vw;
-  }
-  // @MEDIAQUERY logic for desktop devices
-  @media (min-width: 150.15em) {
-    width: 30vw;
-  }
 `;
 
 // ------------------------------

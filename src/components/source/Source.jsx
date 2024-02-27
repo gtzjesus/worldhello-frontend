@@ -33,27 +33,6 @@ const StyledSource = styled.div`
   background-size: cover;
   color: var(--color-white);
   padding: var(--padding-large) var(--padding-medium);
-
-  // ------------------------------
-  // @Media Queries
-  // ------------------------------
-  // These are used for responsive design, for all screens we can modify the web application based on the screen size
-
-  @media (min-width: 40.25em) {
-    padding: var(--padding-large) var(--padding-xlarge);
-  }
-
-  @media (min-width: 61.25em) {
-    padding: var(--padding-xlarge) var(--padding-xxlarge);
-  }
-
-  @media (min-width: 78.15em) {
-    padding: var(--padding-xlarge) var(--padding-xxxlarge);
-  }
-
-  @media (min-width: 150.15em) {
-    padding: var(--padding-xxxlarge) var(--padding-giant);
-  }
 `;
 
 const Information = styled.div`
@@ -74,18 +53,6 @@ const Title = styled.span`
   width: fit-content;
 
   text-shadow: 0.03em 0 black, 0 0.03em black, -0.03em 0 black, 0 -0.03em black;
-
-  // ------------------------------
-  // @Media Queries
-  // ------------------------------
-  // These are used for responsive design, for all screens we can modify the web application based on the screen size
-  @media (min-width: 61.25em) {
-    font-size: var(--font-large);
-  }
-
-  @media (min-width: 150.15em) {
-    font-size: var(--font-xlarge);
-  }
 `;
 
 const Description = styled.div`
@@ -101,18 +68,6 @@ const Quote = styled.span`
   color: var(--color-white);
   padding: var(--padding-xxsmall);
   margin: var(--padding-medium) 0;
-
-  // ------------------------------
-  // @Media Queries
-  // ------------------------------
-  // These are used for responsive design, for all screens we can modify the web application based on the screen size
-  @media (min-width: 61.25em) {
-    font-size: var(--font-medium);
-  }
-
-  @media (min-width: 150.15em) {
-    font-size: var(--font-large);
-  }
 `;
 
 const Quotation = styled.span`
@@ -130,18 +85,6 @@ const Last = styled.div`
 const Ending = styled.span`
   font-size: var(--font-xsmall);
   text-shadow: 0.03em 0 black, 0 0.03em black, -0.03em 0 black, 0 -0.03em black;
-
-  // ------------------------------
-  // @Media Queries
-  // ------------------------------
-  // These are used for responsive design, for all screens we can modify the web application based on the screen size
-  @media (min-width: 61.25em) {
-    font-size: var(--font-small);
-  }
-
-  @media (min-width: 78.15em) {
-    font-size: var(--font-medium);
-  }
 `;
 
 // ------------------------------

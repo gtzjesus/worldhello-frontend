@@ -21,28 +21,8 @@ const StyledDesign = styled.div`
   overflow: hidden;
   height: fit-content;
   width: var(--width-filled-window);
-
-  // @MEDIAQUERY logic for smaller devices
-  @media (max-width: 39.25em) {
-    width: 100vw;
-    height: 65vh;
-  }
-
-  // @MEDIAQUERY logic for smaller devices
-  @media (min-width: 40.25em) {
-    width: 100vw;
-    height: 80vh;
-  }
-  // @MEDIAQUERY logic for medium devices
-  @media (min-width: 78.25em) {
-    width: 100vw;
-    height: 80vh;
-  }
-  // @MEDIAQUERY logic for bigger devices
-  @media (min-width: 150.15em) {
-    width: 100vw;
-    height: 75vh;
-  }
+  width: 100vw;
+  height: 65vh;
 `;
 
 const Video = styled.video`

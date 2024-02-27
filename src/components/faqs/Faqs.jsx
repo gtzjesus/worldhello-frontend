@@ -71,33 +71,13 @@ const Intro = styled.div`
 const Title = styled.span`
   font-size: var(--font-medium);
 
-  // ------------------------------
-  // @Media Queries
-  // ------------------------------
-  // These are used for responsive design, for all screens we can modify the web application based on the screen size
-  @media (min-width: 61.25em) {
-    font-size: var(--font-large);
-  }
-
-  @media (min-width: 150.15em) {
-    font-size: var(--font-xlarge);
-  }
 `;
 
 const Special = styled.span`
   color: var(--color-tan);
   font-size: var(--font-large);
 
-  // ------------------------------
-  // @Media Queries
-  // ------------------------------
-  @media (min-width: 61.25em) {
-    font-size: var(--font-xlarge);
-  }
 
-  @media (min-width: 150.15em) {
-    font-size: var(--font-xxlarge);
-  }
 `;
 
 // ------------------------------

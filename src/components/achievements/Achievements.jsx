@@ -30,11 +30,6 @@ const ParentAchievements = styled.div`
   // Code logic for arranging the children
   display: flex;
   flex-direction: column;
-
-  // @MEDIAQUERY logic for bigger devices
-  @media (min-width: 150.15em) {
-    flex-direction: row;
-  }
 `;
 
 const StyledAchievements = styled.div`
@@ -59,12 +54,6 @@ const AchievementsAreaSlider = styled.div`
 const AchievementsDots = styled.div`
   // Code logic for achievement dots, where user can navigate between apps
   text-align: center;
-
-  // @MEDIAQUERY logic for bigger devices
-  @media (min-width: 150.15em) {
-    text-align: right;
-    padding-right: var(--padding-xxxlarge);
-  }
 `;
 
 const AchievementsDot = styled.div`
@@ -76,13 +65,6 @@ const AchievementsDot = styled.div`
   cursor: pointer;
   margin: 15px 7px 0px;
   background-color: var(--color-black);
-
-  // @MEDIAQUERY logic for bigger devices
-  @media (min-width: 78.15em) {
-    height: 30px;
-    width: 30px;
-    margin: 20px 10px 0px;
-  }
 `;
 
 const Intro = styled.div`
@@ -98,11 +80,6 @@ const Information = styled.div`
   flex-direction: column;
   gap: var(--gap-xsmall);
   padding: var(--padding-app);
-
-  // @MEDIAQUERY logic for medium devices
-  @media (min-width: 78.15em) {
-    padding: var(--padding-large);
-  }
 `;
 
 const Additional = styled.div`
@@ -111,25 +88,11 @@ const Additional = styled.div`
   flex-direction: column;
   gap: var(--gap-medium);
   padding: var(--padding-medium);
-  // @MEDIAQUERY logic for medium devices
-  @media (min-width: 78.15em) {
-    padding: var(--padding-large);
-  }
 `;
 
 const SubTitle = styled.span`
   // Code logic to style span element
   font-size: var(--font-small);
-
-  // @MEDIAQUERY logic for small devices
-  @media (min-width: 40.25em) {
-    font-size: var(--font-medium);
-  }
-
-  // @MEDIAQUERY logic for medium devices
-  @media (min-width: 78.15em) {
-    font-size: var(--font-large);
-  }
 `;
 
 const StyledFinish = styled.div`
@@ -137,17 +100,6 @@ const StyledFinish = styled.div`
   display: flex;
   flex-direction: column;
   font-size: var(--font-small);
-
-  // @MEDIAQUERY logic for small devices
-  @media (min-width: 40.25em) {
-    font-size: var(--font-medium);
-  }
-
-  // @MEDIAQUERY logic for medium devices
-  @media (min-width: 78.15em) {
-    font-size: var(--font-medium);
-    width: var(--width-half-window);
-  }
 `;
 
 const Caption = styled.div`
@@ -160,16 +112,6 @@ const Caption = styled.div`
 
   padding: var(--padding-large) 0 var(--padding-small) 0;
   width: fit-content;
-
-  // @MEDIAQUERY logic for small devices
-  @media (min-width: 40.25em) {
-    font-size: var(--font-large);
-  }
-
-  // @MEDIAQUERY logic for medium devices
-  @media (min-width: 78.15em) {
-    font-size: var(--font-xlarge);
-  }
 `;
 
 // ------------------------------
@@ -179,7 +121,7 @@ const Caption = styled.div`
 
 function Achievements() {
   // Code logic for delay carousel
-  const delay = 16000;
+  const delay = 7500;
   // Code logic useState react hook to keep track
   const [index, setIndex] = useState(0);
   // Code logic useRef react hook to clear time on user's interaction

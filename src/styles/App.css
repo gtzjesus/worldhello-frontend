@@ -7,6 +7,19 @@
   color: inherit;
 }
 
+body {
+  background: var(--color-tan);
+}
+
+/* Media query for larger devices */
+@media (min-width: 768px) {
+  .responsive-container {
+    max-width: 600px; /* Adjust as needed */
+    margin: 0 auto; /* Center the container horizontally */
+    padding: 0 20px;
+  }
+}
+
 hr {
   display: block;
   height: 6px;
