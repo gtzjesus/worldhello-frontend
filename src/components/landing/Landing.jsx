@@ -85,7 +85,7 @@ function Landing({ isModalOpen, openModal, closeModal }) {
 
           <Subtitle>Get a </Subtitle>
           <Subtitle>website</Subtitle>
-          <Subtitle>to tranform</Subtitle>
+          <Subtitle>that transforms</Subtitle>
           <Subtitle>your visitors</Subtitle>
           <Subtitle>into customers.</Subtitle>
           <br />

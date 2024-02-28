@@ -29,6 +29,11 @@ const Video = styled.video`
   // Code logic to style video (mp4)
   width: 100%;
   height: 100%;
+
+  // @MEDIAQUERY logic for medium devices
+  @media (min-width: 58.25em) {
+    height: 70%;
+  }
 `;
 
 // ------------------------------
