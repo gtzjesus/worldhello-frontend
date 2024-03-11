@@ -71,16 +71,22 @@ function Footer() {
     <StyledFooter>
       {/* <!-- All necessary social medias --> */}
       <SocialMedia>
-        <Tag href="https://www.instagram.com/worldhellous/">
+        <Tag target="_blank" href="https://www.instagram.com/worldhellous/">
           <Icon src="/icons/instagram.png" alt="instagram"></Icon>
         </Tag>
-        <Tag href="https://www.facebook.com/profile.php?id=61557119916592">
+        <Tag
+          target="_blank"
+          href="https://www.facebook.com/profile.php?id=61557119916592"
+        >
           <Icon src="/icons/facebook.png" alt="facebook"></Icon>
         </Tag>
-        <Tag href="https://www.tiktok.com/@worldhello.us">
+        <Tag target="_blank" href="https://www.tiktok.com/@worldhello.us">
           <Icon src="/icons/tiktok.png" alt="tiktok"></Icon>
         </Tag>
-        <Tag href="https://www.linkedin.com/in/world-hello-421ba12b9/">
+        <Tag
+          target="_blank"
+          href="https://www.linkedin.com/in/world-hello-421ba12b9/"
+        >
           <Icon src="/icons/linkedin.png" alt="linkedin"></Icon>
         </Tag>
       </SocialMedia>
