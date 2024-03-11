@@ -33,6 +33,10 @@ const SocialMedia = styled.div`
   gap: var(--gap-large);
 `;
 
+const Tag = styled.a`
+  // Code logic to modify logo
+`;
+
 const Icon = styled.img`
   // Code logic to modify logo
   height: 1.5rem;
@@ -67,18 +71,18 @@ function Footer() {
     <StyledFooter>
       {/* <!-- All necessary social medias --> */}
       <SocialMedia>
-        <a href="https://www.instagram.com/worldhellous/">
+        <Tag href="https://www.instagram.com/worldhellous/">
           <Icon src="/icons/instagram.png" alt="instagram"></Icon>
-        </a>
-        <a href="https://www.facebook.com/profile.php?id=61557119916592">
+        </Tag>
+        <Tag href="https://www.facebook.com/profile.php?id=61557119916592">
           <Icon src="/icons/facebook.png" alt="facebook"></Icon>
-        </a>
-        <a href="https://www.tiktok.com/@worldhellous">
-        <Icon src="/icons/tiktok.png" alt="tiktok"></Icon>
-        </a>
-        <a href="https://www.linkedin.com/in/world-hello-421ba12b9/">
+        </Tag>
+        <Tag href="https://www.tiktok.com/@worldhello.us">
+          <Icon src="/icons/tiktok.png" alt="tiktok"></Icon>
+        </Tag>
+        <Tag href="https://www.linkedin.com/in/world-hello-421ba12b9/">
           <Icon src="/icons/linkedin.png" alt="linkedin"></Icon>
-        </a>
+        </Tag>
       </SocialMedia>
       <Signature>
         {/* <!-- Brand Container --> */}
