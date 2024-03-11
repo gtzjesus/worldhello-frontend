@@ -1,5 +1,5 @@
 // ------------------------------
-// File: Landing.js
+// File: Button.js
 // ------------------------------
 // Description: Reusable Button Component (throughout the whole application)
 // ------------------------------

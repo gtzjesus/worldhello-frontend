@@ -70,7 +70,9 @@ function Footer() {
         <Icon src="/icons/instagram.png" alt="instagram"></Icon>
         <Icon src="/icons/facebook.png" alt="facebook"></Icon>
         <Icon src="/icons/tiktok.png" alt="tiktok"></Icon>
-        <Icon src="/icons/linkedin.png" alt="linkedin"></Icon>
+        <a href="https://www.linkedin.com/in/world-hello-421ba12b9/">
+          <Icon src="/icons/linkedin.png" alt="linkedin"></Icon>
+        </a>
       </SocialMedia>
 
       <Signature>
