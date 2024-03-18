@@ -16,7 +16,6 @@ import styled from 'styled-components';
 const StyledDesign = styled.div`
   // Code logic to rotate videos that are horizontal for my designs
   transform: rotate(90deg);
-  // Code logic to display every design side-by-side
 `;
 
 const Video = styled.video`
@@ -25,8 +24,22 @@ const Video = styled.video`
   height: 65vh;
 
   // @MEDIAQUERY logic for medium devices
-  @media (min-width: 58.25em) {
-    height: 70%;
+  @media (min-width: 55.25em) {
+    padding-top: var(--padding-xlarge);
+  }
+
+  // @MEDIAQUERY logic for medium devices
+  @media (min-width: 65.25em) {
+    height: 40vh;
+
+    padding-top: var(--padding-xxxlarge);
+  }
+
+  // @MEDIAQUERY logic for medium devices
+  @media (min-width: 75.25em) {
+    height: 40vh;
+
+    padding-top: var(--padding-xxxlarge);
   }
 `;
 
