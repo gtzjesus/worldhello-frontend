@@ -18,64 +18,43 @@ import Spinner from '../../ui/spinners/Spinner';
 import Design from '../designs/Design';
 import styled from 'styled-components';
 import LazyLoad from 'react-lazyload';
-
-import { useContext, useEffect, useRef, useState } from 'react';
+import { useContext } from 'react';
 import { DesignsContext } from '../../context/DesignsContext';
 
-// ------------------------------
-// Styled Componenets
-// ------------------------------
-// This section has all CSS styles configured for every HTML element.
 const ParentAchievements = styled.div`
-  // Code logic for arranging the children
   display: flex;
   flex-direction: column;
+  overflow-x: auto; /* Enable horizontal scrolling */
+  scroll-behavior: smooth; /* Smooth scrolling */
 `;
 
 const StyledAchievements = styled.div`
-  // Code logic for setting the background and overflow
   background-color: var(--color-blue);
   color: var(--color-white);
-  overflow: hidden;
 `;
 
 const AchievementsArea = styled.div`
-  // Code logic to cover the full screen of the device user is in
   margin: 0 auto;
   max-width: var(--width-filled-window);
+  display: flex;
+  flex-wrap: nowrap; /* Prevent wrapping */
+  overflow-x: auto; /* Enable horizontal scrolling */
+  scroll-behavior: smooth; /* Smooth scrolling */
 `;
 
 const AchievementsAreaSlider = styled.div`
-  // Code logic for slider (multiple videos)
-  white-space: nowrap;
-  transition: ease 1100ms;
-`;
-
-const AchievementsDots = styled.div`
-  // Code logic for achievement dots, where user can navigate between apps
-  text-align: center;
-`;
-
-const AchievementsDot = styled.div`
-  // Code logic for displaying single dot
-  display: inline-block;
-  height: 20px;
-  width: 20px;
-  border-radius: 50%;
-  cursor: pointer;
-  margin: 15px 7px 0px;
-  background-color: var(--color-black);
+  display: flex;
+  flex-wrap: nowrap;
+  transition: transform 0.5s ease; /* Transition effect for smooth scrolling */
 `;
 
 const Intro = styled.div`
-  // Code logic to style div element
   color: var(--color-tan);
   font-size: var(--font-xxxsmall);
   padding: var(--padding-small) 0;
 `;
 
 const Information = styled.div`
-  // Code logic to arrange children (our information)
   display: flex;
   flex-direction: column;
   gap: var(--gap-xsmall);
@@ -83,7 +62,6 @@ const Information = styled.div`
 `;
 
 const Additional = styled.div`
-  // Code logic to arrange children (our information)
   display: flex;
   flex-direction: column;
   gap: var(--gap-medium);
@@ -91,112 +69,50 @@ const Additional = styled.div`
 `;
 
 const SubTitle = styled.span`
-  // Code logic to style span element
   font-size: var(--font-small);
 `;
 
 const StyledFinish = styled.div`
-  // Code logic to arrange children (our information)
   display: flex;
   flex-direction: column;
   font-size: var(--font-small);
 `;
 
 const Caption = styled.div`
-  // Code logic to arrange children (our information)
   display: flex;
   justify-content: space-between;
   font-size: var(--font-medium);
   align-items: center;
   text-transform: uppercase;
-
   padding: var(--padding-large) 0 var(--padding-small) 0;
   width: fit-content;
 `;
 
-// ------------------------------
-// Component
-// ------------------------------
-// This section has our React Component which handles the achievements data located at supabase backend
-
 function Achievements() {
-  // Code logic for delay carousel
-  const delay = 7500;
-  // Code logic useState react hook to keep track
-  const [index, setIndex] = useState(0);
-  // Code logic useRef react hook to clear time on user's interaction
-  const timeoutRef = useRef(null);
-  // Handle reseting the time
-  function resetTimeout() {
-    if (timeoutRef.current) {
-      clearTimeout(timeoutRef.current);
-    }
-  }
-  // Code logic to grab designs from useContext react hook (context API)
   const { designs, isLoading, error } = useContext(DesignsContext);
 
-  // Code logic useEffect react hook for setting the timeout functionality
-  useEffect(() => {
-    resetTimeout();
-    timeoutRef.current = setTimeout(
-      () =>
-        setIndex((prevIndex) =>
-          prevIndex === designs.length - 1 ? 0 : prevIndex + 1
-        ),
-      delay
-    );
-
-    return () => {
-      resetTimeout();
-    };
-  }, [index, designs]);
-
-  // Code logic to check if state is loading
   if (isLoading) return <Spinner />;
-  // Code logic to handle any errors
   if (error) throw new Error('Failed to grab designs');
 
   return (
     <LazyLoad>
-      {/* <!-- Main Container --> */}
       <StyledAchievements>
-        {/* <!-- Another Parent Achievements Container --> */}
         <ParentAchievements>
-          {/* <!-- All information Container --> */}
           <Information>
             <Intro>[ we offer a way for you to ]</Intro>
             <SubTitle>
               Connect with your desired audience with a website.
             </SubTitle>
-
             <Caption>Explore some of our websites,</Caption>
           </Information>
-
-          {/* <!-- Achivements HERE Container --> */}
           <AchievementsArea>
-            <AchievementsAreaSlider
-              style={{ transform: `translate3d(${-index * 100}%, 0, 0)` }}
-            >
-              {/* <!-- Map the array of designs and display all as new Design Component --> */}
-              {designs.map((design) => (
-                <Design design={design} key={design.id} />
+            <AchievementsAreaSlider>
+              {designs.map((design, idx) => (
+                <Design design={design} key={idx} />
               ))}
             </AchievementsAreaSlider>
           </AchievementsArea>
         </ParentAchievements>
-        {/* <!-- Dots for User Navigation Container --> */}
-        <AchievementsDots>
-          {designs.map((_, idx) => (
-            <AchievementsDot
-              key={idx}
-              className={`AchievementsDot${index === idx ? ' active' : ''}`}
-              onClick={() => {
-                setIndex(idx);
-              }}
-            ></AchievementsDot>
-          ))}
-        </AchievementsDots>
-        {/* <!-- Additional Ending Container --> */}
         <Additional>
           <StyledFinish>
             <Intro>[ our approach ]</Intro>
@@ -214,5 +130,4 @@ function Achievements() {
   );
 }
 
-// Export reusable Carousel Achivements component
 export default Achievements;
