@@ -1,19 +1,3 @@
-// ------------------------------
-// File: Achievements.js
-// ------------------------------
-// Description: React component for displaying carousel videos of all business web applications, using supabase integration (backend)
-// ------------------------------
-// Figma Designs + Video Screen Editor/Recording.
-// ------------------------------
-// LazyLoading from React for optimization (images & web app loading time).
-// ------------------------------
-// Global Styles from /src/styles/ used for global variables.
-
-// ------------------------------
-// Imports
-// ------------------------------
-// This section has all necessary imports for this component.
-
 import React, { useContext, useEffect, useRef, useState } from 'react';
 import Spinner from '../../ui/spinners/Spinner';
 import Design from '../designs/Design';
@@ -24,13 +8,12 @@ import { DesignsContext } from '../../context/DesignsContext';
 const ParentAchievements = styled.div`
   display: flex;
   flex-direction: column;
-  overflow-x: auto; /* Enable horizontal scrolling */
-  scroll-behavior: smooth; /* Smooth scrolling */
-  /* Hide the scrollbar */
-  scrollbar-width: none; /* Firefox */
-  -ms-overflow-style: none; /* IE and Edge */
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
   &::-webkit-scrollbar {
-    display: none; /* Chrome, Safari, and Opera */
+    display: none;
   }
 `;
 
@@ -42,8 +25,7 @@ const StyledAchievements = styled.div`
 const AchievementsArea = styled.div`
   margin: 0 auto;
   max-width: var(--width-filled-window);
-  overflow-x: scroll; /* Enable user scroll */
-  scroll-behavior: smooth; /* Smooth scrolling */
+  overflow: hidden; /* Ensure no scrollbar is visible */
 `;
 
 const AchievementsAreaSlider = styled.div`
@@ -107,16 +89,11 @@ function Achievements() {
       );
     }, 5000); // Adjust the interval time as needed
 
-    // Cleanup function to clear the interval when the component unmounts
+    // Cleanup function to clear the interval when the component unmounts or when designs change
     return () => {
       clearInterval(intervalRef.current);
     };
   }, [designs]); // Re-run effect when designs change
-
-  const handleScroll = () => {
-    // Clear the interval when user scrolls to stop automatic sliding temporarily
-    clearInterval(intervalRef.current);
-  };
 
   if (isLoading) return <Spinner />;
   if (error) throw new Error('Failed to grab designs');
@@ -124,7 +101,7 @@ function Achievements() {
   return (
     <LazyLoad>
       <StyledAchievements>
-        <ParentAchievements onScroll={handleScroll}>
+        <ParentAchievements>
           <Information>
             <Intro>[ we offer a way for you to ]</Intro>
             <SubTitle>
