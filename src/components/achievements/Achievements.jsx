@@ -14,23 +14,22 @@
 // ------------------------------
 // This section has all necessary imports for this component.
 
+import React, { useContext, useEffect, useRef, useState } from 'react';
 import Spinner from '../../ui/spinners/Spinner';
 import Design from '../designs/Design';
 import styled from 'styled-components';
 import LazyLoad from 'react-lazyload';
-import { useContext } from 'react';
 import { DesignsContext } from '../../context/DesignsContext';
 
 const ParentAchievements = styled.div`
   display: flex;
   flex-direction: column;
-  overflow-x: auto; /* Enable horizontal scrolling */
-  scroll-behavior: smooth; /* Smooth scrolling */
-  /* Hide the scrollbar */
-  scrollbar-width: none; /* Firefox */
-  -ms-overflow-style: none; /* IE and Edge */
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
   &::-webkit-scrollbar {
-    display: none; /* Chrome, Safari, and Opera */
+    display: none;
   }
 `;
 
@@ -42,10 +41,7 @@ const StyledAchievements = styled.div`
 const AchievementsArea = styled.div`
   margin: 0 auto;
   max-width: var(--width-filled-window);
-  display: flex;
-  flex-wrap: nowrap; /* Prevent wrapping */
-  overflow-x: auto; /* Enable horizontal scrolling */
-  scroll-behavior: smooth; /* Smooth scrolling */
+  overflow: hidden; /* Ensure no scrollbar is visible */
 `;
 
 const AchievementsAreaSlider = styled.div`
@@ -96,6 +92,24 @@ const Caption = styled.div`
 
 function Achievements() {
   const { designs, isLoading, error } = useContext(DesignsContext);
+  const [index, setIndex] = useState(0);
+
+  // Ref to hold the interval ID
+  const intervalRef = useRef(null);
+
+  useEffect(() => {
+    // Start the interval to auto-slide
+    intervalRef.current = setInterval(() => {
+      setIndex((prevIndex) =>
+        prevIndex === designs.length - 1 ? 0 : prevIndex + 1
+      );
+    }, 5000); // Adjust the interval time as needed
+
+    // Cleanup function to clear the interval when the component unmounts or when designs change
+    return () => {
+      clearInterval(intervalRef.current);
+    };
+  }, [designs]); // Re-run effect when designs change
 
   if (isLoading) return <Spinner />;
   if (error) throw new Error('Failed to grab designs');
@@ -112,7 +126,9 @@ function Achievements() {
             <Caption>Explore some of our websites,</Caption>
           </Information>
           <AchievementsArea>
-            <AchievementsAreaSlider>
+            <AchievementsAreaSlider
+              style={{ transform: `translateX(${-index * 100}%)` }}
+            >
               {designs.map((design, idx) => (
                 <Design design={design} key={idx} />
               ))}
