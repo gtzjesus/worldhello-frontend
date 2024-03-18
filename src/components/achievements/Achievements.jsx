@@ -105,11 +105,16 @@ function Achievements() {
       );
     }, 5000); // Adjust the interval time as needed
 
-    // Cleanup function to clear the interval when the component unmounts or when designs change
+    // Cleanup function to clear the interval when the component unmounts
     return () => {
       clearInterval(intervalRef.current);
     };
   }, [designs]); // Re-run effect when designs change
+
+  const handleScroll = () => {
+    // Clear the interval when user scrolls to stop automatic sliding temporarily
+    clearInterval(intervalRef.current);
+  };
 
   if (isLoading) return <Spinner />;
   if (error) throw new Error('Failed to grab designs');
@@ -117,7 +122,7 @@ function Achievements() {
   return (
     <LazyLoad>
       <StyledAchievements>
-        <ParentAchievements>
+        <ParentAchievements onScroll={handleScroll}>
           <Information>
             <Intro>[ we offer a way for you to ]</Intro>
             <SubTitle>
