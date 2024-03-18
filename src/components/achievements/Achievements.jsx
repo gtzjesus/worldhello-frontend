@@ -87,7 +87,7 @@ function Achievements() {
       setIndex((prevIndex) =>
         prevIndex === designs.length - 1 ? 0 : prevIndex + 1
       );
-    }, 5000); // Adjust the interval time as needed
+    }, 7500); // Adjust the interval time as needed
 
     // Cleanup function to clear the interval when the component unmounts or when designs change
     return () => {
