@@ -24,12 +24,13 @@ import { DesignsContext } from '../../context/DesignsContext';
 const ParentAchievements = styled.div`
   display: flex;
   flex-direction: column;
-  overflow-x: auto;
-  scroll-behavior: smooth;
-  scrollbar-width: none;
-  -ms-overflow-style: none;
+  overflow-x: auto; /* Enable horizontal scrolling */
+  scroll-behavior: smooth; /* Smooth scrolling */
+  /* Hide the scrollbar */
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
   &::-webkit-scrollbar {
-    display: none;
+    display: none; /* Chrome, Safari, and Opera */
   }
 `;
 
@@ -41,7 +42,8 @@ const StyledAchievements = styled.div`
 const AchievementsArea = styled.div`
   margin: 0 auto;
   max-width: var(--width-filled-window);
-  overflow: hidden; /* Ensure no scrollbar is visible */
+  overflow-x: scroll; /* Enable user scroll */
+  scroll-behavior: smooth; /* Smooth scrolling */
 `;
 
 const AchievementsAreaSlider = styled.div`
