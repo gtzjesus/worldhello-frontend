@@ -18,11 +18,9 @@ const StyledDesign = styled.div`
   transform: rotate(90deg);
   // Code logic to display every design side-by-side
   display: inline-block;
-  overflow: hidden;
-  height: fit-content;
-  width: var(--width-filled-window);
+
   width: 100vw;
-  height: 65vh;
+  height: 40vh;
 `;
 
 const Video = styled.video`
