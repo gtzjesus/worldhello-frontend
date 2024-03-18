@@ -26,6 +26,12 @@ const ParentAchievements = styled.div`
   flex-direction: column;
   overflow-x: auto; /* Enable horizontal scrolling */
   scroll-behavior: smooth; /* Smooth scrolling */
+  /* Hide the scrollbar */
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+  &::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, and Opera */
+  }
 `;
 
 const StyledAchievements = styled.div`
