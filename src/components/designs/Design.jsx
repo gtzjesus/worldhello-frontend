@@ -17,16 +17,12 @@ const StyledDesign = styled.div`
   // Code logic to rotate videos that are horizontal for my designs
   transform: rotate(90deg);
   // Code logic to display every design side-by-side
-  display: inline-block;
-
-  width: 100vw;
-  height: 40vh;
 `;
 
 const Video = styled.video`
   // Code logic to style video (mp4)
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  height: 65vh;
 
   // @MEDIAQUERY logic for medium devices
   @media (min-width: 58.25em) {
