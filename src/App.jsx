@@ -7,6 +7,7 @@ import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 
 import Contact from './pages/contact/Contact';
+import ErrorBoundary from './components/errors/ErrorBoundary';
 
 // REACT QUERY INTEGRATION
 const queryClient = new QueryClient({
@@ -36,12 +37,14 @@ function App() {
   }, []);
 
   return (
-    <QueryClientProvider client={queryClient}>
-      <GlobalStyles />
-      <DesignsProvider>
-        <RouterProvider router={router} />
-      </DesignsProvider>
-    </QueryClientProvider>
+    <ErrorBoundary>
+      <QueryClientProvider client={queryClient}>
+        <GlobalStyles />
+        <DesignsProvider>
+          <RouterProvider router={router} />
+        </DesignsProvider>
+      </QueryClientProvider>
+    </ErrorBoundary>
   );
 }
 
