@@ -61,7 +61,7 @@ function Design({ design }) {
 
   // Handle navigation towards specific link dynamically
   function handleNavigation() {
-    window.location.href = finalDesign.link;
+    window.open(finalDesign.link, '_blank');
   }
 
   return (
