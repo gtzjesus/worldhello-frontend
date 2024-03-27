@@ -135,7 +135,6 @@ const DeliveredSmall = styled.span`
 `;
 
 const ErrorMessage = styled.div`
-  padding: var(--padding-xxsmall);
   color: red;
 `;
 
