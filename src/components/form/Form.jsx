@@ -11,8 +11,8 @@
 
 import { useState } from 'react';
 import styled from 'styled-components';
-import Button from '../buttons/Button';
-import Spinner from '../spinners/Spinner';
+import Button from '../../ui/buttons/Button';
+import Spinner from '../../ui/spinners/Spinner';
 
 // ------------------------------
 // Styled Componenets

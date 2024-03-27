@@ -1,6 +1,6 @@
 import styled from 'styled-components';
-import Form from '../form/Form';
 import { useEffect } from 'react';
+import Form from '../../components/form/Form';
 
 const StyledModal = styled.div`
   position: fixed;
