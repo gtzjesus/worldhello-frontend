@@ -196,18 +196,29 @@ function Form({ closeModal }) {
     const errors = {};
     let isValid = true;
 
-    if (!fullName.trim()) {
-      errors.fullName = 'Full name is required';
+    // Validate name
+    if (!formData.name.trim()) {
+      errors.name = 'Full name is required';
       isValid = false;
+    } else if (formData.name.trim().length < 3) {
+      errors.name = 'Name must be at least 3 characters';
     }
 
-    if (!email.trim()) {
+    // Validate email
+    if (!formData.email.trim()) {
       errors.email = 'Email is required';
       isValid = false;
+    } else if (!/\S+@\S+\.\S+/.test(formData.email)) {
+      errors.email = 'Please provide a real email';
+      isValid = false;
     }
 
-    if (!phoneNumber.trim()) {
-      errors.phoneNumber = 'Phone number is required';
+    // Validate phone
+    if (!formData.phone.trim()) {
+      errors.phone = 'Phone number is required';
+      isValid = false;
+    } else if (!/^\d{10}$/.test(formData.phone)) {
+      errors.phone = 'Please provide a real phone #';
       isValid = false;
     }
 
@@ -322,9 +333,7 @@ function Form({ closeModal }) {
                 onChange={handleInputChange}
               />
             </FormRow>
-            {formErrors.fullName && (
-              <ErrorMessage>{formErrors.fullName}</ErrorMessage>
-            )}
+            {formErrors.name && <ErrorMessage>{formErrors.name}</ErrorMessage>}
           </FormGroup>
           <HorizontalGroup>
             <FormGroup>
@@ -359,8 +368,8 @@ function Form({ closeModal }) {
                   onChange={handleInputChange}
                 />
               </FormRow>
-              {formErrors.phoneNumber && (
-                <ErrorMessage>{formErrors.phoneNumber}</ErrorMessage>
+              {formErrors.phone && (
+                <ErrorMessage>{formErrors.phone}</ErrorMessage>
               )}
             </FormGroup>
           </HorizontalGroup>
