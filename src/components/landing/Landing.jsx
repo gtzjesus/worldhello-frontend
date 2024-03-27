@@ -22,7 +22,7 @@ import Modal from '../../ui/modals/Modal';
 const StyledLanding = styled.div`
   // Code logic for setting the background
   // Design background from Figma software
-  background: url('backgrounds/landing.jpg');
+  background: url('backgrounds/landing.webp');
   background-size: cover;
 
   // Code logic for covering full-screen devices
@@ -31,7 +31,7 @@ const StyledLanding = styled.div`
   // @MEDIAQUERY logic for bigger devices 980px
   @media (min-width: 61.25em) {
     // Design background from Figma software
-    background-image: url('backgrounds/landing_second.jpg');
+    background-image: url('backgrounds/landing_second.webp');
   }
 `;
 

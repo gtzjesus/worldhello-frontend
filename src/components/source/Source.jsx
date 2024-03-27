@@ -29,7 +29,7 @@ const StyledSource = styled.div`
   // Code logic for figma design blackening
   /* filter: brightness(1) saturate(100%); */
   // Code logic for setting the background
-  background-image: url('/backgrounds/earth.jpg');
+  background-image: url('/backgrounds/source.webp');
   background-size: cover;
   color: var(--color-white);
   padding: var(--padding-large) var(--padding-medium);

@@ -21,7 +21,7 @@ import Modal from '../../ui/modals/Modal';
 const StyledRefer = styled.div`
   display: flex;
   flex-direction: column;
-  background-image: url('/backgrounds/contact.png');
+  background-image: url('/backgrounds/refer.webp');
   background-size: cover;
   color: var(--color-white);
   padding: var(--padding-xlarge) var(--padding-medium);

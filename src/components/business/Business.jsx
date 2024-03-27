@@ -71,7 +71,7 @@ function Business({ isModalOpen, openModal, closeModal }) {
             <br />
             Enhance sales, drive lead generation, and expand customer reach.
           </Title>
-          <Img src="/backgrounds/brand.jpg"></Img>
+          <Img src="/backgrounds/brand.webp"></Img>
         </Information>
         {/* <!-- Information Big Container --> */}
         <Information>
