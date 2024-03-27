@@ -75,7 +75,7 @@ function Craft({ isModalOpen, openModal, closeModal }) {
 
         {/* <!-- Information Container (need 2 for responsiveness) --> */}
         <Information>
-          <Img src="/backgrounds/grow.jpg"></Img>
+          <Img src="/backgrounds/grow.jpg" alt="grow"></Img>
           <Description>Join us and grow!</Description>
           <MiniDescription>
             Expand your business by harnessing the full advantages of our
