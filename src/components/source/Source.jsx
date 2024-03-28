@@ -15,7 +15,6 @@
 // This section has all necessary imports for this component.
 
 import styled from 'styled-components';
-import Button from '../../ui/buttons/Button';
 
 import LazyLoad from 'react-lazyload';
 import { useEffect, useRef } from 'react';
@@ -27,7 +26,8 @@ import { useEffect, useRef } from 'react';
 const StyledSource = styled.div`
   position: relative;
   overflow: hidden;
-  height: 100vh; /* Adjust the height as needed */
+  height: 80vh; /* Adjust the height as needed */
+  color: var(--color-white);
 `;
 
 const Background = styled.div`
@@ -54,23 +54,11 @@ const Information = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 0 20px; /* Adjust padding as needed */
   text-align: center; /* Center-align text */
 `;
 
 const Title = styled.span`
-  font-size: var(--font-medium);
-`;
-
-const Quote = styled.span`
-  font-size: var(--font-small);
-  background-color: var(--color-black);
-  color: var(--color-white);
-  padding: var(--padding-xxsmall);
-`;
-
-const Quotation = styled.span`
-  font-weight: 9999;
+  font-size: var(--font-large);
 `;
 
 const Last = styled.div`
@@ -104,21 +92,10 @@ function Source() {
       <StyledSource>
         <Background ref={backgroundRef} />
         <Information>
-          <Title>Gateway to connect with the world.</Title>
-          <Quote>
-            <Quotation>&ldquo;</Quotation>80% of consumers are more likely to
-            buy from brands that offer personalized website experiences.
-            <Quotation>&rdquo;</Quotation>
-          </Quote>
-          <Button
-            href="https://bloggingwizard.com/website-statistics/"
-            target="_blank"
-            rel="noreferrer"
-          >
-            visit article
-          </Button>
+          <Title>Connect with the World.</Title>
           <Last>
-            <Ending>Foster global reach and interaction!</Ending>
+            <Ending>First impressions are vital on the web.</Ending>
+            <br />
           </Last>
         </Information>
       </StyledSource>
