@@ -1,3 +1,12 @@
+// ------------------------------
+// File: Achievements.jsx
+// ------------------------------
+// Description: A React Component showcasing all of our achievements (websites)
+
+// ------------------------------
+// Imports
+// ------------------------------
+// This section has all necessary imports for this component.
 import React, { useContext, useEffect, useRef, useState } from 'react';
 import Spinner from '../../ui/spinners/Spinner';
 import Design from '../designs/Design';
@@ -5,33 +14,19 @@ import styled from 'styled-components';
 import LazyLoad from 'react-lazyload';
 import { DesignsContext } from '../../context/DesignsContext';
 
-const ParentAchievements = styled.div`
-  display: flex;
-  flex-direction: column;
-  overflow-x: auto;
-  scroll-behavior: smooth;
-  scrollbar-width: none;
-  -ms-overflow-style: none;
-  &::-webkit-scrollbar {
-    display: none;
-  }
-`;
+// ------------------------------
+// Styled Componenets
+// ------------------------------
+// This section has all CSS styles configured for every HTML element.
 
 const StyledAchievements = styled.div`
   background-color: var(--color-blue);
   color: var(--color-white);
 `;
 
-const AchievementsArea = styled.div`
-  margin: 0 auto;
-  max-width: var(--width-filled-window);
-  overflow: hidden; /* Ensure no scrollbar is visible */
-`;
-
-const AchievementsAreaSlider = styled.div`
-  display: flex;
-  flex-wrap: nowrap;
-  transition: transform 0.5s ease; /* Transition effect for smooth scrolling */
+const GridContainer = styled.div`
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 `;
 
 const Intro = styled.div`
@@ -74,6 +69,10 @@ const Caption = styled.div`
   width: fit-content;
 `;
 
+// ------------------------------
+// Component
+// ------------------------------
+// This section has our React Component which displays our achievements (websites)
 function Achievements() {
   const { designs, isLoading, error } = useContext(DesignsContext);
   const [index, setIndex] = useState(0);
@@ -101,24 +100,18 @@ function Achievements() {
   return (
     <LazyLoad>
       <StyledAchievements>
-        <ParentAchievements>
-          <Information>
-            <Intro>[ we offer a way for you to ]</Intro>
-            <SubTitle>
-              Connect with your desired audience with a website.
-            </SubTitle>
-            <Caption>Explore some of our websites,</Caption>
-          </Information>
-          <AchievementsArea>
-            <AchievementsAreaSlider
-              style={{ transform: `translateX(${-index * 100}%)` }}
-            >
-              {designs.map((design, idx) => (
-                <Design design={design} key={idx} />
-              ))}
-            </AchievementsAreaSlider>
-          </AchievementsArea>
-        </ParentAchievements>
+        <Information>
+          <Intro>[ we offer a way for you to ]</Intro>
+          <SubTitle>
+            Connect with your desired audience with a website.
+          </SubTitle>
+          <Caption>Explore some of our websites,</Caption>
+        </Information>
+        <GridContainer>
+          {designs.map((design, idx) => (
+            <Design design={design} key={idx} />
+          ))}
+        </GridContainer>
         <Additional>
           <StyledFinish>
             <Intro>[ our approach ]</Intro>

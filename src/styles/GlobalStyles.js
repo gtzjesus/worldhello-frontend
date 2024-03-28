@@ -26,6 +26,12 @@ const GlobalStyles = createGlobalStyle`
     --height-navigation-padding: 5rem;
     --height-navigation-padding-40-em: 10rem;
 
+        /* Line Height */
+    --line-height-xsmall: 1.5rem;
+    --line-height-small: 3rem;
+    --line-height-medium: 3.5rem;
+    --line-height-large: 6rem;
+
     --logo-height: 2.5rem;
 
 
@@ -109,11 +115,7 @@ const GlobalStyles = createGlobalStyle`
     --text-shadow-font: 4px 3px 5px rgba(0, 0, 0, 0.5);
 
 
-    /* Line Height */
-    --line-height-xsmall: 1.5rem;
-    --line-height-small: 3rem;
-    --line-height-medium: 5rem;
-    --line-height-large: 6rem;
+
 
     /* Image Sizes */
     --image-small: 8rem;

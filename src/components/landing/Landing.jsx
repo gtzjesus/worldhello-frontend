@@ -48,10 +48,11 @@ const Title = styled.span`
   // Code logic for title element
   font-size: var(--font-xlarge);
   letter-spacing: var(--spacing-title);
-  line-height: var(--line-height-small);
+  line-height: var(--line-height-medium);
   // Code logic shadow beneath text (more visibility)
   text-shadow: var(--text-shadow-font);
   text-transform: uppercase;
+  overflow: hidden;
 `;
 
 const Subtitle = styled.span`

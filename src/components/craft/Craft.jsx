@@ -2,12 +2,6 @@
 // File: Craft.js
 // ------------------------------
 // Description: A React Component a crafted website using SEO, designs, and data
-// ------------------------------
-// Figma Design.
-// ------------------------------
-// LazyLoading from React for optimization (images & web app loading time).
-// ------------------------------
-// Global Styles from /src/styles/ used for global variables.
 
 // ------------------------------
 // Imports
@@ -23,7 +17,6 @@ import Modal from '../../ui/modals/Modal';
 // Styled Componenets
 // ------------------------------
 // This section has all CSS styles configured for every HTML element.
-
 const StyledCraft = styled.div`
   // Code logic for arranging children + styles
   display: flex;
@@ -60,7 +53,6 @@ const Img = styled.img`
 // Component
 // ------------------------------
 // This section has our React Component which displays our figma design + information
-
 function Craft({ isModalOpen, openModal, closeModal }) {
   return (
     <LazyLoad>

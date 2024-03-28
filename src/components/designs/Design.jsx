@@ -13,43 +13,29 @@
 // This section has all necessary imports for this component.
 import styled from 'styled-components';
 
+const GridContainer = styled.div`
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Create 2 equal-width columns */
+  grid-template-rows: repeat(2, auto); /* Create 2 rows with auto height */
+  gap: 20px; /* Add some gap between grid items */
+`;
+
+// Styled component for each individual design
 const StyledDesign = styled.div`
-  // Code logic to rotate videos that are horizontal for my designs
+  display: flex;
+  justify-content: center;
+  align-items: center;
   transform: rotate(90deg);
 `;
 
+// Styled component for the video element
 const Video = styled.video`
-  // Code logic to style video (mp4)
-  width: 100vw;
-  height: 65vh;
-
-  // @MEDIAQUERY logic for medium devices
-  @media (min-width: 55.25em) {
-    padding-top: var(--padding-xlarge);
-  }
-
-  // @MEDIAQUERY logic for medium devices
-  @media (min-width: 65.25em) {
-    height: 40vh;
-
-    padding-top: var(--padding-xxxlarge);
-  }
-
-  // @MEDIAQUERY logic for medium devices
-  @media (min-width: 75.25em) {
-    height: 40vh;
-
-    padding-top: var(--padding-xxxlarge);
-  }
+  width: 100%; /* Ensure the video fills its container */
+  height: 100%; /* Ensure the video fills its container */
+  object-fit: cover; /* Ensure the video fills its container without stretching */
 `;
 
-// ------------------------------
-// Component
-// ------------------------------
-// This section has our React Component which handles the every individual design added to supabase
-
 function Design({ design }) {
-  // Code logic to create object (design)
   const finalDesign = {
     id: design.id,
     creator: design.creator,
@@ -59,21 +45,21 @@ function Design({ design }) {
     link: design.link,
   };
 
-  // Handle navigation towards specific link dynamically
   function handleNavigation() {
     window.open(finalDesign.link, '_blank');
   }
 
   return (
-    <StyledDesign onClick={handleNavigation}>
-      {/* <!-- Video Container --> */}
-      <Video preload="auto" autoPlay="autoPlay" loop muted playsInline={true}>
-        {/* <!-- Grab video source from each object --> */}
-        <source src={finalDesign.video} type="video/mp4" />
-      </Video>
-    </StyledDesign>
+    <GridContainer>
+      <StyledDesign onClick={handleNavigation}>
+        {/* Video container */}
+        <Video preload="auto" autoPlay loop muted playsInline>
+          {/* Video source */}
+          <source src={finalDesign.video} type="video/mp4" />
+        </Video>
+      </StyledDesign>
+    </GridContainer>
   );
 }
 
-// Export reusable Individual Design component
 export default Design;
