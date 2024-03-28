@@ -89,7 +89,7 @@ function Landing({ isModalOpen, openModal, closeModal }) {
           <Subtitle>your visitors</Subtitle>
           <Subtitle>into customers.</Subtitle>
           <br />
-          <TriggerButton openModal={openModal} text={`Click to start`} />
+          <TriggerButton openModal={openModal} text={`Click to begin`} />
           {isModalOpen && <Modal closeModal={closeModal} />}
         </Hook>
       </StyledLanding>

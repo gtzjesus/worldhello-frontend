@@ -13,6 +13,8 @@ import Design from '../designs/Design';
 import styled from 'styled-components';
 import LazyLoad from 'react-lazyload';
 import { DesignsContext } from '../../context/DesignsContext';
+import TriggerButton from '../../ui/buttons/TriggerButton';
+import Modal from '../../ui/modals/Modal';
 
 // ------------------------------
 // Styled Componenets
@@ -63,11 +65,15 @@ const SeeMoreButton = styled.button`
   padding: 0.8rem 1.2rem;
 `;
 
+const ButtonLayAway = styled.div`
+  margin: var(--margin-medium) auto;
+`;
+
 // ------------------------------
 // Component
 // ------------------------------
 // This section has our React Component which displays our achievements (websites)
-function Achievements() {
+function Achievements({ isModalOpen, openModal, closeModal }) {
   const { designs, isLoading, error } = useContext(DesignsContext);
   const [index, setIndex] = useState(0);
   const [visibleAchievements, setVisibleAchievements] = useState(2);
@@ -119,7 +125,7 @@ function Achievements() {
         </GridContainer>
         {visibleAchievements < designs.length && (
           <Additional>
-            <SeeMoreButton onClick={handleSeeMore}>See More</SeeMoreButton>
+            <SeeMoreButton onClick={handleSeeMore}>See more</SeeMoreButton>
           </Additional>
         )}
         {/* <Additional>
@@ -141,9 +147,14 @@ function Achievements() {
           <Title>Transform your clients into</Title>
           <Title>Loyal,</Title>
           <Title>Paying,</Title>
+          <Title>Customers.</Title>
+
           <br />
           <br />
-          <Caption>Customers.</Caption>
+          <ButtonLayAway>
+            <TriggerButton openModal={openModal} text={`Learn more`} />
+            {isModalOpen && <Modal closeModal={closeModal} />}
+          </ButtonLayAway>
         </Information>
       </StyledAchievements>
     </LazyLoad>
