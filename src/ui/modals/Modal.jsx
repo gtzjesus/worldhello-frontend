@@ -1,7 +1,6 @@
 import styled from 'styled-components';
 import { useEffect } from 'react';
 import Form from '../../components/form/Form';
-
 const StyledModal = styled.div`
   position: fixed;
   top: 0;
@@ -13,8 +12,6 @@ const StyledModal = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: var(--z-toppest);
-  overflow: hidden;
 `;
 
 const ModalContent = styled.div`
@@ -29,14 +26,13 @@ const ModalContent = styled.div`
 `;
 
 function Modal({ closeModal }) {
-  // Check for modal = open then set the css class
   useEffect(() => {
-    // Add class to body to hide overflow when modal is open
-    document.body.classList.add('body-overflow-hidden');
+    // Disable scrolling on the body when the modal is open
+    document.body.style.overflow = 'hidden';
 
-    // Remove class from body when modal is closed
+    // Re-enable scrolling on the body when the modal is closed
     return () => {
-      document.body.classList.remove('body-overflow-hidden');
+      document.body.style.overflow = 'unset';
     };
   }, []);
 

@@ -100,7 +100,7 @@ const Select = styled.select`
 
 const TextArea = styled.textarea`
   width: 100%;
-  height: 150px; /* Adjust the height as needed */
+  height: 80px; /* Adjust the height as needed */
   padding: 0.5rem;
   border-radius: 4px;
   border: 1px solid #ced4da; /* Add border styles as needed */
@@ -411,11 +411,9 @@ function Form({ closeModal }) {
           </FormButton>
           <br />
           <br />
-
           <Button type="submit" onClick={handleSubmit}>
-            Submit Message
+            Submit message
           </Button>
-
           <br />
           <br />
         </StyledForm>
