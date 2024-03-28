@@ -33,8 +33,6 @@ const ModalNav = styled.div`
   letter-spacing: var(--spacing-subtitle);
   // Code logic shadow beneath text (more visibility)
   /* text-shadow: var(--text-shadow-font); */
-  text-transform: uppercase;
-
   // Code logic for margin from form in modal
   margin-bottom: var(--margin-form);
   padding: var(--padding-modal-nav);
@@ -98,6 +96,14 @@ const Select = styled.select`
   float: left;
   // IOS feature UI for select
   -webkit-appearance: none;
+`;
+
+const TextArea = styled.textarea`
+  width: 100%;
+  height: 150px; /* Adjust the height as needed */
+  padding: 0.5rem;
+  border-radius: 4px;
+  border: 1px solid #ced4da; /* Add border styles as needed */
 `;
 
 const Option = styled.option``;
@@ -164,8 +170,6 @@ function Form({ closeModal }) {
     name: '',
     email: '',
     phone: '',
-    website: '',
-    companyName: '',
     howCanWeHelp: '',
     howDidYouHear: 'default',
   });
@@ -286,7 +290,7 @@ function Form({ closeModal }) {
     <>
       {!isSubmittionComplete && !isLoading ? (
         <ModalNav>
-          <ModalTitle>Send a message</ModalTitle>
+          <ModalTitle>What is on your mind?</ModalTitle>
           <Close onClick={closeModal} src="/icons/close.png" />
         </ModalNav>
       ) : (
@@ -372,42 +376,13 @@ function Form({ closeModal }) {
               )}
             </FormGroup>
           </HorizontalGroup>
-          <HorizontalGroup>
-            <FormGroup>
-              <FormRow>
-                <Label htmlFor="companyName">Company Name</Label>
-                <Input
-                  type="text"
-                  id="companyName"
-                  name="companyName"
-                  placeholder="Enter Company Name"
-                  value={formData.companyName}
-                  onChange={handleInputChange}
-                />
-              </FormRow>
-            </FormGroup>
-            <FormGroup>
-              <FormRow>
-                <Label htmlFor="website">Website URL</Label>
-                <Input
-                  type="text"
-                  id="website"
-                  name="website"
-                  placeholder="Enter Website URL (Link)"
-                  value={formData.website}
-                  onChange={handleInputChange}
-                />
-              </FormRow>
-            </FormGroup>
-          </HorizontalGroup>
+
           <FormGroup>
             <FormRow>
-              <Label htmlFor="howCanWeHelp">How can we help you?</Label>
-              <Input
-                type="text"
+              <TextArea
                 id="howCanWeHelp"
                 name="howCanWeHelp"
-                placeholder="Need a New Website?"
+                placeholder="I need a new website..."
                 value={formData.howCanWeHelp}
                 onChange={handleInputChange}
               />
@@ -423,7 +398,7 @@ function Form({ closeModal }) {
                 value={formData.howDidYouHear}
                 onChange={handleInputChange}
               >
-                <Option value="googleSearch">Google Search</Option>
+                <Option value="googleSearch">Google</Option>
                 <Option value="socialMedia">Social Media</Option>
                 <Option value="friend">Friend</Option>
                 <Option value="ad">Ad</Option>
@@ -433,6 +408,11 @@ function Form({ closeModal }) {
           </FormGroup>
           <FormButton>
             <FormRow>
+              <br />
+              <br />
+              <br />
+              <br />
+
               <Button type="submit" onClick={handleSubmit}>
                 Submit Message
               </Button>
