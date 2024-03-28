@@ -43,14 +43,19 @@ const Background = styled.div`
   background-repeat: no-repeat;
   z-index: -1;
 `;
+
 const Information = styled.div`
-  position: relative;
+  position: absolute;
+  top: 50%; /* Position the content vertically in the middle */
+  left: 50%; /* Position the content horizontally in the middle */
+  transform: translate(-50%, -50%); /* Center the content */
   z-index: 1;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 100%;
+  padding: 0 20px; /* Adjust padding as needed */
+  text-align: center; /* Center-align text */
 `;
 
 const Title = styled.span`
@@ -83,7 +88,7 @@ function Source() {
     const handleScroll = () => {
       const scrollPosition = window.scrollY;
       backgroundRef.current.style.transform = `translateY(-${
-        scrollPosition * 0.5
+        scrollPosition * 0.2 /* Adjust the multiplier to slow down the effect */
       }px)`;
     };
 
