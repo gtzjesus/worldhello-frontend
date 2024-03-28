@@ -32,15 +32,11 @@ const StyledSource = styled.div`
 
 const Background = styled.div`
   position: absolute;
-  top: 0;
-  left: 0;
   width: 100%;
   height: 100%; /* Set height to 100% */
   background-image: url('/backgrounds/source.webp');
   background-size: cover; /* Adjust to cover the entire area */
-  background-position: center;
   background-repeat: no-repeat;
-  z-index: -1;
 `;
 
 const Information = styled.div`
@@ -89,10 +85,9 @@ function Source() {
       <StyledSource>
         <Background ref={backgroundRef} />
         <Information>
-          <Title>A Website seen all over the world.</Title>
+          <Title>Be seen</Title>
           <Last>
-            <Ending>First impressions are vital on the web.</Ending>
-            <br />
+            <Ending>With a website accessable all over the world.</Ending>
           </Last>
         </Information>
       </StyledSource>
