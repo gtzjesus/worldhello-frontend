@@ -407,17 +407,17 @@ function Form({ closeModal }) {
             </FormRow>
           </FormGroup>
           <FormButton>
-            <FormRow>
-              <br />
-              <br />
-              <br />
-              <br />
-
-              <Button type="submit" onClick={handleSubmit}>
-                Submit Message
-              </Button>
-            </FormRow>
+            <FormRow></FormRow>
           </FormButton>
+          <br />
+          <br />
+
+          <Button type="submit" onClick={handleSubmit}>
+            Submit Message
+          </Button>
+
+          <br />
+          <br />
         </StyledForm>
       )}
     </>
