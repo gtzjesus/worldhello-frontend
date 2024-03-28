@@ -31,7 +31,6 @@ const GridContainer = styled.div`
 
 const Title = styled.span`
   font-size: var(--font-small);
-  padding-bottom: var(--padding-small);
 `;
 
 const Caption = styled.span`
@@ -103,8 +102,15 @@ function Achievements() {
       <StyledAchievements>
         <Information>
           <Title>World Hello</Title>
+          <br />
+          <br />
           <Caption>Turn that Idea</Caption>
           <Caption>Into a Website.</Caption>
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
         </Information>
         <GridContainer>
           {designs.slice(0, visibleAchievements).map((design, idx) => (
@@ -130,9 +136,15 @@ function Achievements() {
         </Additional> */}
         <Information>
           <Title>From $49/mo.</Title>
+          <br />
+          <br />
+          <Title>Transform your clients into</Title>
+          <Title>Loyal,</Title>
+          <Title>Paying,</Title>
+          <br />
+          <br />
+          <Caption>Customers.</Caption>
         </Information>
-        <Title>Transform your clients</Title>
-        <Title>into loyal, paying customers.</Title>
       </StyledAchievements>
     </LazyLoad>
   );
