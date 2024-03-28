@@ -57,9 +57,7 @@ function Home() {
       />
       <div className="responsive-container">
         <Achievements />
-      </div>
-      <Source />
-      <div className="responsive-container">
+        <Source />
         <Craft
           isModalOpen={isModalOpen}
           openModal={openModal}
@@ -81,8 +79,9 @@ function Home() {
           openModal={openModal}
           closeModal={closeModal}
         />
+
+        <Footer />
       </div>
-      <Footer />
     </>
   );
 }
