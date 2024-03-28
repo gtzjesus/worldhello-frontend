@@ -71,7 +71,7 @@ const SeeMoreButton = styled.button`
 function Achievements() {
   const { designs, isLoading, error } = useContext(DesignsContext);
   const [index, setIndex] = useState(0);
-  const [visibleAchievements, setVisibleAchievements] = useState(4);
+  const [visibleAchievements, setVisibleAchievements] = useState(2);
 
   // Ref to hold the interval ID
   const intervalRef = useRef(null);
