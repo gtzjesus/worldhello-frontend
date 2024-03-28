@@ -18,48 +18,43 @@ import styled from 'styled-components';
 import Button from '../../ui/buttons/Button';
 
 import LazyLoad from 'react-lazyload';
+import { useEffect, useRef } from 'react';
 
 // ------------------------------
 // Styled Componenets
 // ------------------------------
 // This section has all CSS styles configured for every HTML element.
 const StyledSource = styled.div`
-  // Code logic for arranging children
-  display: flex;
-  // Code logic for figma design blackening
-  /* filter: brightness(1) saturate(100%); */
-  // Code logic for setting the background
+  position: relative;
+  overflow: hidden;
+  height: 100vh; /* Adjust the height as needed */
+`;
+
+const Background = styled.div`
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   background-image: url('/backgrounds/source.webp');
   background-size: cover;
-  color: var(--color-white);
-  padding: var(--padding-large) var(--padding-medium);
+  background-position: center;
+  transform: translateY(-50%);
+  z-index: -1;
 `;
 
 const Information = styled.div`
+  position: relative;
+  z-index: 1;
   display: flex;
   flex-direction: column;
-`;
-
-const Intro = styled.div`
-  // Code logic to style div element
-  color: var(--color-tan);
-  font-size: var(--font-xxxsmall);
-  padding: var(--padding-small) 0;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
 `;
 
 const Title = styled.span`
-  align-items: center;
   font-size: var(--font-medium);
-  width: fit-content;
-
-  text-shadow: 0.03em 0 black, 0 0.03em black, -0.03em 0 black, 0 -0.03em black;
-`;
-
-const Description = styled.div`
-  // Code logic for arranging children
-  display: flex;
-  flex-direction: column;
-  gap: var(--gap-medium);
 `;
 
 const Quote = styled.span`
@@ -67,7 +62,6 @@ const Quote = styled.span`
   background-color: var(--color-black);
   color: var(--color-white);
   padding: var(--padding-xxsmall);
-  margin: var(--padding-medium) 0;
 `;
 
 const Quotation = styled.span`
@@ -75,47 +69,49 @@ const Quotation = styled.span`
 `;
 
 const Last = styled.div`
-  // Code logic for arranging children
-  display: flex;
-  flex-direction: column;
-  padding: var(--padding-xlarge) 0 0 0;
-  gap: var(--gap-small);
+  margin-top: var(--margin-xlarge);
 `;
 
 const Ending = styled.span`
   font-size: var(--font-xsmall);
-  text-shadow: 0.03em 0 black, 0 0.03em black, -0.03em 0 black, 0 -0.03em black;
 `;
 
-// ------------------------------
-// Component
-// ------------------------------
-// This section has our React Component which handles the hook data
-
 function Source() {
+  const backgroundRef = useRef(null);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollPosition = window.scrollY;
+      backgroundRef.current.style.transform = `translateY(-${
+        scrollPosition * 0.5
+      }px)`;
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
   return (
     <LazyLoad>
-      {/* <!-- Main Container --> */}
       <StyledSource>
-        {/* <!-- Information Big Container --> */}
+        <Background ref={backgroundRef} />
         <Information>
-          {/* <!-- All necessary info --> */}
-          <Intro>[ a website that will serve as a ]</Intro>
           <Title>Gateway to connect with the world.</Title>
-          <Description>
-            <Quote>
-              <Quotation>&ldquo;</Quotation>80% of consumers are more likely to
-              buy from brands that offer personalized website experiences.
-              <Quotation>&rdquo;</Quotation>
-            </Quote>
-            <a
-              href="https://bloggingwizard.com/website-statistics/"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <Button>visit article</Button>
-            </a>
-          </Description>
+          <Quote>
+            <Quotation>&ldquo;</Quotation>80% of consumers are more likely to
+            buy from brands that offer personalized website experiences.
+            <Quotation>&rdquo;</Quotation>
+          </Quote>
+          <Button
+            href="https://bloggingwizard.com/website-statistics/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            visit article
+          </Button>
           <Last>
             <Ending>Foster global reach and interaction!</Ending>
           </Last>
@@ -125,5 +121,4 @@ function Source() {
   );
 }
 
-// Export reusable Component
 export default Source;

@@ -62,12 +62,12 @@ function Home() {
       />
 
       <div className="responsive-container">
+        <Source />
         <Craft
           isModalOpen={isModalOpen}
           openModal={openModal}
           closeModal={closeModal}
         />
-        <Source />
         <Business
           isModalOpen={isModalOpen}
           openModal={openModal}
