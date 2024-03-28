@@ -59,21 +59,17 @@ const SeeMoreButton = styled.button`
   cursor: pointer;
   border-radius: 100px;
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04);
-  background-color: var(--color-tan);
+  background-color: var(--color-white);
   color: var(--color-black);
   font-size: var(--font-xxxsmall);
   padding: 0.8rem 1.2rem;
-`;
-
-const ButtonLayAway = styled.div`
-  margin: var(--margin-medium) auto;
 `;
 
 // ------------------------------
 // Component
 // ------------------------------
 // This section has our React Component which displays our achievements (websites)
-function Achievements({ isModalOpen, openModal, closeModal }) {
+function Achievements() {
   const { designs, isLoading, error } = useContext(DesignsContext);
   const [index, setIndex] = useState(0);
   const [visibleAchievements, setVisibleAchievements] = useState(2);
@@ -114,9 +110,6 @@ function Achievements({ isModalOpen, openModal, closeModal }) {
           <Caption>Into a Website.</Caption>
           <br />
           <br />
-          <br />
-          <br />
-          <br />
         </Information>
         <GridContainer>
           {designs.slice(0, visibleAchievements).map((design, idx) => (
@@ -148,13 +141,6 @@ function Achievements({ isModalOpen, openModal, closeModal }) {
           <Title>Loyal,</Title>
           <Title>Paying,</Title>
           <Title>Customers.</Title>
-
-          <br />
-          <br />
-          <ButtonLayAway>
-            <TriggerButton openModal={openModal} text={`Learn more`} />
-            {isModalOpen && <Modal closeModal={closeModal} />}
-          </ButtonLayAway>
         </Information>
       </StyledAchievements>
     </LazyLoad>

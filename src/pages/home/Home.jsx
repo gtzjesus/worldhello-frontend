@@ -55,13 +55,8 @@ function Home() {
         openModal={openModal}
         closeModal={closeModal}
       />
-      <Achievements
-        isModalOpen={isModalOpen}
-        openModal={openModal}
-        closeModal={closeModal}
-      />
-
       <div className="responsive-container">
+        <Achievements />
         <Source />
         <Craft
           isModalOpen={isModalOpen}

@@ -37,12 +37,12 @@ const Background = styled.div`
   width: 100%;
   height: 100%;
   background-image: url('/backgrounds/source.webp');
-  background-size: cover;
+  background-size: contain; /* Change this property to adjust the image size */
   background-position: center;
   transform: translateY(-50%);
+  background-repeat: no-repeat;
   z-index: -1;
 `;
-
 const Information = styled.div`
   position: relative;
   z-index: 1;
