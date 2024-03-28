@@ -15,24 +15,22 @@ import styled from 'styled-components';
 
 const GridContainer = styled.div`
   display: grid;
-  grid-template-columns: repeat(2, 1fr); /* Create 2 equal-width columns */
-  grid-template-rows: repeat(2, auto); /* Create 2 rows with auto height */
-  gap: 20px; /* Add some gap between grid items */
+  overflow-y: hidden;
 `;
 
 // Styled component for each individual design
 const StyledDesign = styled.div`
   display: flex;
-  justify-content: center;
-  align-items: center;
   transform: rotate(90deg);
+  margin-bottom: 2.5rem;
 `;
 
 // Styled component for the video element
 const Video = styled.video`
-  width: 100%; /* Ensure the video fills its container */
-  height: 100%; /* Ensure the video fills its container */
-  object-fit: cover; /* Ensure the video fills its container without stretching */
+  width: 100%; /* Ensure the video fills its container horizontally */
+  height: auto; /* Let the height adjust proportionally based on the width */
+  max-height: 100%; /* Limit the height to prevent it from exceeding the container */
+  object-fit: contain; /* Maintain aspect ratio while fitting the video within the container */
 `;
 
 function Design({ design }) {

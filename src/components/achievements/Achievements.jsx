@@ -13,6 +13,7 @@ import Design from '../designs/Design';
 import styled from 'styled-components';
 import LazyLoad from 'react-lazyload';
 import { DesignsContext } from '../../context/DesignsContext';
+import Button from '../../ui/buttons/Button';
 
 // ------------------------------
 // Styled Componenets
@@ -30,6 +31,7 @@ const GridContainer = styled.div`
 
 const Title = styled.span`
   font-size: var(--font-small);
+  padding-bottom: var(--padding-small);
 `;
 
 const Caption = styled.span`
@@ -47,11 +49,25 @@ const Information = styled.div`
 const Additional = styled.div`
   display: flex;
   flex-direction: column;
+  margin: 0 auto;
 `;
 
 const StyledFinish = styled.div`
   display: flex;
   flex-direction: column;
+`;
+
+const SeeMoreButton = styled.button`
+  border: none;
+  margin: var(--margin-medium) auto;
+  width: fit-content;
+  cursor: pointer;
+  border-radius: 100px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04);
+  background-color: var(--color-tan);
+  color: var(--color-black);
+  font-size: var(--font-xxxsmall);
+  padding: 0.8rem 1.2rem;
 `;
 
 // ------------------------------
@@ -61,6 +77,7 @@ const StyledFinish = styled.div`
 function Achievements() {
   const { designs, isLoading, error } = useContext(DesignsContext);
   const [index, setIndex] = useState(0);
+  const [visibleAchievements, setVisibleAchievements] = useState(4);
 
   // Ref to hold the interval ID
   const intervalRef = useRef(null);
@@ -79,6 +96,11 @@ function Achievements() {
     };
   }, [designs]); // Re-run effect when designs change
 
+  // Handler function to display more achievements
+  const handleSeeMore = () => {
+    setVisibleAchievements((prevVisible) => prevVisible + 4);
+  };
+
   if (isLoading) return <Spinner />;
   if (error) throw new Error('Failed to grab designs');
 
@@ -91,11 +113,16 @@ function Achievements() {
           <Caption>Into a Website.</Caption>
         </Information>
         <GridContainer>
-          {designs.map((design, idx) => (
+          {designs.slice(0, visibleAchievements).map((design, idx) => (
             <Design design={design} key={idx} />
           ))}
         </GridContainer>
-        <Additional>
+        {visibleAchievements < designs.length && (
+          <Additional>
+            <SeeMoreButton onClick={handleSeeMore}>See More</SeeMoreButton>
+          </Additional>
+        )}
+        {/* <Additional>
           <StyledFinish>
             <Title>[ our approach ]</Title>
             Is on optimizing conversions to elevate your business&rsquo;s
@@ -106,7 +133,10 @@ function Achievements() {
             <br />
             <br />
           </StyledFinish>
-        </Additional>
+        </Additional> */}
+        <Information>
+          <Title>From $49/mo.</Title>
+        </Information>
       </StyledAchievements>
     </LazyLoad>
   );
