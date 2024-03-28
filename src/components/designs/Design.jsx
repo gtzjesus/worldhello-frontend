@@ -21,16 +21,14 @@ const GridContainer = styled.div`
 // Styled component for each individual design
 const StyledDesign = styled.div`
   display: flex;
-  transform: rotate(90deg);
-  margin-bottom: 2.5rem;
+  padding: 0.25rem;
 `;
 
-// Styled component for the video element
-const Video = styled.video`
-  width: 100%; /* Ensure the video fills its container horizontally */
-  height: auto; /* Let the height adjust proportionally based on the width */
-  max-height: 100%; /* Limit the height to prevent it from exceeding the container */
-  object-fit: contain; /* Maintain aspect ratio while fitting the video within the container */
+// Styled component for the image element
+const Image = styled.img`
+  width: 100%;
+  height: auto;
+  cursor: pointer; /* Add cursor pointer for interaction */
 `;
 
 function Design({ design }) {
@@ -39,7 +37,7 @@ function Design({ design }) {
     creator: design.creator,
     title: design.title,
     description: design.description,
-    video: design.video,
+    image: design.image, // Assuming 'image' is the property for the image URL
     link: design.link,
   };
 
@@ -50,11 +48,8 @@ function Design({ design }) {
   return (
     <GridContainer>
       <StyledDesign onClick={handleNavigation}>
-        {/* Video container */}
-        <Video preload="auto" autoPlay loop muted playsInline>
-          {/* Video source */}
-          <source src={finalDesign.video} type="video/mp4" />
-        </Video>
+        {/* Image container */}
+        <Image src={finalDesign.image} alt={finalDesign.title} />
       </StyledDesign>
     </GridContainer>
   );

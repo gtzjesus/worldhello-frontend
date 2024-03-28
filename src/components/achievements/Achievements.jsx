@@ -13,7 +13,6 @@ import Design from '../designs/Design';
 import styled from 'styled-components';
 import LazyLoad from 'react-lazyload';
 import { DesignsContext } from '../../context/DesignsContext';
-import Button from '../../ui/buttons/Button';
 
 // ------------------------------
 // Styled Componenets
@@ -22,6 +21,7 @@ import Button from '../../ui/buttons/Button';
 
 const StyledAchievements = styled.div`
   color: var(--color-white);
+  overflow: hidden;
 `;
 
 const GridContainer = styled.div`
@@ -42,7 +42,6 @@ const Information = styled.div`
   display: flex;
   flex-direction: column;
   text-align: center;
-
   padding: var(--padding-medium);
 `;
 
@@ -50,11 +49,6 @@ const Additional = styled.div`
   display: flex;
   flex-direction: column;
   margin: 0 auto;
-`;
-
-const StyledFinish = styled.div`
-  display: flex;
-  flex-direction: column;
 `;
 
 const SeeMoreButton = styled.button`
@@ -137,6 +131,8 @@ function Achievements() {
         <Information>
           <Title>From $49/mo.</Title>
         </Information>
+        <Title>Transform your clients</Title>
+        <Title>into loyal, paying customers.</Title>
       </StyledAchievements>
     </LazyLoad>
   );
