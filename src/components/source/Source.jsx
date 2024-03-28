@@ -26,7 +26,7 @@ import { useEffect, useRef } from 'react';
 const StyledSource = styled.div`
   position: relative;
   overflow: hidden;
-  height: 80vh; /* Adjust the height as needed */
+  height: 75vh; /* Adjust the height as needed */
   color: var(--color-white);
 `;
 
@@ -35,11 +35,10 @@ const Background = styled.div`
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
+  height: 100%; /* Set height to 100% */
   background-image: url('/backgrounds/source.webp');
-  background-size: contain; /* Change this property to adjust the image size */
+  background-size: cover; /* Adjust to cover the entire area */
   background-position: center;
-  transform: translateY(-50%);
   background-repeat: no-repeat;
   z-index: -1;
 `;
@@ -52,8 +51,6 @@ const Information = styled.div`
   z-index: 1;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
   text-align: center; /* Center-align text */
 `;
 
@@ -92,7 +89,7 @@ function Source() {
       <StyledSource>
         <Background ref={backgroundRef} />
         <Information>
-          <Title>Connect with the World.</Title>
+          <Title>A Website seen all over the world.</Title>
           <Last>
             <Ending>First impressions are vital on the web.</Ending>
             <br />
