@@ -36,16 +36,16 @@ const GlobalStyles = createGlobalStyle`
 
 
     /* Backrounds */
-    --background-primary: #070606;
-    --background-secondary: #ffff;
+    --background-primary: #131212;
+    --background-secondary: #F5F5F5;
     --background-third: #e7e167;
 
 
     /* Colors */
     --color-red: #991b1b;
-    --color-black: #070606;
+    --color-black: #121212;
     --color-yellow: #e7e167;
-    --color-white: #ffff;
+    --color-white: #F5F5F5;
     --color-blue: #455e71;
     --color-green: #6A7744;
     --color-tan: #EDDAD5;
@@ -55,8 +55,8 @@ const GlobalStyles = createGlobalStyle`
     --font-xxxsmall: 1rem;
     --font-xxsmall: 1.25rem;
     --font-xsmall: 1.35rem;
-    --font-small: 1.5rem;
-    --font-medium: 2.5rem;
+    --font-small: 1.25rem;
+    --font-medium: 2.25rem;
     --font-large: 3rem;
     --font-xlarge: 4rem;
     --font-xxlarge: 7rem;

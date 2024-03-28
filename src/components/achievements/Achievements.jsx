@@ -7,7 +7,7 @@
 // Imports
 // ------------------------------
 // This section has all necessary imports for this component.
-import React, { useContext, useEffect, useRef, useState } from 'react';
+import { useContext, useEffect, useRef, useState } from 'react';
 import Spinner from '../../ui/spinners/Spinner';
 import Design from '../designs/Design';
 import styled from 'styled-components';
@@ -20,7 +20,6 @@ import { DesignsContext } from '../../context/DesignsContext';
 // This section has all CSS styles configured for every HTML element.
 
 const StyledAchievements = styled.div`
-  background-color: var(--color-blue);
   color: var(--color-white);
 `;
 
@@ -29,44 +28,30 @@ const GridContainer = styled.div`
   grid-template-columns: 1fr 1fr;
 `;
 
-const Intro = styled.div`
-  color: var(--color-tan);
-  font-size: var(--font-xxxsmall);
-  padding: var(--padding-small) 0;
+const Title = styled.span`
+  font-size: var(--font-small);
+`;
+
+const Caption = styled.span`
+  font-size: var(--font-medium);
 `;
 
 const Information = styled.div`
   display: flex;
   flex-direction: column;
-  gap: var(--gap-xsmall);
-  padding: var(--padding-app);
+  text-align: center;
+
+  padding: var(--padding-medium);
 `;
 
 const Additional = styled.div`
   display: flex;
   flex-direction: column;
-  gap: var(--gap-medium);
-  padding: var(--padding-medium);
-`;
-
-const SubTitle = styled.span`
-  font-size: var(--font-small);
 `;
 
 const StyledFinish = styled.div`
   display: flex;
   flex-direction: column;
-  font-size: var(--font-small);
-`;
-
-const Caption = styled.div`
-  display: flex;
-  justify-content: space-between;
-  font-size: var(--font-medium);
-  align-items: center;
-  text-transform: uppercase;
-  padding: var(--padding-large) 0 var(--padding-small) 0;
-  width: fit-content;
 `;
 
 // ------------------------------
@@ -101,11 +86,9 @@ function Achievements() {
     <LazyLoad>
       <StyledAchievements>
         <Information>
-          <Intro>[ we offer a way for you to ]</Intro>
-          <SubTitle>
-            Connect with your desired audience with a website.
-          </SubTitle>
-          <Caption>Explore some of our websites,</Caption>
+          <Title>World Hello</Title>
+          <Caption>Turn that Idea</Caption>
+          <Caption>Into a Website.</Caption>
         </Information>
         <GridContainer>
           {designs.map((design, idx) => (
@@ -114,7 +97,7 @@ function Achievements() {
         </GridContainer>
         <Additional>
           <StyledFinish>
-            <Intro>[ our approach ]</Intro>
+            <Title>[ our approach ]</Title>
             Is on optimizing conversions to elevate your business&rsquo;s
             potential for success. <br />
             <br />
