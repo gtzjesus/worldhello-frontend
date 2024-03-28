@@ -29,13 +29,14 @@ const ModalContent = styled.div`
 `;
 
 function Modal({ closeModal }) {
+  // Check for modal = open then set the css class
   useEffect(() => {
-    // Set body overflow to 'hidden' when modal is opened
-    document.body.style.overflow = 'hidden';
+    // Add class to body to hide overflow when modal is open
+    document.body.classList.add('body-overflow-hidden');
 
-    // Revert body overflow to 'auto' when modal is closed
+    // Remove class from body when modal is closed
     return () => {
-      document.body.style.overflow = 'auto';
+      document.body.classList.remove('body-overflow-hidden');
     };
   }, []);
 

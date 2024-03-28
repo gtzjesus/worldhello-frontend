@@ -12,6 +12,10 @@ body {
   background: var(--color-black);
 }
 
+.body-overflow-hidden {
+  overflow: hidden;
+}
+
 /* Media query for larger devices */
 @media (min-width: 768px) {
   .responsive-container {
