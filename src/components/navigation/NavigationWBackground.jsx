@@ -10,7 +10,7 @@
 // This section has all necessary imports for this component.
 
 import styled from 'styled-components';
-import { useNavigate } from 'react-router';
+import { useState } from 'react';
 
 // ------------------------------
 // Styled Componenets
@@ -25,25 +25,99 @@ const StyledNav = styled.nav`
   // Code logic for positioning fixed in all web app + header config
   position: fixed;
   background: var(--color-black);
-  color: var(--color-white);
   width: var(--width-full-window);
   z-index: var(--z-top);
   height: var(--height-navigation);
-  font-size: var(--font-xxxsmall);
+
+  // Padd from top of web app, too close to edges
+  padding-top: var(--padding-xxsmall);
+`;
+
+const MenuImg = styled.img``;
+
+const Object = styled.div`
+  padding: 0 var(--padding-small);
+`;
+
+const Icon = styled.a`
+  height: var(--font-small);
 `;
 
 const Logo = styled.img`
-  // Code logic to arrange children
-
-  padding: 0 0 0 var(--padding-small);
-  gap: var(--gap-small);
-  // Code logic to modify logo
-  height: var(--logo-height);
+  height: var(--font-medium);
+  padding-left: var(--padding-xxsmall);
+  color: white;
+  @media (min-width: 61.25em) {
+    padding: 0 var(--padding-medium) 0 0;
+  }
 `;
 
-const Menu = styled.a`
-  // Code logic for contact link a element
-  padding: 0 var(--padding-small) 0 0;
+const Menu = styled.button`
+  position: relative;
+  background-color: transparent;
+  border: none;
+  width: 40px; /* Adjust the width as needed */
+  height: 40px; /* Adjust the height as needed */
+  cursor: pointer;
+  font-size: var(--font-xsmall);
+
+  ::before,
+  ::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%; /* Adjust the width of the lines */
+    height: 3px; /* Adjust the height of the lines */
+    background-color: white; /* Adjust the color of the lines */
+    transition: all 0.3s ease;
+  }
+
+  ::before {
+    top: 12px;
+  }
+
+  ::after {
+    top: 24px;
+  }
+
+  /* Animation for the middle line */
+  &.open-menu::before {
+    top: 18px;
+    transform: translate(-50%, -50%) rotate(45deg);
+  }
+
+  &.open-menu::after {
+    top: 18px;
+    transform: translate(-50%, -50%) rotate(-45deg);
+  }
+`;
+
+const MenuContainer = styled.div`
+  position: fixed;
+  top: ${({ isOpen }) => (isOpen ? '0' : '-100%')}; /* Adjusted top property */
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  transition: top 0.5s ease-out; /* Updated transition with ease-out timing function */
+  z-index: 999;
+`;
+
+const MenuContent = styled.div`
+  display: flex;
+  flex-direction: column; /* Display menu items vertically */
+  height: 100%;
+  background-color: var(--color-black);
+  padding-top: var(--padding-xlarge);
+  padding-left: var(--padding-medium);
+`;
+
+const MenuItem = styled.a`
+  display: inline-block;
+  padding: 8px 16px;
+  color: var(--color-white);
+  text-decoration: none;
+  font-size: var(--font-links);
 `;
 
 // ------------------------------
@@ -51,25 +125,47 @@ const Menu = styled.a`
 // ------------------------------
 // This section has our React Component which handles the hook data
 
-function NavigationWBackground() {
-  // Grab react hook to navigate the router
-  const navigate = useNavigate();
-  // Handles the navigation to contact page
-  function handleContact() {
-    navigate('/contact');
+function NavigationWbackground() {
+  // Set states for menu commands from UI
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  // Helper function to toggle menu
+  function toggleMenu() {
+    setIsMenuOpen(!isMenuOpen);
   }
-  // Handles the navigation to home page
-  function handleHome() {
-    navigate('/');
-  }
+
   return (
-    <StyledNav>
-      {/* <!-- Container for logo and title --> */}
-      <Logo onClick={handleHome} src="/logos/helloworld.png" alt="globe"></Logo>
-      {/* <!-- Menu Container for links --> */}
-      <Menu onClick={handleContact}>Contact</Menu>
-    </StyledNav>
+    <>
+      {/* <!-- Nav Container , the header --> */}
+      <StyledNav>
+        <Object>
+          <Icon target="_blank" href="https://www.worldhello.us/">
+            {/* <!--  Container for logo and title --> */}
+            <Logo src="/logos/helloworld.png" alt="instagram"></Logo>
+          </Icon>
+        </Object>
+        <Object>
+          {/* <!-- Menu Container for links --> */}
+          <Menu onClick={toggleMenu}>
+            {' '}
+            {isMenuOpen ? (
+              <MenuImg src="/icons/close.png" alt="Close"></MenuImg>
+            ) : (
+              <>
+                <MenuImg src="/icons/menuW.png" alt="Menu"></MenuImg>
+              </>
+            )}
+          </Menu>
+        </Object>
+      </StyledNav>
+      <MenuContainer isOpen={isMenuOpen}>
+        <MenuContent>
+          <MenuItem>Contact</MenuItem>
+        </MenuContent>
+      </MenuContainer>
+    </>
   );
 }
 
-export default NavigationWBackground;
+// Export the Component (reusable)
+export default NavigationWbackground;

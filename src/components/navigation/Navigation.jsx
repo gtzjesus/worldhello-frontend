@@ -10,7 +10,7 @@
 // This section has all necessary imports for this component.
 
 import styled from 'styled-components';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 
 // ------------------------------
 // Styled Componenets
@@ -99,7 +99,6 @@ const MenuContainer = styled.div`
   left: 0;
   width: 100%;
   height: 100vh;
-  background-color: transparent;
   transition: top 0.5s ease-out; /* Updated transition with ease-out timing function */
   z-index: 999;
 `;
@@ -107,21 +106,18 @@ const MenuContainer = styled.div`
 const MenuContent = styled.div`
   display: flex;
   flex-direction: column; /* Display menu items vertically */
-  align-items: center; /* Center-align menu items horizontally */
-  justify-content: center; /* Center-align menu items vertically */
   height: 100%;
   background-color: var(--color-black);
+  padding-top: var(--padding-xlarge);
+  padding-left: var(--padding-medium);
 `;
 
 const MenuItem = styled.a`
   display: inline-block;
   padding: 8px 16px;
-  background-color: black;
-  color: white;
-  border-radius: 20px;
-  text-align: center;
+  color: var(--color-white);
   text-decoration: none;
-  margin: 8px;
+  font-size: var(--font-links);
 `;
 
 // ------------------------------
@@ -130,50 +126,13 @@ const MenuItem = styled.a`
 // This section has our React Component which handles the hook data
 
 function Navigation() {
+  // Set states for menu commands from UI
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
+  // Helper function to toggle menu
   function toggleMenu() {
     setIsMenuOpen(!isMenuOpen);
   }
-
-  useEffect(() => {
-    function handleClick() {
-      setIsMenuOpen(false);
-    }
-
-    const menuItems = document.querySelectorAll('.menu-item');
-    menuItems.forEach((item) => {
-      item.addEventListener('click', handleClick);
-    });
-
-    return () => {
-      menuItems.forEach((item) => {
-        item.removeEventListener('click', handleClick);
-      });
-    };
-  }, []);
-
-  useEffect(() => {
-    function scrollToHashSection() {
-      const hash = window.location.hash;
-      if (hash) {
-        const sectionId = hash.substring(1);
-        const section = document.getElementById(sectionId);
-        console.log(section);
-        if (section) {
-          section.scrollIntoView({ behavior: 'smooth', block: 'start' });
-        }
-      }
-    }
-
-    // Scroll to the section when the component mounts and when the hash changes
-    scrollToHashSection();
-    window.addEventListener('hashchange', scrollToHashSection);
-
-    return () => {
-      window.removeEventListener('hashchange', scrollToHashSection);
-    };
-  }, []);
 
   return (
     <>
@@ -201,7 +160,7 @@ function Navigation() {
       </StyledNav>
       <MenuContainer isOpen={isMenuOpen}>
         <MenuContent>
-          <MenuItem className="menu-item">contact</MenuItem>
+          <MenuItem>Contact</MenuItem>
         </MenuContent>
       </MenuContainer>
     </>

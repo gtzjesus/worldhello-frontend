@@ -13,8 +13,6 @@ import Design from '../designs/Design';
 import styled from 'styled-components';
 import LazyLoad from 'react-lazyload';
 import { DesignsContext } from '../../context/DesignsContext';
-import TriggerButton from '../../ui/buttons/TriggerButton';
-import Modal from '../../ui/modals/Modal';
 
 // ------------------------------
 // Styled Componenets
@@ -105,9 +103,8 @@ function Achievements() {
         <Information>
           <Title>World Hello</Title>
           <br />
-          <br />
-          <Caption>Turn that Idea</Caption>
-          <Caption>Into a Website.</Caption>
+          <Caption>Turn that idea</Caption>
+          <Caption>into a website.</Caption>
           <br />
           <br />
         </Information>
@@ -137,10 +134,12 @@ function Achievements() {
           <Title>From $49/mo.</Title>
           <br />
           <br />
+          {/* <br />
+          <br />
           <Title>Transform your clients into</Title>
           <Title>Loyal,</Title>
           <Title>Paying,</Title>
-          <Title>Customers.</Title>
+          <Title>Customers.</Title> */}
         </Information>
       </StyledAchievements>
     </LazyLoad>
