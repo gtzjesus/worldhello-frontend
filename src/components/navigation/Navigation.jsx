@@ -28,20 +28,20 @@ const StyledNav = styled.nav`
   width: var(--width-full-window);
   z-index: var(--z-top);
   height: var(--height-navigation);
-  font-size: var(--font-xxxsmall);
+
+  // Padd from top of web app, too close to edges
+  padding-top: var(--padding-xxsmall);
 `;
 
-const MenuImg = styled.img`
-  height: var(--menu-height);
-  padding-top: var(--padding-small);
-  padding-right: var(--padding-xsmall);
-`;
+const MenuImg = styled.img``;
 
 const Object = styled.div`
   padding: 0 var(--padding-small);
 `;
 
-const Icon = styled.a``;
+const Icon = styled.a`
+  height: var(--font-small);
+`;
 
 const Logo = styled.img`
   height: var(--font-medium);
@@ -95,22 +95,22 @@ const Menu = styled.button`
 
 const MenuContainer = styled.div`
   position: fixed;
-  top: 0;
-  left: ${({ isOpen }) => (isOpen ? '0' : '100%')}; /* Adjusted left property */
+  top: ${({ isOpen }) => (isOpen ? '0' : '-100%')}; /* Adjusted top property */
+  left: 0;
   width: 100%;
   height: 100vh;
   background-color: transparent;
-  transition: left 0.3s ease-in-out;
+  transition: top 0.5s ease-out; /* Updated transition with ease-out timing function */
   z-index: 999;
 `;
 
 const MenuContent = styled.div`
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  flex-direction: column; /* Display menu items vertically */
+  align-items: center; /* Center-align menu items horizontally */
+  justify-content: center; /* Center-align menu items vertically */
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: var(--color-black);
 `;
 
 const MenuItem = styled.a`
