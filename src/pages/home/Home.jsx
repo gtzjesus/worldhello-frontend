@@ -1,6 +1,5 @@
 import { useEffect, useState } from 'react';
 import Navigation from '../../components/navigation/Navigation';
-import NavigationWBackground from '../../components/navigation/NavigationWBackground';
 import Achievements from '../../components/achievements/Achievements';
 import Source from '../../components/source/Source';
 import Trial from '../../components/trial/Trial';
@@ -49,7 +48,7 @@ function Home() {
   window.addEventListener('scroll', changeHeader);
   return (
     <>
-      {!header ? <Navigation /> : <NavigationWBackground />}
+      <Navigation />
       <Landing
         isModalOpen={isModalOpen}
         openModal={openModal}

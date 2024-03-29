@@ -24,7 +24,7 @@ const StyledNav = styled.nav`
   justify-content: space-between;
   // Code logic for positioning fixed in all web app + header config
   position: fixed;
-  background: transparent;
+  background: var(--color-black);
   width: var(--width-full-window);
   z-index: var(--z-top);
   height: var(--height-navigation);
@@ -141,7 +141,7 @@ function Navigation() {
         <Object>
           <Icon target="_blank" href="https://www.worldhello.us/">
             {/* <!--  Container for logo and title --> */}
-            <Logo src="/logos/worldhello.png" alt="instagram"></Logo>
+            <Logo src="/logos/helloworld.png" alt="instagram"></Logo>
           </Icon>
         </Object>
         <Object>
@@ -152,7 +152,7 @@ function Navigation() {
               <MenuImg src="/icons/close.png" alt="Close"></MenuImg>
             ) : (
               <>
-                <MenuImg src="/icons/menu.png" alt="Menu"></MenuImg>
+                <MenuImg src="/icons/menuW.png" alt="Menu"></MenuImg>
               </>
             )}
           </Menu>
