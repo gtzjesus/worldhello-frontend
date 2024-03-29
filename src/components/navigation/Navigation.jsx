@@ -10,7 +10,7 @@
 // This section has all necessary imports for this component.
 
 import styled from 'styled-components';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 // ------------------------------
 // Styled Componenets
@@ -24,13 +24,10 @@ const StyledNav = styled.nav`
   justify-content: space-between;
   // Code logic for positioning fixed in all web app + header config
   position: fixed;
-  background: var(--color-black);
+  background: transparent;
   width: var(--width-full-window);
   z-index: var(--z-top);
   height: var(--height-navigation);
-
-  // Padd from top of web app, too close to edges
-  padding-top: var(--padding-xxsmall);
 `;
 
 const MenuImg = styled.img``;
@@ -101,6 +98,9 @@ const MenuContainer = styled.div`
   height: 100vh;
   transition: top 0.5s ease-out; /* Updated transition with ease-out timing function */
   z-index: 999;
+
+  background-color: ${({ isScrolled }) =>
+    isScrolled ? 'black' : 'transparent'};
 `;
 
 const MenuContent = styled.div`
@@ -128,11 +128,27 @@ const MenuItem = styled.a`
 function Navigation() {
   // Set states for menu commands from UI
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
 
   // Helper function to toggle menu
   function toggleMenu() {
     setIsMenuOpen(!isMenuOpen);
   }
+
+  // useEffect to handle our scroll events
+  useEffect(() => {
+    // Create function to handle scroll
+    function handleScroll() {
+      const scrollTop = window.scrollY;
+      setIsScrolled(scrollTop > 0);
+    }
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
 
   return (
     <>
@@ -141,7 +157,7 @@ function Navigation() {
         <Object>
           <Icon target="_blank" href="https://www.worldhello.us/">
             {/* <!--  Container for logo and title --> */}
-            <Logo src="/logos/helloworld.png" alt="instagram"></Logo>
+            <Logo src="/logos/worldhello.png" alt="instagram"></Logo>
           </Icon>
         </Object>
         <Object>
@@ -152,7 +168,7 @@ function Navigation() {
               <MenuImg src="/icons/close.png" alt="Close"></MenuImg>
             ) : (
               <>
-                <MenuImg src="/icons/menuW.png" alt="Menu"></MenuImg>
+                <MenuImg src="/icons/menu.png" alt="Menu"></MenuImg>
               </>
             )}
           </Menu>
