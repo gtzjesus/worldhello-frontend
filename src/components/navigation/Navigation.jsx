@@ -24,7 +24,7 @@ const StyledNav = styled.nav`
   justify-content: space-between;
   // Code logic for positioning fixed in all web app + header config
   position: fixed;
-  background: var(--color-white);
+  background: transparent;
   width: var(--width-full-window);
   z-index: var(--z-top);
   height: var(--height-navigation);
@@ -44,17 +44,13 @@ const Logo = styled.img`
   height: var(--font-medium);
   padding-left: var(--padding-xxsmall);
   color: white;
-  @media (min-width: 61.25em) {
-    padding: 0 var(--padding-medium) 0 0;
-  }
 `;
 
 const Menu = styled.button`
   position: relative;
   background-color: transparent;
   border: none;
-  width: 40px; /* Adjust the width as needed */
-  height: 40px; /* Adjust the height as needed */
+
   cursor: pointer;
   font-size: var(--font-xsmall);
 
@@ -80,12 +76,10 @@ const Menu = styled.button`
 
   /* Animation for the middle line */
   &.open-menu::before {
-    top: 18px;
     transform: translate(-50%, -50%) rotate(45deg);
   }
 
   &.open-menu::after {
-    top: 18px;
     transform: translate(-50%, -50%) rotate(-45deg);
   }
 `;
