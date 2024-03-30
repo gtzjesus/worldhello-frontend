@@ -9,13 +9,41 @@
 // ------------------------------
 // This section has all necessary imports for this component.
 
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 import { useEffect, useState } from 'react';
 
 // ------------------------------
 // Styled Componenets
 // ------------------------------
 // This section has all CSS styles configured for every HTML element.
+
+// Define keyframe animations
+const fadeIn = keyframes`
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+`;
+
+const slideIn = keyframes`
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+`;
+
+const rotateIn = keyframes`
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+`;
 
 const StyledNav = styled.nav`
   // Code logic to arrange children
@@ -45,61 +73,49 @@ const Logo = styled.img`
   color: white;
 `;
 
+const MenuContainer = styled.div`
+  display: ${({ isOpen }) => (isOpen ? 'block' : 'none')};
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  overflow-y: auto;
+  z-index: 999;
+  background-color: transparent;
+  animation: ${fadeIn} 0.5s ease, ${slideIn} 0.5s ease;
+`;
+
 const Menu = styled.button`
   position: relative;
   background-color: transparent;
   border: none;
-
   cursor: pointer;
   font-size: var(--font-xsmall);
-
   ::before,
   ::after {
     content: '';
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
-    width: 80%; /* Adjust the width of the lines */
-    height: 3px; /* Adjust the height of the lines */
-    background-color: white; /* Adjust the color of the lines */
+    width: 80%;
+    height: 3px;
+    background-color: white;
     transition: all 0.3s ease;
   }
-
   ::before {
     top: 12px;
   }
-
   ::after {
     top: 24px;
   }
-
-  /* Animation for the middle line */
   &.open-menu::before {
     transform: translate(-50%, -50%) rotate(45deg);
   }
-
   &.open-menu::after {
     transform: translate(-50%, -50%) rotate(-45deg);
   }
-`;
-
-const MenuContainer = styled.div`
-  display: ${({ isOpen }) => (isOpen ? 'block' : 'none')};
-  position: fixed;
-  top: ${({ isOpen }) =>
-    isOpen ? '0' : '-100%'}; /* Start off-screen when closed */
-  left: 0;
-  width: 100%;
-  height: 100vh;
-  overflow-y: hidden;
-  transition: transform 0.5s ease, opacity 0.5s ease; /* Transition transform and opacity */
-  z-index: 999;
-  background-color: transparent;
-  opacity: ${({ isOpen }) =>
-    isOpen ? 1 : 0}; /* Set opacity to 0 when closed */
-  transform: translateY(
-    ${({ isOpen }) => (isOpen ? '0' : '-100%')}
-  ); /* Move from top to bottom */
+  ${({ isOpen }) => isOpen && `animation: ${rotateIn} 0.5s ease;`}
 `;
 
 const MenuContent = styled.div`
