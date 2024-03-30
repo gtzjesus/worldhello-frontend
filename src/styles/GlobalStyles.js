@@ -28,7 +28,7 @@ const GlobalStyles = createGlobalStyle`
 
         /* Line Height */
     --line-height-xsmall: 1.5rem;
-    --line-height-small: 3rem;
+    --line-height-small: 2.5rem;
     --line-height-medium: 3.5rem;
     --line-height-large: 6rem;
 

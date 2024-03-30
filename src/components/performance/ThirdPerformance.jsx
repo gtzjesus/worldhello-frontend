@@ -32,6 +32,7 @@ const Intro = styled.div`
   // Code logic to style div element
   font-size: var(--font-medium);
   padding: var(--padding-small) 0;
+  text-transform: uppercase;
 `;
 
 const Img = styled.img`
@@ -39,9 +40,11 @@ const Img = styled.img`
 `;
 
 const Description = styled.span`
-  font-size: var(--font-xsmall);
-  letter-spacing: var(--spacing-subtitle);
-  line-height: var(--line-height-xsmall);
+  font-size: var(--font-xxxsmall);
+  letter-spacing: 0.2rem;
+  line-height: var(--line-height-small);
+  text-transform: uppercase;
+  opacity: 0.75;
 `;
 
 // ------------------------------
@@ -59,8 +62,11 @@ function ThirdPerformance() {
           {/* <!-- All necessary info --> */}
 
           <Img src="/backgrounds/brand.webp" alt="brand"></Img>
-          <Intro> Performance all across </Intro>
-          <Description></Description>
+          <Intro>Product spotlights</Intro>
+          <Description>
+            By delivering a seamless and responsive experience to every visitor
+            .
+          </Description>
         </Information>
         {/* <!-- Information Big Container --> */}
         <Information>{/* <!-- All necessary info --> */}</Information>
