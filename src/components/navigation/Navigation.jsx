@@ -166,11 +166,11 @@ function Navigation() {
           </Menu>
         </Object>
       </StyledNav>
-      {/* <MenuContainer isOpen={isMenuOpen}>
+      <MenuContainer isOpen={isMenuOpen}>
         <MenuContent>
           <MenuItem>Contact</MenuItem>
         </MenuContent>
-      </MenuContainer> */}
+      </MenuContainer>
     </>
   );
 }
