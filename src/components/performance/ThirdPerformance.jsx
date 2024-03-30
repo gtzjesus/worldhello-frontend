@@ -32,6 +32,8 @@ const Intro = styled.div`
   // Code logic to style div element
   font-size: var(--font-medium);
   padding: var(--padding-small) 0;
+  line-height: var(--line-height-small);
+
   text-transform: uppercase;
 `;
 
@@ -63,10 +65,11 @@ function FirstPerformance() {
 
           <Img src="/backgrounds/brand.webp" alt="brand"></Img>
           <Intro>
-            Product <br /> spotlights
+            Spotlight <br /> products
           </Intro>
           <Description>
-            By delivering a seamless experience while browsing your products.
+            Deliver a seamless experience to your customers while they browse
+            your products.
           </Description>
         </Information>
         {/* <!-- Information Big Container --> */}
