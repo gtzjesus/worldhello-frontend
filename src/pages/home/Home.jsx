@@ -55,7 +55,6 @@ function Home() {
         closeModal={closeModal}
       />
       <Source />
-
       <div className="responsive-container">
         <Achievements />
         <Craft

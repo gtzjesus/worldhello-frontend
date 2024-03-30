@@ -30,7 +30,7 @@ const GridContainer = styled.div`
 `;
 
 const Title = styled.span`
-  font-size: var(--font-small);
+  font-size: var(--font-xxxsmall);
 `;
 
 const Caption = styled.span`
@@ -101,12 +101,11 @@ function Achievements() {
     <LazyLoad>
       <StyledAchievements>
         <Information>
-          <Title>World Hello</Title>
-          <br />
           <Caption>Turn that idea</Caption>
           <Caption>into a website.</Caption>
           <br />
           <br />
+          <Title>Some of our clients below</Title>
         </Information>
         <GridContainer>
           {designs.slice(0, visibleAchievements).map((design, idx) => (
