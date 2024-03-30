@@ -61,8 +61,6 @@ const StyledNav = styled.nav`
   transition: background-color 0.3s ease; /* Smooth transition for background color */
 `;
 
-const MenuImg = styled.img``;
-
 const Object = styled.div`
   padding: 0 var(--padding-small);
 `;
@@ -148,6 +146,8 @@ const MenuItem = styled.a`
   font-size: var(--font-links);
 `;
 
+const MenuImg = styled.img``;
+
 // ------------------------------
 // Component
 // ------------------------------
@@ -185,7 +185,7 @@ function Navigation() {
         <Object>
           <Icon target="_blank" href="https://www.worldhello.us/">
             {/* <!--  Container for logo and title --> */}
-            <Logo src="/logos/worldhello.png" alt="worldhello"></Logo>
+            <Logo src="/logos/helloworld.png" alt="worldhello"></Logo>
           </Icon>
         </Object>
         <Object>
@@ -196,7 +196,7 @@ function Navigation() {
               <MenuImg src="/icons/close.png" alt="Close"></MenuImg>
             ) : (
               <>
-                <MenuImg src="/icons/menuW.png" alt="Menu"></MenuImg>
+                <MenuImg src="/icons/menu.png" alt="Menu"></MenuImg>
               </>
             )}
           </Menu>
