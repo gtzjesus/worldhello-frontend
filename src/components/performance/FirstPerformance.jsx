@@ -32,6 +32,8 @@ const Intro = styled.div`
   // Code logic to style div element
   font-size: var(--font-medium);
   padding: var(--padding-small) 0;
+  line-height: var(--line-height-small);
+
   text-transform: uppercase;
 `;
 
@@ -41,8 +43,8 @@ const Img = styled.img`
 
 const Description = styled.span`
   font-size: var(--font-xxxsmall);
-  letter-spacing: 0.2rem;
-  line-height: var(--line-height-small);
+  letter-spacing: 0.15rem;
+  line-height: var(--line-height-xsmall);
   text-transform: uppercase;
   opacity: 0.75;
 `;
@@ -61,13 +63,12 @@ function FirstPerformance() {
         <Information>
           {/* <!-- All necessary info --> */}
 
-          <Img src="/backgrounds/brand.webp" alt="brand"></Img>
+          <Img src="/backgrounds/signin.webp" alt="signin"></Img>
           <Intro>
-            Product <br /> spotlights
+            Grow <br /> clientele
           </Intro>
           <Description>
-            By delivering a seamless and responsive experience to every visitor
-            .
+            Effortlessly have clients subscribe and be loyal.
           </Description>
         </Information>
         {/* <!-- Information Big Container --> */}

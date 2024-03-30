@@ -65,7 +65,7 @@ function FirstPerformance() {
 
           <Img src="/backgrounds/brand.webp" alt="brand"></Img>
           <Intro>
-            Spotlight <br /> products
+            Showcase <br /> products
           </Intro>
           <Description>
             Deliver a seamless experience to your customers while they browse

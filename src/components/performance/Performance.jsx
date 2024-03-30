@@ -26,7 +26,7 @@ const StyledPerformance = styled.div`
   background: var(--color-black);
   color: var(--color-white);
   padding: var(--padding-medium);
-  height: 100vh; /* Set the height to fill the viewport */
+  height: 75vh; /* Set the height to fill the viewport */
   overflow-y: auto; /* Enable vertical scrolling */
 `;
 
@@ -91,9 +91,9 @@ function Performance() {
     <LazyLoad>
       <StyledPerformance>
         <Information>
-          {activeComponent === 1 && <FirstPerformance />}
-          {activeComponent === 2 && <SecondPerformance />}
-          {activeComponent === 3 && <ThirdPerformance />}
+          <FirstPerformance />
+          <SecondPerformance />
+          <ThirdPerformance />
         </Information>
       </StyledPerformance>
     </LazyLoad>
