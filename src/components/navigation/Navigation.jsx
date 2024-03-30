@@ -24,7 +24,7 @@ const StyledNav = styled.nav`
   justify-content: space-between;
   // Code logic for positioning fixed in all web app + header config
   position: fixed;
-  background: transparent;
+  background: var(--color-white);
   width: var(--width-full-window);
   z-index: var(--z-top);
   height: var(--height-navigation);
@@ -174,7 +174,10 @@ function Navigation() {
           </Menu>
         </Object>
       </StyledNav>
-      <MenuContainer isOpen={isMenuOpen}>
+      <MenuContainer
+        isopen={isMenuOpen ? 'true' : 'false'}
+        isScrolled={isScrolled}
+      >
         <MenuContent>
           <MenuItem>Contact</MenuItem>
         </MenuContent>
