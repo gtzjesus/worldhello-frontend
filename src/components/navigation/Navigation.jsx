@@ -185,7 +185,7 @@ function Navigation() {
         <Object>
           <Icon target="_blank" href="https://www.worldhello.us/">
             {/* <!--  Container for logo and title --> */}
-            <Logo src="/logos/helloworld.png" alt="worldhello"></Logo>
+            <Logo src="/logos/worldhello.png" alt="worldhello"></Logo>
           </Icon>
         </Object>
         <Object>
