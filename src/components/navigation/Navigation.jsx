@@ -146,7 +146,9 @@ const MenuItem = styled.a`
   font-size: var(--font-links);
 `;
 
-const MenuImg = styled.img``;
+const MenuImg = styled.img`
+  height: 2rem;
+`;
 
 // ------------------------------
 // Component
