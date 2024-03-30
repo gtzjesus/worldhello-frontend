@@ -52,7 +52,7 @@ const StyledNav = styled.nav`
   position: fixed;
   background: ${({ isScrolled }) =>
     isScrolled
-      ? 'white'
+      ? 'var(--color-black)'
       : 'transparent'}; /* Change background based on isScrolled */
   width: var(--width-full-window);
   z-index: var(--z-top);
@@ -185,7 +185,7 @@ function Navigation() {
         <Object>
           <Icon target="_blank" href="https://www.worldhello.us/">
             {/* <!--  Container for logo and title --> */}
-            <Logo src="/logos/worldhello.png" alt="worldhello"></Logo>
+            <Logo src="/logos/helloworld.png" alt="worldhello"></Logo>
           </Icon>
         </Object>
         <Object>
@@ -196,7 +196,7 @@ function Navigation() {
               <MenuImg src="/icons/close.png" alt="Close"></MenuImg>
             ) : (
               <>
-                <MenuImg src="/icons/menu.png" alt="Menu"></MenuImg>
+                <MenuImg src="/icons/menuW.png" alt="Menu"></MenuImg>
               </>
             )}
           </Menu>
