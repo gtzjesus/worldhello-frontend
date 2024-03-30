@@ -3,7 +3,7 @@ import Navigation from '../../components/navigation/Navigation';
 import Achievements from '../../components/achievements/Achievements';
 import Source from '../../components/source/Source';
 import Trial from '../../components/trial/Trial';
-import Business from '../../components/business/Business';
+import Performance from '../../components/performance/Performance';
 import Footer from '../../components/footer/Footer';
 import Faqs from '../../components/faqs/Faqs';
 import Craft from '../../components/craft/Craft';
@@ -57,16 +57,13 @@ function Home() {
       <Source />
       <div className="responsive-container">
         <Achievements />
+        <Performance />
         <Craft
           isModalOpen={isModalOpen}
           openModal={openModal}
           closeModal={closeModal}
         />
-        <Business
-          isModalOpen={isModalOpen}
-          openModal={openModal}
-          closeModal={closeModal}
-        />
+
         <Faqs />
         <Refer
           isModalOpen={isModalOpen}

@@ -1,5 +1,5 @@
 // ------------------------------
-// File: Business.js
+// File: SecondPerformance.js
 // ------------------------------
 // Description: React component for displaying products, a digital footprint for the user to interact
 
@@ -9,16 +9,14 @@
 // This section has all necessary imports for this component.
 
 import styled from 'styled-components';
-import TriggerButton from '../../ui/buttons/TriggerButton';
 import LazyLoad from 'react-lazyload';
-import Modal from '../../ui/modals/Modal';
 
 // ------------------------------
 // Styled Componenets
 // ------------------------------
 // This section has all CSS styles configured for every HTML element.
 
-const StyledBusiness = styled.div`
+const StyledSecondPerformance = styled.div`
   background: var(--color-black);
   color: var(--color-white);
   padding: var(--padding-medium);
@@ -32,17 +30,8 @@ const Information = styled.div`
 `;
 const Intro = styled.div`
   // Code logic to style div element
-  color: var(--color-tan);
-  font-size: var(--font-xxxsmall);
-  padding: var(--padding-small) 0;
-`;
-
-const Special = styled.span`
-  color: var(--color-tan);
-`;
-
-const Title = styled.span`
   font-size: var(--font-medium);
+  padding: var(--padding-small) 0;
 `;
 
 const Img = styled.img`
@@ -50,7 +39,9 @@ const Img = styled.img`
 `;
 
 const Description = styled.span`
-  font-size: var(--font-small);
+  font-size: var(--font-xsmall);
+  letter-spacing: var(--spacing-subtitle);
+  line-height: var(--line-height-xsmall);
 `;
 
 // ------------------------------
@@ -58,37 +49,24 @@ const Description = styled.span`
 // ------------------------------
 // This section has our React Component which handles the hook data
 
-function Business({ isModalOpen, openModal, closeModal }) {
+function SecondPerformance() {
   return (
     <LazyLoad>
       {/* <!-- Main Container --> */}
-      <StyledBusiness>
+      <StyledSecondPerformance>
         {/* <!-- Information Big Container --> */}
         <Information>
           {/* <!-- All necessary info --> */}
-          <Title>
-            <Intro>[ We seek partnerships to ]</Intro>
-            <br />
-            Enhance sales, drive lead generation, and expand customer reach.
-          </Title>
+          <Intro> Performance all across </Intro>
+          <Description>Texting</Description>
           <Img src="/backgrounds/brand.webp" alt="brand"></Img>
         </Information>
         {/* <!-- Information Big Container --> */}
-        <Information>
-          {/* <!-- All necessary info --> */}
-          <Description>
-            Fully maximize the capabilities of your business with a strong
-            digital presence with <Special>WorldHello!</Special>
-            <br />
-            <br />
-            <TriggerButton openModal={openModal} text={`Click to begin`} />
-            {isModalOpen && <Modal closeModal={closeModal} />}
-          </Description>
-        </Information>
-      </StyledBusiness>
+        <Information>{/* <!-- All necessary info --> */}</Information>
+      </StyledSecondPerformance>
     </LazyLoad>
   );
 }
 
 // Export reusable Component
-export default Business;
+export default SecondPerformance;
