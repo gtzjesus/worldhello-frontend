@@ -92,7 +92,7 @@ const MenuContainer = styled.div`
   height: 100vh;
   overflow-y: hidden;
   transition: top 0.5s ease-out;
-  z-index: 999;
+  z-index: 1;
 `;
 
 const MenuContent = styled.div`
