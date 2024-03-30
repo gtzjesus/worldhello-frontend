@@ -46,17 +46,19 @@ const rotateIn = keyframes`
 `;
 
 const StyledNav = styled.nav`
-  // Code logic to arrange children
   display: flex;
   align-items: center;
   justify-content: space-between;
-  // Code logic for positioning fixed in all web app + header config
   position: fixed;
-  background: transparent;
+  background: ${({ isScrolled }) =>
+    isScrolled
+      ? 'black'
+      : 'transparent'}; /* Change background based on isScrolled */
   width: var(--width-full-window);
   z-index: var(--z-top);
   height: var(--height-navigation);
   padding-top: var(--padding-xxsmall);
+  transition: background-color 0.3s ease; /* Smooth transition for background color */
 `;
 
 const MenuImg = styled.img``;
@@ -180,7 +182,7 @@ function Navigation() {
   return (
     <>
       {/* <!-- Nav Container , the header --> */}
-      <StyledNav>
+      <StyledNav isScrolled={isScrolled}>
         <Object>
           <Icon target="_blank" href="https://www.worldhello.us/">
             {/* <!--  Container for logo and title --> */}
