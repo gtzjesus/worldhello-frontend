@@ -1,4 +1,3 @@
-import React from 'react';
 import styled from 'styled-components';
 
 const StyledFirstPerformance = styled.div`
@@ -16,7 +15,7 @@ const Information = styled.div`
 const Intro = styled.div`
   font-size: var(--font-smmd);
   padding: var(--padding-small) 0;
-  line-height: var(--line-height-small);
+  line-height: var(--line-height-xsmall);
   text-transform: uppercase;
 `;
 

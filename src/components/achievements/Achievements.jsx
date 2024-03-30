@@ -30,7 +30,7 @@ const GridContainer = styled.div`
 `;
 
 const Title = styled.span`
-  font-size: var(--font-xxxsmall);
+  font-size: var(--font-xxsmall);
 `;
 
 const Caption = styled.span`

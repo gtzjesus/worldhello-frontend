@@ -13,6 +13,7 @@ const StyledPerformance = styled.div`
   padding: var(--padding-medium);
   height: 75vh; /* Set the height to fill the viewport */
   overflow-y: auto; /* Enable vertical scrolling */
+  padding-bottom: var(--padding-xxlarge);
 `;
 
 const Information = styled.div`
