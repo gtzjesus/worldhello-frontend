@@ -56,6 +56,7 @@ const StyledNav = styled.nav`
   width: var(--width-full-window);
   z-index: var(--z-top);
   height: var(--height-navigation);
+  padding-top: var(--padding-xxsmall);
 `;
 
 const MenuImg = styled.img``;
@@ -115,7 +116,18 @@ const Menu = styled.button`
   &.open-menu::after {
     transform: translate(-50%, -50%) rotate(-45deg);
   }
-  ${({ isOpen }) => isOpen && `animation: ${rotateIn} 0.5s ease;`}
+  ${({ isOpen }) =>
+    isOpen &&
+    `
+    ::before {
+      top: 50%;
+      transform: translate(-50%, -50%) rotate(45deg);
+    }
+    ::after {
+      top: 50%;
+      transform: translate(-50%, -50%) rotate(-45deg);
+    }
+  `}
 `;
 
 const MenuContent = styled.div`
