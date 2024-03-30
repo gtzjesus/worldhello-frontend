@@ -62,7 +62,9 @@ function FirstPerformance() {
           {/* <!-- All necessary info --> */}
 
           <Img src="/backgrounds/brand.webp" alt="brand"></Img>
-          <Intro>Product spotlights</Intro>
+          <Intro>
+            Product <br /> spotlights
+          </Intro>
           <Description>
             By delivering a seamless and responsive experience to every visitor
             .

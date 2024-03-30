@@ -1,5 +1,5 @@
 // ------------------------------
-// File: ThirdPerformance.js
+// File: FirstPerformance.js
 // ------------------------------
 // Description: React component for displaying products, a digital footprint for the user to interact
 
@@ -16,7 +16,7 @@ import LazyLoad from 'react-lazyload';
 // ------------------------------
 // This section has all CSS styles configured for every HTML element.
 
-const StyledThirdPerformance = styled.div`
+const StyledFirstPerformance = styled.div`
   background: var(--color-black);
   color: var(--color-white);
   padding: var(--padding-medium);
@@ -52,28 +52,29 @@ const Description = styled.span`
 // ------------------------------
 // This section has our React Component which handles the hook data
 
-function ThirdPerformance() {
+function FirstPerformance() {
   return (
     <LazyLoad>
       {/* <!-- Main Container --> */}
-      <StyledThirdPerformance>
+      <StyledFirstPerformance>
         {/* <!-- Information Big Container --> */}
         <Information>
           {/* <!-- All necessary info --> */}
 
           <Img src="/backgrounds/brand.webp" alt="brand"></Img>
-          <Intro>Product spotlights</Intro>
+          <Intro>
+            Product <br /> spotlights
+          </Intro>
           <Description>
-            By delivering a seamless and responsive experience to every visitor
-            .
+            By delivering a seamless experience while browsing your products.
           </Description>
         </Information>
         {/* <!-- Information Big Container --> */}
         <Information>{/* <!-- All necessary info --> */}</Information>
-      </StyledThirdPerformance>
+      </StyledFirstPerformance>
     </LazyLoad>
   );
 }
 
 // Export reusable Component
-export default ThirdPerformance;
+export default FirstPerformance;

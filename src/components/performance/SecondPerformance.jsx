@@ -1,5 +1,5 @@
 // ------------------------------
-// File: SecondPerformance.js
+// File: ThirdPerformance.js
 // ------------------------------
 // Description: React component for displaying products, a digital footprint for the user to interact
 
@@ -16,7 +16,7 @@ import LazyLoad from 'react-lazyload';
 // ------------------------------
 // This section has all CSS styles configured for every HTML element.
 
-const StyledSecondPerformance = styled.div`
+const StyledThirdPerformance = styled.div`
   background: var(--color-black);
   color: var(--color-white);
   padding: var(--padding-medium);
@@ -32,6 +32,7 @@ const Intro = styled.div`
   // Code logic to style div element
   font-size: var(--font-medium);
   padding: var(--padding-small) 0;
+  text-transform: uppercase;
 `;
 
 const Img = styled.img`
@@ -39,9 +40,11 @@ const Img = styled.img`
 `;
 
 const Description = styled.span`
-  font-size: var(--font-xsmall);
-  letter-spacing: var(--spacing-subtitle);
-  line-height: var(--line-height-xsmall);
+  font-size: var(--font-xxxsmall);
+  letter-spacing: 0.2rem;
+  line-height: var(--line-height-small);
+  text-transform: uppercase;
+  opacity: 0.75;
 `;
 
 // ------------------------------
@@ -49,24 +52,29 @@ const Description = styled.span`
 // ------------------------------
 // This section has our React Component which handles the hook data
 
-function SecondPerformance() {
+function ThirdPerformance() {
   return (
     <LazyLoad>
       {/* <!-- Main Container --> */}
-      <StyledSecondPerformance>
+      <StyledThirdPerformance>
         {/* <!-- Information Big Container --> */}
         <Information>
           {/* <!-- All necessary info --> */}
-          <Intro> Performance all across </Intro>
-          <Description></Description>
-          <Img src="/backgrounds/brand.webp" alt="brand"></Img>
+
+          <Img src="/backgrounds/signin.webp" alt="signin"></Img>
+          <Intro>
+            Grow <br /> clientele
+          </Intro>
+          <Description>
+            Effortlessly have clients subscribe and be loyal.
+          </Description>
         </Information>
         {/* <!-- Information Big Container --> */}
         <Information>{/* <!-- All necessary info --> */}</Information>
-      </StyledSecondPerformance>
+      </StyledThirdPerformance>
     </LazyLoad>
   );
 }
 
 // Export reusable Component
-export default SecondPerformance;
+export default ThirdPerformance;
