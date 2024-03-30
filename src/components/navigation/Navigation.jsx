@@ -93,7 +93,6 @@ const MenuContainer = styled.div`
   overflow-y: hidden;
   transition: top 0.5s ease-out;
   z-index: 999;
-  background-color: transparent; /* Ensure background is transparent */
 `;
 
 const MenuContent = styled.div`
@@ -167,11 +166,11 @@ function Navigation() {
           </Menu>
         </Object>
       </StyledNav>
-      <MenuContainer isOpen={isMenuOpen}>
+      {/* <MenuContainer isOpen={isMenuOpen}>
         <MenuContent>
           <MenuItem>Contact</MenuItem>
         </MenuContent>
-      </MenuContainer>
+      </MenuContainer> */}
     </>
   );
 }
