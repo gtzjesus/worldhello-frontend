@@ -25,8 +25,8 @@ const Img = styled.img`
 
 const Description = styled.span`
   font-size: var(--font-xxxsmall);
-  letter-spacing: 0.15rem;
-  line-height: var(--line-height-xsmall);
+  letter-spacing: 0.05rem;
+  line-height: var(--line-height-xxsmall);
   text-transform: uppercase;
   opacity: 0.75;
 `;
