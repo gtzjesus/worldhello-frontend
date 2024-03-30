@@ -92,13 +92,13 @@ const Menu = styled.button`
 
 const MenuContainer = styled.div`
   position: fixed;
-  top: ${({ isOpen }) => (isOpen ? '0' : '-100%')}; /* Adjusted top property */
+  top: ${({ isOpen }) => (isOpen ? '0' : '-100%')};
   left: 0;
   width: 100%;
-  height: 100vh;
-  transition: top 0.5s ease-out; /* Updated transition with ease-out timing function */
+  height: 100vh; /* Maintain full height */
+  overflow-y: hidden; /* Hide any overflowing content */
+  transition: top 0.5s ease-out;
   z-index: 999;
-
   background-color: ${({ isScrolled }) =>
     isScrolled ? 'black' : 'transparent'};
 `;
@@ -174,10 +174,7 @@ function Navigation() {
           </Menu>
         </Object>
       </StyledNav>
-      <MenuContainer
-        isopen={isMenuOpen ? 'true' : 'false'}
-        isScrolled={isScrolled}
-      >
+      <MenuContainer isOpen={isMenuOpen}>
         <MenuContent>
           <MenuItem>Contact</MenuItem>
         </MenuContent>
