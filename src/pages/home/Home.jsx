@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 import Navigation from '../../components/navigation/Navigation';
 import Achievements from '../../components/achievements/Achievements';
 import Source from '../../components/source/Source';
@@ -11,9 +11,7 @@ import Refer from '../../components/refer/Refer';
 import Landing from '../../components/landing/Landing';
 
 function Home() {
-  // GRAB STATE for navigation scroll
   const [header, setHeader] = useState(false);
-  // GRAB STATE for opening/closing modal component
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   const openModal = () => {
@@ -36,7 +34,6 @@ function Home() {
     };
   }, [isModalOpen]);
 
-  // Function TO change state on scroll
   const changeHeader = () => {
     if (window.scrollY >= 40) {
       setHeader(true);
@@ -44,8 +41,32 @@ function Home() {
       setHeader(false);
     }
   };
-  // CHECK for scroll with event listener
-  window.addEventListener('scroll', changeHeader);
+
+  const craftRef = useRef(null);
+  const achievementsRef = useRef(null);
+
+  useEffect(() => {
+    window.addEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
+  const handleScroll = () => {
+    const scrollPosition = window.scrollY;
+    const craftOffset = craftRef.current.offsetTop;
+    const achievementsOffset = achievementsRef.current.offsetTop;
+
+    // Check if the user has scrolled past the Craft section
+    if (scrollPosition >= craftOffset && scrollPosition < achievementsOffset) {
+      // Smooth scroll to the Achievements section
+      window.scrollTo({
+        top: achievementsOffset,
+        behavior: 'smooth',
+      });
+    }
+  };
+
   return (
     <>
       <Navigation />
@@ -56,14 +77,9 @@ function Home() {
       />
       <Source />
       <div className="responsive-container">
-        <Achievements />
+        <Achievements ref={achievementsRef} />
         <Performance />
-        <Craft
-          isModalOpen={isModalOpen}
-          openModal={openModal}
-          closeModal={closeModal}
-        />
-
+        <Craft ref={craftRef} />
         <Faqs />
         <Refer
           isModalOpen={isModalOpen}
@@ -75,7 +91,6 @@ function Home() {
           openModal={openModal}
           closeModal={closeModal}
         />
-
         <Footer />
       </div>
     </>

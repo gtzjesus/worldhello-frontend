@@ -1,5 +1,5 @@
 // ------------------------------
-// File: Business.js
+// File: ThirdPerformance.js
 // ------------------------------
 // Description: React component for displaying products, a digital footprint for the user to interact
 
@@ -16,7 +16,7 @@ import LazyLoad from 'react-lazyload';
 // ------------------------------
 // This section has all CSS styles configured for every HTML element.
 
-const StyledBusiness = styled.div`
+const StyledThirdPerformance = styled.div`
   background: var(--color-black);
   color: var(--color-white);
   padding: var(--padding-medium);
@@ -30,16 +30,8 @@ const Information = styled.div`
 `;
 const Intro = styled.div`
   // Code logic to style div element
-  font-size: var(--font-xxxsmall);
-  padding: var(--padding-small) 0;
-`;
-
-const Special = styled.span`
-  color: var(--color-tan);
-`;
-
-const Title = styled.span`
   font-size: var(--font-medium);
+  padding: var(--padding-small) 0;
 `;
 
 const Img = styled.img`
@@ -47,7 +39,9 @@ const Img = styled.img`
 `;
 
 const Description = styled.span`
-  font-size: var(--font-small);
+  font-size: var(--font-xsmall);
+  letter-spacing: var(--spacing-subtitle);
+  line-height: var(--line-height-xsmall);
 `;
 
 // ------------------------------
@@ -55,33 +49,25 @@ const Description = styled.span`
 // ------------------------------
 // This section has our React Component which handles the hook data
 
-function Business() {
+function ThirdPerformance() {
   return (
     <LazyLoad>
       {/* <!-- Main Container --> */}
-      <StyledBusiness>
+      <StyledThirdPerformance>
         {/* <!-- Information Big Container --> */}
         <Information>
           {/* <!-- All necessary info --> */}
-          <Title>
-            <Intro>We seek partnerships to </Intro>
-            <br />
-            Enhance sales, drive lead generation, and expand customer reach.
-          </Title>
-          <Img src="/backgrounds/landing.webp" alt="brand"></Img>
+
+          <Img src="/backgrounds/brand.webp" alt="brand"></Img>
+          <Intro> Performance all across </Intro>
+          <Description></Description>
         </Information>
         {/* <!-- Information Big Container --> */}
-        <Information>
-          {/* <!-- All necessary info --> */}
-          <Description>
-            Fully maximize the capabilities of your business with a strong
-            digital presence with <Special>WorldHello!</Special>
-          </Description>
-        </Information>
-      </StyledBusiness>
+        <Information>{/* <!-- All necessary info --> */}</Information>
+      </StyledThirdPerformance>
     </LazyLoad>
   );
 }
 
 // Export reusable Component
-export default Business;
+export default ThirdPerformance;

@@ -58,7 +58,7 @@ function SecondPerformance() {
         <Information>
           {/* <!-- All necessary info --> */}
           <Intro> Performance all across </Intro>
-          <Description>Texting</Description>
+          <Description></Description>
           <Img src="/backgrounds/brand.webp" alt="brand"></Img>
         </Information>
         {/* <!-- Information Big Container --> */}
