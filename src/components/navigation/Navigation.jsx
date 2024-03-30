@@ -187,7 +187,7 @@ function Navigation() {
         <Object>
           <Icon target="_blank" href="https://www.worldhello.us/">
             {/* <!--  Container for logo and title --> */}
-            <Logo src="/logos/helloworld.png" alt="worldhello"></Logo>
+            <Logo src="/logos/helloworld.webp" alt="worldhello"></Logo>
           </Icon>
         </Object>
         <Object>
@@ -195,10 +195,10 @@ function Navigation() {
           <Menu onClick={toggleMenu}>
             {' '}
             {isMenuOpen ? (
-              <MenuImg src="/icons/close.png" alt="Close"></MenuImg>
+              <MenuImg src="/icons/close.webp" alt="Close"></MenuImg>
             ) : (
               <>
-                <MenuImg src="/icons/menu.png" alt="Menu"></MenuImg>
+                <MenuImg src="/icons/menu.webp" alt="Menu"></MenuImg>
               </>
             )}
           </Menu>
