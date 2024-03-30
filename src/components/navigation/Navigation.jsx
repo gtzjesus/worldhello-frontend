@@ -85,14 +85,17 @@ const Menu = styled.button`
 `;
 
 const MenuContainer = styled.div`
+  display: ${({ isOpen }) =>
+    isOpen ? 'block' : 'none'}; /* Show or hide based on isOpen state */
   position: fixed;
-  top: ${({ isOpen }) => (isOpen ? '0' : '-100%')};
+  top: 0;
   left: 0;
   width: 100%;
   height: 100vh;
   overflow-y: hidden;
   transition: top 0.5s ease-out;
-  z-index: 1;
+  z-index: 999;
+  background-color: transparent;
 `;
 
 const MenuContent = styled.div`
