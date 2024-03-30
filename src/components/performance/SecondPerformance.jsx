@@ -1,4 +1,3 @@
-import React from 'react';
 import styled from 'styled-components';
 
 const StyledSecondPerformance = styled.div`
@@ -14,9 +13,9 @@ const Information = styled.div`
 `;
 
 const Intro = styled.div`
-  font-size: var(--font-medium);
+  font-size: var(--font-smmd);
   padding: var(--padding-small) 0;
-  line-height: var(--line-height-small);
+  line-height: var(--line-height-xsmall);
   text-transform: uppercase;
 `;
 
@@ -26,8 +25,8 @@ const Img = styled.img`
 
 const Description = styled.span`
   font-size: var(--font-xxxsmall);
-  letter-spacing: 0.15rem;
-  line-height: var(--line-height-xsmall);
+  letter-spacing: 0.05rem;
+  line-height: var(--line-height-xxsmall);
   text-transform: uppercase;
   opacity: 0.75;
 `;
@@ -41,8 +40,7 @@ function SecondPerformance({ handleScrollToSecond }) {
           Showcase <br /> products
         </Intro>
         <Description>
-          Deliver a seamless experience to your customers while they browse your
-          products.
+          Deliver a seamless experience while customers browse your products.
         </Description>
       </Information>
     </StyledSecondPerformance>

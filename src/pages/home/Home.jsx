@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useRef } from 'react';
+import { useEffect, useState, useRef } from 'react';
 import Navigation from '../../components/navigation/Navigation';
 import Achievements from '../../components/achievements/Achievements';
 import Source from '../../components/source/Source';
@@ -11,7 +11,6 @@ import Refer from '../../components/refer/Refer';
 import Landing from '../../components/landing/Landing';
 
 function Home() {
-  const [header, setHeader] = useState(false);
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   const openModal = () => {
@@ -33,14 +32,6 @@ function Home() {
       document.body.classList.remove('modal-open');
     };
   }, [isModalOpen]);
-
-  const changeHeader = () => {
-    if (window.scrollY >= 40) {
-      setHeader(true);
-    } else {
-      setHeader(false);
-    }
-  };
 
   const craftRef = useRef(null);
   const achievementsRef = useRef(null);

@@ -40,7 +40,8 @@ function FirstPerformance({ handleScrollToSecond }) {
           Grow <br /> clientele
         </Intro>
         <Description>
-          Effortlessly have clients subscribe and be loyal.
+          Effortlessly have clients subscribe and remain loyal, paying
+          customers.
         </Description>
       </Information>
     </StyledFirstPerformance>
