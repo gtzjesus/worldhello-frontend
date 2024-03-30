@@ -42,7 +42,6 @@ const Icon = styled.a`
 
 const Logo = styled.img`
   height: var(--font-medium);
-  padding-left: var(--padding-xxsmall);
   color: white;
 `;
 
@@ -85,17 +84,22 @@ const Menu = styled.button`
 `;
 
 const MenuContainer = styled.div`
-  display: ${({ isOpen }) =>
-    isOpen ? 'block' : 'none'}; /* Show or hide based on isOpen state */
+  display: ${({ isOpen }) => (isOpen ? 'block' : 'none')};
   position: fixed;
-  top: 0;
+  top: ${({ isOpen }) =>
+    isOpen ? '0' : '-100%'}; /* Start off-screen when closed */
   left: 0;
   width: 100%;
   height: 100vh;
   overflow-y: hidden;
-  transition: top 0.5s ease-out;
+  transition: transform 0.5s ease, opacity 0.5s ease; /* Transition transform and opacity */
   z-index: 999;
   background-color: transparent;
+  opacity: ${({ isOpen }) =>
+    isOpen ? 1 : 0}; /* Set opacity to 0 when closed */
+  transform: translateY(
+    ${({ isOpen }) => (isOpen ? '0' : '-100%')}
+  ); /* Move from top to bottom */
 `;
 
 const MenuContent = styled.div`
