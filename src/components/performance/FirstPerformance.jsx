@@ -14,7 +14,7 @@ const Information = styled.div`
 `;
 
 const Intro = styled.div`
-  font-size: var(--font-medium);
+  font-size: var(--font-smmd);
   padding: var(--padding-small) 0;
   line-height: var(--line-height-small);
   text-transform: uppercase;
