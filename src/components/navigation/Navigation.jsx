@@ -26,6 +26,7 @@ const StyledNav = styled.nav`
   position: fixed;
   background: transparent;
   width: var(--width-full-window);
+  z-index: var(--z-top);
   height: var(--height-navigation);
 `;
 
@@ -88,10 +89,11 @@ const MenuContainer = styled.div`
   top: ${({ isOpen }) => (isOpen ? '0' : '-100%')};
   left: 0;
   width: 100%;
-  height: 100vh; /* Maintain full height */
-  overflow-y: hidden; /* Hide any overflowing content */
+  height: 100vh;
+  overflow-y: hidden;
   transition: top 0.5s ease-out;
   z-index: 999;
+  background-color: transparent; /* Ensure background is transparent */
 `;
 
 const MenuContent = styled.div`
