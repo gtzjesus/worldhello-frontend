@@ -40,7 +40,7 @@ function SecondPerformance({ handleScrollToSecond }) {
           Showcase <br /> products
         </Intro>
         <Description>
-          Deliver a seamless experience while customers browse your products.
+          Deliver a unique experience while customers browse your products.
         </Description>
       </Information>
     </StyledSecondPerformance>

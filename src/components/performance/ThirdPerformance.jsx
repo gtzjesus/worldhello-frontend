@@ -40,7 +40,7 @@ function ThirdPerformance({ handleScrollToThird }) {
           Collect <br /> payments
         </Intro>
         <Description>
-          Monetize your products with a revenue-generating platform.
+          Monetize your products or services with a revenue-generating platform.
         </Description>
       </Information>
     </StyledThirdPerformance>
