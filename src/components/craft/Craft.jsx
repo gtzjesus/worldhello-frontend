@@ -1,7 +1,8 @@
 // ------------------------------
 // File: Craft.js
 // ------------------------------
-// Description: A React Component a crafted website using SEO, designs, and data
+// Description: React component for displaying Craft page (first thing USER sees).
+// ------------------------------
 
 // ------------------------------
 // Imports
@@ -17,66 +18,73 @@ import Modal from '../../ui/modals/Modal';
 // Styled Componenets
 // ------------------------------
 // This section has all CSS styles configured for every HTML element.
+
 const StyledCraft = styled.div`
-  // Code logic for arranging children + styles
-  display: flex;
-  flex-direction: column;
-  background: var(--color-tan);
-  padding: var(--padding-medium);
-  color: var(--color-black);
+  // Code logic for setting the background
+  // Design background from Figma software
+  background: url('backgrounds/craft.webp');
+  background-size: cover;
+
+  // Code logic for covering full-screen devices
+  min-height: 100vh;
+
+  z-index: var(--z-top);
 `;
 
-const Information = styled.div`
-  // Code logic for arranging children
+const Hook = styled.div`
+  // Code logic for positioning all information inside our hook
+  position: absolute;
   display: flex;
   flex-direction: column;
-  gap: var(--gap-medium);
+  justify-content: center;
+  padding: var(--height-navigation-padding) var(--padding-small);
 `;
 
 const Title = styled.span`
-  font-size: var(--font-medium);
+  // Code logic for title element
+  font-size: var(--font-xlarge);
+  letter-spacing: var(--spacing-title);
+  line-height: var(--line-height-medium);
+  // Code logic shadow beneath text (more visibility)
+  text-shadow: var(--text-shadow-font);
+  text-transform: uppercase;
+  overflow: hidden;
 `;
 
-const Description = styled.span`
-  font-size: var(--font-medium);
-`;
-
-const MiniDescription = styled.span`
+const Subtitle = styled.span`
+  // Code logic for subtitle element
   font-size: var(--font-xsmall);
-`;
-
-const Img = styled.img`
-  padding: var(--padding-medium) 0;
+  letter-spacing: var(--spacing-subtitle);
+  line-height: var(--line-height-xsmall);
 `;
 
 // ------------------------------
 // Component
 // ------------------------------
-// This section has our React Component which displays our figma design + information
+// This section has our React Component which handles the hook data
+
 function Craft({ isModalOpen, openModal, closeModal }) {
   return (
     <LazyLoad>
       {/* <!-- Main Container --> */}
       <StyledCraft>
-        {/* <!-- Information Container (need 2 for responsiveness) --> */}
-        <Information>
-          <Title>
-            Crafting websites with high conversion rates, <br />
-          </Title>
-        </Information>
-
-        {/* <!-- Information Container (need 2 for responsiveness) --> */}
-        <Information>
-          <Img src="/backgrounds/craft.webp" alt="grow"></Img>
-          <Description>Join us and grow!</Description>
-          <MiniDescription>
-            Expand your business by harnessing the full advantages of our
-            combined resources and extensive experience.
-          </MiniDescription>
+        {/* <!-- Hook Container --> */}
+        <Hook>
+          {/* TODO: <!-- Span Elements Vertically Messy Implementation --> */}
+          <Title>Web</Title>
+          <Title>Dev</Title>
+          <Title>Agency</Title>
           <br />
-          <TriggerButton openModal={openModal} text={`send us a message`} />
-          {isModalOpen && <Modal closeModal={closeModal} />}
-        </Information>
+          <br />
+          <br />
+          <br />
+          <br />
+          <Subtitle>Get a </Subtitle>
+          <Subtitle>website</Subtitle>
+          <Subtitle>that transforms</Subtitle>
+          <Subtitle>your visitors</Subtitle>
+          <Subtitle>into customers.</Subtitle>
+        </Hook>
       </StyledCraft>
     </LazyLoad>
   );
