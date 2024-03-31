@@ -1,5 +1,4 @@
-// Performance Component (Parent)
-import React, { useState, useRef, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import styled from 'styled-components';
 import LazyLoad from 'react-lazyload';
 import FirstPerformance from './FirstPerformance';
@@ -10,8 +9,9 @@ const StyledPerformance = styled.div`
   background: var(--color-black);
   color: var(--color-white);
   padding: var(--padding-medium);
-  height: 75vh;
-  overflow: hidden;
+  height: 100vh; /* Adjusted height */
+  overflow-y: auto; /* Enable vertical scrolling */
+  scroll-behavior: smooth; /* Add smooth scroll behavior */
 `;
 
 const Information = styled.div`
@@ -23,26 +23,31 @@ const Information = styled.div`
 function Performance() {
   const [activeSection, setActiveSection] = useState(0);
   const sectionsRef = useRef([]);
-  const scrollToSection = (index) => {
-    setActiveSection(index);
-    sectionsRef.current[index].scrollIntoView({ behavior: 'smooth' });
-  };
-
-  const handleScroll = () => {
-    const windowHeight = window.innerHeight;
-    const scrollPosition = window.scrollY;
-    const activeIndex = Math.floor(
-      (scrollPosition + windowHeight / 2) / windowHeight
-    );
-    setActiveSection(activeIndex);
-  };
 
   useEffect(() => {
+    const handleScroll = () => {
+      const windowHeight = window.innerHeight;
+      const scrollPosition = window.scrollY;
+      const activeIndex = Math.floor(
+        (scrollPosition + windowHeight / 2) / windowHeight
+      );
+      setActiveSection(activeIndex);
+    };
+
     window.addEventListener('scroll', handleScroll);
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
   }, []);
+
+  const scrollToSection = (index) => {
+    if (sectionsRef.current[index]) {
+      sectionsRef.current[index].scrollIntoView({
+        behavior: 'smooth',
+        block: 'start',
+      });
+    }
+  };
 
   return (
     <LazyLoad>
