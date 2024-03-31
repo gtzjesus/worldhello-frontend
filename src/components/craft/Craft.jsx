@@ -23,12 +23,10 @@ const StyledCraft = styled.div`
   // Code logic for setting the background
   // Design background from Figma software
   background: url('backgrounds/craft.webp');
-  background-size: cover;
-
+  background-size: contain;
+  background-repeat: no-repeat;
   // Code logic for covering full-screen devices
-  min-height: 100vh;
-
-  z-index: var(--z-top);
+  height: 100vh;
 `;
 
 const Hook = styled.div`
@@ -42,9 +40,8 @@ const Hook = styled.div`
 
 const Title = styled.span`
   // Code logic for title element
-  font-size: var(--font-xlarge);
+  font-size: var(--font-large);
   letter-spacing: var(--spacing-title);
-  line-height: var(--line-height-medium);
   // Code logic shadow beneath text (more visibility)
   text-shadow: var(--text-shadow-font);
   text-transform: uppercase;
@@ -53,9 +50,9 @@ const Title = styled.span`
 
 const Subtitle = styled.span`
   // Code logic for subtitle element
-  font-size: var(--font-xsmall);
+  font-size: var(--font-medium);
   letter-spacing: var(--spacing-subtitle);
-  line-height: var(--line-height-xsmall);
+  line-height: var(--line-height-small);
 `;
 
 // ------------------------------
@@ -63,7 +60,7 @@ const Subtitle = styled.span`
 // ------------------------------
 // This section has our React Component which handles the hook data
 
-function Craft({ isModalOpen, openModal, closeModal }) {
+function Craft() {
   return (
     <LazyLoad>
       {/* <!-- Main Container --> */}
@@ -71,19 +68,16 @@ function Craft({ isModalOpen, openModal, closeModal }) {
         {/* <!-- Hook Container --> */}
         <Hook>
           {/* TODO: <!-- Span Elements Vertically Messy Implementation --> */}
-          <Title>Web</Title>
-          <Title>Dev</Title>
-          <Title>Agency</Title>
+          <Title>Join us</Title>
+
           <br />
           <br />
           <br />
           <br />
           <br />
-          <Subtitle>Get a </Subtitle>
-          <Subtitle>website</Subtitle>
-          <Subtitle>that transforms</Subtitle>
-          <Subtitle>your visitors</Subtitle>
-          <Subtitle>into customers.</Subtitle>
+          <Subtitle>
+            Expand your business by harnessing our combined resources{' '}
+          </Subtitle>
         </Hook>
       </StyledCraft>
     </LazyLoad>
