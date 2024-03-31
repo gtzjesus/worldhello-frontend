@@ -1,57 +1,38 @@
-// ------------------------------
-// File: Source.js
-// ------------------------------
-// Description: React component for our source being displayed
-// ------------------------------
-// Figma Design.
-// ------------------------------
-// LazyLoading from React for optimization (images & web app loading time).
-// ------------------------------
-// Global Styles from /src/styles/ used for global variables.
-
-// ------------------------------
-// Imports
-// ------------------------------
-// This section has all necessary imports for this component.
-
 import styled from 'styled-components';
-
 import LazyLoad from 'react-lazyload';
 import { useEffect, useRef } from 'react';
 
-// ------------------------------
-// Styled Componenets
-// ------------------------------
-// This section has all CSS styles configured for every HTML element.
 const StyledSource = styled.div`
   position: relative;
   overflow: hidden;
-  height: 75vh; /* Adjust the height as needed */
+  height: 75vh;
   color: var(--color-white);
 `;
 
 const Background = styled.div`
   position: absolute;
   width: 100%;
-  height: 100%; /* Set height to 100% */
+  height: 100%;
   background-image: url('/backgrounds/source.webp');
-  background-size: cover; /* Adjust to cover the entire area */
+  background-size: cover;
   background-repeat: no-repeat;
 `;
 
 const Information = styled.div`
   position: absolute;
-  top: 50%; /* Position the content vertically in the middle */
-  left: 50%; /* Position the content horizontally in the middle */
-  transform: translate(-50%, -50%); /* Center the content */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   z-index: 1;
   display: flex;
   flex-direction: column;
-  text-align: center; /* Center-align text */
+  text-align: center;
 `;
 
 const Title = styled.span`
   font-size: var(--font-large);
+  font-weight: bold; /* Add font weight for emphasis */
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5); /* Add a subtle text shadow */
 `;
 
 const Last = styled.div`
@@ -59,7 +40,8 @@ const Last = styled.div`
 `;
 
 const Ending = styled.span`
-  font-size: var(--font-xsmall);
+  font-size: var(--font-smmd); /* Increase font size for readability */
+  line-height: 1.5; /* Increase line spacing */
 `;
 
 function Source() {
@@ -69,7 +51,7 @@ function Source() {
     const handleScroll = () => {
       const scrollPosition = window.scrollY;
       backgroundRef.current.style.transform = `translateY(-${
-        scrollPosition * 0.2 /* Adjust the multiplier to slow down the effect */
+        scrollPosition * 0.2
       }px)`;
     };
 
@@ -87,7 +69,7 @@ function Source() {
         <Information>
           <Title>Be seen</Title>
           <Last>
-            <Ending>With a website accessable all over the world.</Ending>
+            <Ending>With a website accessible all over the world.</Ending>
           </Last>
         </Information>
       </StyledSource>
