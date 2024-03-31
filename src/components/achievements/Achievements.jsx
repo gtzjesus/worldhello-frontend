@@ -22,6 +22,7 @@ import { DesignsContext } from '../../context/DesignsContext';
 const StyledAchievements = styled.div`
   color: var(--color-white);
   overflow: hidden;
+  padding-bottom: var(--padding-xlarge);
 `;
 
 const GridContainer = styled.div`

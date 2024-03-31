@@ -1,4 +1,3 @@
-import { useRef } from 'react';
 import styled from 'styled-components';
 import LazyLoad from 'react-lazyload';
 
@@ -23,27 +22,13 @@ const Information = styled.div`
 `;
 
 function Performance() {
-  const secondPerformanceRef = useRef(null);
-  const thirdPerformanceRef = useRef(null);
-
-  const handleScrollToSecond = () => {
-    secondPerformanceRef.current.scrollIntoView({ behavior: 'smooth' });
-  };
-
-  const handleScrollToThird = () => {
-    thirdPerformanceRef.current.scrollIntoView({ behavior: 'smooth' });
-  };
-
   return (
     <LazyLoad>
       <StyledPerformance>
         <Information>
-          <FirstPerformance handleScrollToSecond={handleScrollToSecond} />
-          <SecondPerformance
-            ref={secondPerformanceRef}
-            handleScrollToThird={handleScrollToThird}
-          />
-          <ThirdPerformance ref={thirdPerformanceRef} />
+          <FirstPerformance />
+          <SecondPerformance />
+          <ThirdPerformance />
         </Information>
       </StyledPerformance>
     </LazyLoad>

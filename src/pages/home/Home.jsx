@@ -44,7 +44,6 @@ function Home() {
       <Source />
       <div className="responsive-container">
         <Performance />
-
         <Achievements />
         <Craft />
         <Faqs />
