@@ -12,6 +12,7 @@ const StyledModal = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  z-index: var(--z-toppest);
 `;
 
 const ModalContent = styled.div`

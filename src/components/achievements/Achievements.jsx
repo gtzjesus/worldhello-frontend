@@ -34,6 +34,12 @@ const Title = styled.span`
   font-size: var(--font-xxsmall);
 `;
 
+const Learn = styled.a`
+  font-size: var(--font-xxxsmall);
+  color: var(--color-link);
+  cursor: pointer;
+`;
+
 const Caption = styled.span`
   font-size: var(--font-medium);
 `;
@@ -107,13 +113,8 @@ function Achievements() {
 
           <Information>
             <Title>From $49/mo.</Title>
-
-            {/* <br />
-          <br />
-          <Title>Transform your clients into</Title>
-          <Title>Loyal,</Title>
-          <Title>Paying,</Title>
-          <Title>Customers.</Title> */}
+            <br />
+            <Learn>Learn more</Learn>
           </Information>
           <br />
           <br />
@@ -130,18 +131,6 @@ function Achievements() {
             <SeeMoreButton onClick={handleSeeMore}>See more</SeeMoreButton>
           </Additional>
         )}
-        {/* <Additional>
-          <StyledFinish>
-            <Title>[ our approach ]</Title>
-            Is on optimizing conversions to elevate your business&rsquo;s
-            potential for success. <br />
-            <br />
-            Transforming your clientele into loyal, paying customers through a
-            top-performing website.
-            <br />
-            <br />
-          </StyledFinish>
-        </Additional> */}
       </StyledAchievements>
     </LazyLoad>
   );

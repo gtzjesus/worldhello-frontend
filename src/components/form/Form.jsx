@@ -291,7 +291,7 @@ function Form({ closeModal }) {
       {!isSubmittionComplete && !isLoading ? (
         <ModalNav>
           <ModalTitle>What is on your mind?</ModalTitle>
-          <Close onClick={closeModal} src="/icons/close.png" />
+          <Close onClick={closeModal} src="/icons/close.webp" />
         </ModalNav>
       ) : (
         ''
