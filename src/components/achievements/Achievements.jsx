@@ -48,7 +48,7 @@ const Information = styled.div`
   display: flex;
   flex-direction: column;
   text-align: center;
-  padding: var(--padding-medium);
+  padding: var(--padding-small);
 `;
 
 const Additional = styled.div`

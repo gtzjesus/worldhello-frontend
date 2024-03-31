@@ -26,7 +26,7 @@ const StyledCraft = styled.div`
   background-size: contain;
   background-repeat: no-repeat;
   // Code logic for covering full-screen devices
-  height: 100vh;
+  height: 75vh;
 `;
 
 const Hook = styled.div`
@@ -50,9 +50,11 @@ const Title = styled.span`
 
 const Subtitle = styled.span`
   // Code logic for subtitle element
-  font-size: var(--font-medium);
-  letter-spacing: var(--spacing-subtitle);
-  line-height: var(--line-height-small);
+  font-size: var(--font-xxxsmall);
+  letter-spacing: 0.05rem;
+  line-height: var(--line-height-xxsmall);
+  text-transform: uppercase;
+  opacity: 0.75;
 `;
 
 // ------------------------------
@@ -68,15 +70,12 @@ function Craft() {
         {/* <!-- Hook Container --> */}
         <Hook>
           {/* TODO: <!-- Span Elements Vertically Messy Implementation --> */}
-          <Title>Join us</Title>
-
-          <br />
-          <br />
-          <br />
-          <br />
+          <Title>
+            Join us <Subtitle>and</Subtitle>
+          </Title>
           <br />
           <Subtitle>
-            Expand your business by harnessing our combined resources{' '}
+            Expand your business by harnessing our combined resources.
           </Subtitle>
         </Hook>
       </StyledCraft>

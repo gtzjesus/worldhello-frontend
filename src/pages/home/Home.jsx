@@ -44,8 +44,8 @@ function Home() {
       <Source />
       <div className="responsive-container">
         <Performance />
-        <Achievements />
         <Craft />
+        <Achievements />
         <Faqs />
         <Refer
           isModalOpen={isModalOpen}

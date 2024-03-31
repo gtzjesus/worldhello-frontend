@@ -53,7 +53,7 @@ const GlobalStyles = createGlobalStyle`
     --color-purple: #6B4C8A;
 
     /* Text Size */
-    --font-xxxsmall: 0.85rem;
+    --font-xxxsmall: 0.95rem;
     --font-xxsmall: 1.25rem;
     --font-xsmall: 1.35rem;
     --font-small: 1.25rem;
