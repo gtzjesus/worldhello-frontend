@@ -1,4 +1,4 @@
-import { useEffect, useState, useRef } from 'react';
+import { useEffect, useState } from 'react';
 import Navigation from '../../components/navigation/Navigation';
 import Achievements from '../../components/achievements/Achievements';
 import Source from '../../components/source/Source';
@@ -33,31 +33,6 @@ function Home() {
     };
   }, [isModalOpen]);
 
-  const craftRef = useRef(null);
-  const achievementsRef = useRef(null);
-
-  useEffect(() => {
-    window.addEventListener('scroll', handleScroll);
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, []);
-
-  const handleScroll = () => {
-    const scrollPosition = window.scrollY;
-    const craftOffset = craftRef.current.offsetTop;
-    const achievementsOffset = achievementsRef.current.offsetTop;
-
-    // Check if the user has scrolled past the Craft section
-    if (scrollPosition >= craftOffset && scrollPosition < achievementsOffset) {
-      // Smooth scroll to the Achievements section
-      window.scrollTo({
-        top: achievementsOffset,
-        behavior: 'smooth',
-      });
-    }
-  };
-
   return (
     <>
       <Navigation />
@@ -68,9 +43,10 @@ function Home() {
       />
       <Source />
       <div className="responsive-container">
-        <Achievements ref={achievementsRef} />
         <Performance />
-        <Craft ref={craftRef} />
+
+        <Achievements />
+        <Craft />
         <Faqs />
         <Refer
           isModalOpen={isModalOpen}

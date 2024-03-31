@@ -103,9 +103,21 @@ function Achievements() {
         <Information>
           <Caption>Turn that idea</Caption>
           <Caption>into a website.</Caption>
+
+          <Information>
+            <Title>From $49/mo.</Title>
+
+            {/* <br />
+          <br />
+          <Title>Transform your clients into</Title>
+          <Title>Loyal,</Title>
+          <Title>Paying,</Title>
+          <Title>Customers.</Title> */}
+          </Information>
           <br />
           <br />
-          <Title>Some of our clients below</Title>
+          <br />
+          <Title>Visit some of our clients</Title>
         </Information>
         <GridContainer>
           {designs.slice(0, visibleAchievements).map((design, idx) => (
@@ -129,17 +141,6 @@ function Achievements() {
             <br />
           </StyledFinish>
         </Additional> */}
-        <Information>
-          <Title>From $49/mo.</Title>
-          <br />
-          <br />
-          {/* <br />
-          <br />
-          <Title>Transform your clients into</Title>
-          <Title>Loyal,</Title>
-          <Title>Paying,</Title>
-          <Title>Customers.</Title> */}
-        </Information>
       </StyledAchievements>
     </LazyLoad>
   );
