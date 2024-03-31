@@ -49,9 +49,19 @@ function Performance() {
     }
   };
 
+  const handleScrollEnd = (event) => {
+    const target = event.target;
+    if (target.scrollHeight - target.scrollTop === target.clientHeight) {
+      // Reached the bottom of the component
+      target.style.overflowY = 'visible'; // Allow browser scrolling
+    } else {
+      target.style.overflowY = 'hidden'; // Disable browser scrolling
+    }
+  };
+
   return (
     <LazyLoad>
-      <StyledPerformance>
+      <StyledPerformance onScroll={handleScrollEnd}>
         <Information>
           <FirstPerformance
             ref={(el) => (sectionsRef.current[0] = el)}
