@@ -1,21 +1,9 @@
 import { useState, useEffect, useRef } from 'react';
-import styled, { keyframes } from 'styled-components';
+import styled from 'styled-components';
 import LazyLoad from 'react-lazyload';
 import FirstPerformance from './FirstPerformance';
 import SecondPerformance from './SecondPerformance';
 import ThirdPerformance from './ThirdPerformance';
-
-const fadeIn = keyframes`
-  0% { opacity: 0; }
-  10% { opacity: 1; }
-  100% { opacity: 1; }
-`;
-
-const fadeOut = keyframes`
-  0% { opacity: 1; }
-  90% { opacity: 1; }
-  100% { opacity: 0; }
-`;
 
 const StyledPerformance = styled.div`
   background: var(--color-black);
@@ -28,10 +16,6 @@ const Information = styled.div`
   display: flex;
   flex-direction: column;
   gap: var(--gap-medium);
-`;
-
-const AnimatedComponent = styled.div`
-  animation: ${({ isVisible }) => (isVisible ? fadeIn : fadeOut)} 0.5s forwards;
 `;
 
 function Performance() {
@@ -58,15 +42,9 @@ function Performance() {
     <LazyLoad>
       <StyledPerformance>
         <Information>
-          <AnimatedComponent isVisible={activeSection === 0}>
-            <FirstPerformance ref={(el) => (sectionsRef.current[0] = el)} />
-          </AnimatedComponent>
-          <AnimatedComponent isVisible={activeSection === 1}>
-            <SecondPerformance ref={(el) => (sectionsRef.current[1] = el)} />
-          </AnimatedComponent>
-          <AnimatedComponent isVisible={activeSection === 2}>
-            <ThirdPerformance ref={(el) => (sectionsRef.current[2] = el)} />
-          </AnimatedComponent>
+          <FirstPerformance ref={(el) => (sectionsRef.current[0] = el)} />
+          <SecondPerformance ref={(el) => (sectionsRef.current[1] = el)} />
+          <ThirdPerformance ref={(el) => (sectionsRef.current[2] = el)} />
         </Information>
       </StyledPerformance>
     </LazyLoad>
