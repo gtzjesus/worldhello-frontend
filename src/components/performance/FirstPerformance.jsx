@@ -13,9 +13,9 @@ const Information = styled.div`
 `;
 
 const Intro = styled.div`
-  font-size: var(--font-smmd);
+  font-size: var(--font-medium);
   padding: var(--padding-small) 0;
-  line-height: var(--line-height-xsmall);
+  line-height: var(--line-height-small);
   text-transform: uppercase;
 `;
 
@@ -24,10 +24,9 @@ const Img = styled.img`
 `;
 
 const Description = styled.span`
-  font-size: var(--font-xxxsmall);
+  font-size: var(--font-smmd);
   letter-spacing: 0.05rem;
   line-height: var(--line-height-xxsmall);
-  text-transform: uppercase;
   opacity: 0.75;
 `;
 
@@ -39,10 +38,7 @@ function FirstPerformance({ handleScrollToSecond }) {
         <Intro>
           Grow <br /> clientele
         </Intro>
-        <Description>
-          Effortlessly have clients subscribe and remain loyal, paying
-          customers.
-        </Description>
+        <Description>Effortlessly gather loyal, paying customers.</Description>
       </Information>
     </StyledFirstPerformance>
   );
