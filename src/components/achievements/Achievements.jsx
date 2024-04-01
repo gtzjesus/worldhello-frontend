@@ -81,8 +81,6 @@ function Achievements() {
 
   const firstPerformanceRef = useRef(null);
   const secondPerformanceRef = useRef(null);
-  const thirdPerformanceRef = useRef(null);
-  const fourthPerformanceRef = useRef(null);
 
   // ------------------------------
   // useEffect
@@ -103,12 +101,7 @@ function Achievements() {
     );
 
     // Observing all elements of interest
-    const elementsToObserve = [
-      firstPerformanceRef,
-      secondPerformanceRef,
-      thirdPerformanceRef,
-      fourthPerformanceRef,
-    ];
+    const elementsToObserve = [firstPerformanceRef, secondPerformanceRef];
     elementsToObserve.forEach((ref) => {
       if (ref.current) {
         observer.observe(ref.current);
@@ -143,17 +136,15 @@ function Achievements() {
       <StyledAchievements>
         <>
           <Information>
-            <div ref={firstPerformanceRef} className="hidden">
-              <Caption>Turn that idea</Caption>
-            </div>
-            <div ref={secondPerformanceRef} className="hidden">
-              <Caption>into a website.</Caption>
-            </div>
+            <Caption>Turn that idea</Caption>
+            <Caption>into a website.</Caption>
           </Information>
-          <Information>
-            <Title>From $49/mo.</Title>
-            <Learn>Learn more</Learn>
-          </Information>
+          <div ref={firstPerformanceRef} className="hidden">
+            <Information>
+              <Title>From $49/mo.</Title>
+              <Learn>Learn more</Learn>
+            </Information>
+          </div>
 
           <br />
           <br />
@@ -161,10 +152,10 @@ function Achievements() {
           <br />
           <br />
           <br />
+
           <Information>
             <Title>Visit some of our clients</Title>
           </Information>
-
           <GridContainer>
             {designs.slice(0, visibleAchievements).map((design, idx) => (
               <Design design={design} key={idx} />

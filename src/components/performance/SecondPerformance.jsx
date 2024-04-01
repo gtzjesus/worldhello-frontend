@@ -31,7 +31,6 @@ const Description = styled.span`
 `;
 
 function SecondPerformance() {
-  const sourceRef = useRef(null);
   const firstPerformanceRef = useRef(null);
   const secondPerformanceRef = useRef(null);
   const thirdPerformanceRef = useRef(null);
@@ -41,9 +40,7 @@ function SecondPerformance() {
   // ------------------------------
   // Code logic Animation for the whole app, a useEffect so that it happens once component mounts
   useEffect(() => {
-    // Grab the Intersection Observer API
     const observer = new IntersectionObserver(
-      // Check for each entry viewpoint based on user scroll
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
@@ -53,37 +50,31 @@ function SecondPerformance() {
           }
         });
       },
-      { threshold: 0.5 } // Adjust the threshold as needed
+      { threshold: 0.5 }
     );
 
-    if (sourceRef.current) {
-      observer.observe(sourceRef.current);
-    }
-    if (firstPerformanceRef.current) {
-      observer.observe(firstPerformanceRef.current);
-    }
-    if (secondPerformanceRef.current) {
-      observer.observe(secondPerformanceRef.current);
-    }
-    if (thirdPerformanceRef.current) {
-      observer.observe(thirdPerformanceRef.current);
-    }
+    // Observing all elements of interest
+    const elementsToObserve = [
+      firstPerformanceRef,
+      secondPerformanceRef,
+      thirdPerformanceRef,
+    ];
+    elementsToObserve.forEach((ref) => {
+      if (ref.current) {
+        observer.observe(ref.current);
+      }
+    });
 
+    // Cleanup function
     return () => {
-      if (sourceRef.current) {
-        observer.unobserve(sourceRef.current);
-      }
-      if (firstPerformanceRef.current) {
-        observer.unobserve(firstPerformanceRef.current);
-      }
-      if (secondPerformanceRef.current) {
-        observer.unobserve(secondPerformanceRef.current);
-      }
-      if (thirdPerformanceRef.current) {
-        observer.unobserve(thirdPerformanceRef.current);
-      }
+      elementsToObserve.forEach((ref) => {
+        if (ref.current) {
+          observer.unobserve(ref.current);
+        }
+      });
     };
   }, []);
+
   return (
     <StyledFirstPerformance>
       <div ref={firstPerformanceRef} className="hidden">
