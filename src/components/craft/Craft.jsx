@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
 import LazyLoad from 'react-lazyload';
 
@@ -20,7 +20,6 @@ const Hook = styled.div`
 const Title = styled.span`
   font-size: var(--font-large);
   letter-spacing: var(--spacing-title);
-  text-shadow: var(--text-shadow-font);
   text-transform: uppercase;
   overflow: hidden;
 `;
@@ -35,18 +34,19 @@ const Subtitle = styled.span`
 
 const SlideText = styled.span`
   font-size: var(--font-medium);
-  opacity: 0;
-  transition: 3s ease;
+  text-transform: uppercase;
+  opacity: 0.75;
+  transition: opacity 0.5s ease-in-out;
 `;
 
 function Craft() {
   const [slideIndex, setSlideIndex] = useState(0);
-  const slideTexts = ['Support', 'Data Analytics', 'Performance', 'Hosting'];
+  const slideTexts = ['Hosted', 'Supported', 'Performant', 'Unique'];
 
   useEffect(() => {
     const interval = setInterval(() => {
       setSlideIndex((prevIndex) => (prevIndex + 1) % slideTexts.length);
-    }, 2500); // Change text every 3 seconds
+    }, 3000); // Change text every 3 seconds
 
     return () => clearInterval(interval);
   }, []);
@@ -64,8 +64,12 @@ function Craft() {
             resources.
           </Subtitle>
           <br />
-          <Subtitle>such as</Subtitle>
-          <SlideText>{slideTexts[slideIndex]}</SlideText>
+          <br />
+
+          <Subtitle>With your own</Subtitle>
+          <SlideText>
+            {slideTexts[slideIndex]} <Subtitle>Website. </Subtitle>
+          </SlideText>
         </Hook>
       </StyledCraft>
     </LazyLoad>
