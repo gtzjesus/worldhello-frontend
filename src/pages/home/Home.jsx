@@ -20,6 +20,8 @@ import FirstPerformance from '../../components/performance/FirstPerformance';
 import SecondPerformance from '../../components/performance/SecondPerformance';
 import ThirdPerformance from '../../components/performance/ThirdPerformance';
 import { useEffect, useRef, useState } from 'react';
+import TriggerButton from '../../ui/buttons/TriggerButton';
+import Modal from '../../ui/modals/Modal';
 
 // ------------------------------
 // Component
@@ -27,13 +29,10 @@ import { useEffect, useRef, useState } from 'react';
 // This section has our React Component which handles the data
 function Home() {
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const openModal = () => {
-    setIsModalOpen(true);
-  };
+  const [showFixedButton, setShowFixedButton] = useState(false);
 
-  const closeModal = () => {
-    setIsModalOpen(false);
-  };
+  const openModal = () => setIsModalOpen(true);
+  const closeModal = () => setIsModalOpen(false);
 
   const sourceRef = useRef(null);
   const firstPerformanceRef = useRef(null);
@@ -126,7 +125,6 @@ function Home() {
         <div ref={fourthPerformanceRef} className="hidden">
           <Achievements />
         </div>
-
         <Faqs />
         <Refer
           isModalOpen={isModalOpen}
@@ -140,6 +138,8 @@ function Home() {
         />
         <Footer />
       </div>
+      {showFixedButton && <TriggerButton openModal={openModal} text={`hi`} />}
+      {isModalOpen && <Modal closeModal={closeModal} />}
     </>
   );
 }

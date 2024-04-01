@@ -34,9 +34,8 @@ const sizes = {
 // This section is used to modify the different variations we can have in a button (we can add more variations)
 const variations = {
   primary: css`
-    color: var(--color-black);
-    background-color: var(--background-secondary);
-    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.5);
+    color: var(--color-white);
+    background-color: var(--color-link);
   `,
 };
 
