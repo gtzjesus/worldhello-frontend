@@ -65,7 +65,6 @@ const Brand = styled.a`
 // Component
 // ------------------------------
 // This section has our React Component which handles footer
-
 function Footer() {
   return (
     <StyledFooter>

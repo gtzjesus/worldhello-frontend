@@ -1,4 +1,12 @@
-import React, { useEffect, useState, useRef } from 'react';
+// ------------------------------
+// File: Home.jsx
+// ------------------------------
+// Description: React complete Home page
+
+// ------------------------------
+// Imports
+// ------------------------------
+// This section has all necessary imports for this component.
 import Navigation from '../../components/navigation/Navigation';
 import Achievements from '../../components/achievements/Achievements';
 import Source from '../../components/source/Source';
@@ -11,7 +19,12 @@ import Landing from '../../components/landing/Landing';
 import FirstPerformance from '../../components/performance/FirstPerformance';
 import SecondPerformance from '../../components/performance/SecondPerformance';
 import ThirdPerformance from '../../components/performance/ThirdPerformance';
+import { useEffect, useRef, useState } from 'react';
 
+// ------------------------------
+// Component
+// ------------------------------
+// This section has our React Component which handles the data
 function Home() {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const openModal = () => {
@@ -28,8 +41,14 @@ function Home() {
   const thirdPerformanceRef = useRef(null);
   const fourthPerformanceRef = useRef(null);
 
+  // ------------------------------
+  // useEffect
+  // ------------------------------
+  // Code logic Animation for the whole app, a useEffect so that it happens once component mounts
   useEffect(() => {
+    // Grab the Intersection Observer API
     const observer = new IntersectionObserver(
+      // Check for each entry viewpoint based on user scroll
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
@@ -77,6 +96,7 @@ function Home() {
     };
   }, []);
 
+  // Code Logic HTML (styled-components)
   return (
     <>
       <Navigation />
@@ -124,4 +144,5 @@ function Home() {
   );
 }
 
+// Export Home page
 export default Home;

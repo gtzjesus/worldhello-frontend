@@ -77,10 +77,16 @@ const SeeMoreButton = styled.button`
 function Achievements() {
   const { designs, isLoading, error } = useContext(DesignsContext);
   const [visibleAchievements, setVisibleAchievements] = useState(2);
+  const [showMore, setShowMore] = useState(true); // Track whether to show more or less
 
-  // Handler function to display more achievements
-  const handleSeeMore = () => {
-    setVisibleAchievements((prevVisible) => prevVisible + 4);
+  // Handler function to display more or less achievements
+  const handleToggleSeeMore = () => {
+    if (showMore) {
+      setVisibleAchievements(designs.length);
+    } else {
+      setVisibleAchievements(2);
+    }
+    setShowMore(!showMore); // Toggle the state
   };
 
   if (isLoading) return <Spinner />;
@@ -110,9 +116,18 @@ function Achievements() {
             <Design design={design} key={idx} />
           ))}
         </GridContainer>
-        {visibleAchievements < designs.length && (
+        {showMore && designs.length > visibleAchievements && (
           <Additional>
-            <SeeMoreButton onClick={handleSeeMore}>See more</SeeMoreButton>
+            <SeeMoreButton onClick={handleToggleSeeMore}>
+              See more
+            </SeeMoreButton>
+          </Additional>
+        )}
+        {!showMore && (
+          <Additional>
+            <SeeMoreButton onClick={handleToggleSeeMore}>
+              See less
+            </SeeMoreButton>
           </Additional>
         )}
       </StyledAchievements>

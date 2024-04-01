@@ -1,11 +1,7 @@
 // ------------------------------
-// File: Design.js
+// File: Design.jsx
 // ------------------------------
 // Description: React individual component for each achievement done by WorldHello (the design videos will be displayed with this reusable component dynamically), using supabase integration (backend)
-// ------------------------------
-// Figma Designs + Video Screen Editor/Recording.
-// ------------------------------
-// Global Styles from /src/styles/ used for global variables.
 
 // ------------------------------
 // Imports
@@ -31,6 +27,10 @@ const Image = styled.img`
   cursor: pointer; /* Add cursor pointer for interaction */
 `;
 
+// ------------------------------
+// Component
+// ------------------------------
+// This section has our React Component which handles the data
 function Design({ design }) {
   const finalDesign = {
     id: design.id,
