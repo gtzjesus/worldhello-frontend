@@ -14,7 +14,7 @@ const Hook = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: var(--height-navigation-padding) var(--padding-small);
+  padding: var(--padding-small);
 `;
 
 const Title = styled.span`

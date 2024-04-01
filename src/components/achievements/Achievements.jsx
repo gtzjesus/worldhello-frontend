@@ -95,9 +95,11 @@ function Achievements() {
 
           <Information>
             <Title>From $49/mo.</Title>
-            <br />
             <Learn>Learn more</Learn>
           </Information>
+          <br />
+          <br />
+          <br />
           <br />
           <br />
           <br />
