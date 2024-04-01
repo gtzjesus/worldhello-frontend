@@ -26,7 +26,7 @@ const StyledCraft = styled.div`
   background-size: contain;
   background-repeat: no-repeat;
   // Code logic for covering full-screen devices
-  height: 75vh;
+  height: 100vh;
 `;
 
 const Hook = styled.div`
@@ -75,7 +75,8 @@ function Craft() {
           </Title>
           <br />
           <Subtitle>
-            Expand your business by harnessing our combined resources.
+            Expand your business <br /> by harnessing <br /> our combined
+            resources.
           </Subtitle>
         </Hook>
       </StyledCraft>
