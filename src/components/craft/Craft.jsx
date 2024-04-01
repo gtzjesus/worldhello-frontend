@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import styled from 'styled-components';
 import LazyLoad from 'react-lazyload';
 
@@ -35,8 +35,21 @@ const Subtitle = styled.span`
 
 const SlideText = styled.span`
   font-size: var(--font-medium);
-  opacity: 0.75;
-  transition: opacity 5s ease-in-out;
+  opacity: 0;
+  animation: fadeInOut 2.5s infinite; /* Smooth fade-in and fade-out animation */
+
+  @keyframes fadeInOut {
+    0%,
+    100% {
+      opacity: 0;
+    }
+    25% {
+      opacity: 0.75;
+    }
+    75% {
+      opacity: 0.75;
+    }
+  }
 `;
 
 function Craft() {
