@@ -27,17 +27,15 @@ function Home() {
   // Animation Logic
   // ------------------------------
   // Animate using react hooks on components
-  const sourceRef = useRef(null);
-  const performanceRef = useRef(null);
+  const firstPerformanceRef = useRef(null);
+  const secondPerformanceRef = useRef(null);
 
   // ------------------------------
   // useEffect
   // ------------------------------
   // Code logic Animation for the whole app, a useEffect so that it happens once component mounts
   useEffect(() => {
-    // Grab the Intersection Observer API
     const observer = new IntersectionObserver(
-      // Check for each entry viewpoint based on user scroll
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
@@ -47,23 +45,24 @@ function Home() {
           }
         });
       },
-      { threshold: 0.5 } // Adjust the threshold as needed
+      { threshold: 0.5 }
     );
 
-    if (sourceRef.current) {
-      observer.observe(sourceRef.current);
-    }
-    if (performanceRef.current) {
-      observer.observe(performanceRef.current);
-    }
+    // Observing all elements of interest
+    const elementsToObserve = [firstPerformanceRef, secondPerformanceRef];
+    elementsToObserve.forEach((ref) => {
+      if (ref.current) {
+        observer.observe(ref.current);
+      }
+    });
 
+    // Cleanup function
     return () => {
-      if (sourceRef.current) {
-        observer.unobserve(sourceRef.current);
-      }
-      if (performanceRef.current) {
-        observer.unobserve(performanceRef.current);
-      }
+      elementsToObserve.forEach((ref) => {
+        if (ref.current) {
+          observer.unobserve(ref.current);
+        }
+      });
     };
   }, []);
   // Code Logic HTML (styled-components)
@@ -71,13 +70,17 @@ function Home() {
     <>
       <Navigation />
       <Landing />
-      <div ref={performanceRef} className="hidden">
+      <div ref={firstPerformanceRef} className="hidden">
         <Source />
       </div>
       <div className="responsive-container">
         <Performance />
+
         <Craft />
-        <Achievements />
+        <div ref={secondPerformanceRef} className="hidden">
+          <Achievements />
+        </div>
+
         <Faqs />
         <Refer />
         <Trial />
