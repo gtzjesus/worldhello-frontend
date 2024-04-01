@@ -8,6 +8,7 @@
 // ------------------------------
 // This section has all necessary imports for this component.
 
+import { useEffect, useRef } from 'react';
 import styled from 'styled-components';
 
 // ------------------------------
@@ -26,20 +27,14 @@ const StyledItem = styled.div`
   column-gap: 24px;
   row-gap: 32px;
   align-items: center;
-
-
 `;
 
 const Number = styled.p`
   font-weight: 500;
-
-
 `;
 
 const Title = styled.p`
   font-weight: 500;
-
-
 `;
 
 const Icon = styled.p`
@@ -50,8 +45,6 @@ const Content = styled.p`
   grid-column: 2 / -1;
   padding-bottom: 16px;
   line-height: 1.6;
-
-
 `;
 
 // ------------------------------
@@ -61,6 +54,43 @@ const Content = styled.p`
 // Receives multiple parameters to be used to interact with displaying/not displaying modal
 
 function FaqsItem({ num, title, currentOpen, onOpen, children }) {
+  const firstPerformanceRef = useRef(null);
+
+  // ------------------------------
+  // useEffect
+  // ------------------------------
+  // Code logic Animation for the whole app, a useEffect so that it happens once component mounts
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('show');
+          } else {
+            entry.target.classList.remove('show');
+          }
+        });
+      },
+      { threshold: 0.5 }
+    );
+
+    // Observing all elements of interest
+    const elementsToObserve = [firstPerformanceRef];
+    elementsToObserve.forEach((ref) => {
+      if (ref.current) {
+        observer.observe(ref.current);
+      }
+    });
+
+    // Cleanup function
+    return () => {
+      elementsToObserve.forEach((ref) => {
+        if (ref.current) {
+          observer.unobserve(ref.current);
+        }
+      });
+    };
+  }, []);
   // Code logic to check which faq number is currently open
   const isOpen = num === currentOpen;
 
@@ -70,14 +100,21 @@ function FaqsItem({ num, title, currentOpen, onOpen, children }) {
   }
   return (
     <>
-      {/* <!-- Main Container with state dynamic class names --> */}
-      <StyledItem className={`${isOpen ? 'open' : ''}`} onClick={handleToggle}>
-        <Number className="number">{num < 9 ? `0${num + 1}` : num + 1}</Number>
-        <Title>{title}</Title>
-        <Icon>{isOpen ? '-' : '+'}</Icon>
-        {isOpen && <Content>{children}</Content>}
-      </StyledItem>
-      <hr />
+      <div ref={firstPerformanceRef} className="hidden">
+        {/* <!-- Main Container with state dynamic class names --> */}
+        <StyledItem
+          className={`${isOpen ? 'open' : ''}`}
+          onClick={handleToggle}
+        >
+          <Number className="number">
+            {num < 9 ? `0${num + 1}` : num + 1}
+          </Number>
+          <Title>{title}</Title>
+          <Icon>{isOpen ? '-' : '+'}</Icon>
+          {isOpen && <Content>{children}</Content>}
+        </StyledItem>
+        <hr />
+      </div>
     </>
   );
 }

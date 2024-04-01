@@ -75,12 +75,10 @@ function Home() {
       </div>
       <div className="responsive-container">
         <Performance />
-
         <Craft />
         <div ref={secondPerformanceRef} className="hidden">
           <Achievements />
         </div>
-
         <Faqs />
         <Refer />
         <Trial />
