@@ -79,6 +79,52 @@ function Achievements() {
   const [visibleAchievements, setVisibleAchievements] = useState(2);
   const [showMore, setShowMore] = useState(true); // Track whether to show more or less
 
+  const firstPerformanceRef = useRef(null);
+  const secondPerformanceRef = useRef(null);
+  const thirdPerformanceRef = useRef(null);
+  const fourthPerformanceRef = useRef(null);
+
+  // ------------------------------
+  // useEffect
+  // ------------------------------
+  // Code logic Animation for the whole app, a useEffect so that it happens once component mounts
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('show');
+          } else {
+            entry.target.classList.remove('show');
+          }
+        });
+      },
+      { threshold: 0.5 }
+    );
+
+    // Observing all elements of interest
+    const elementsToObserve = [
+      firstPerformanceRef,
+      secondPerformanceRef,
+      thirdPerformanceRef,
+      fourthPerformanceRef,
+    ];
+    elementsToObserve.forEach((ref) => {
+      if (ref.current) {
+        observer.observe(ref.current);
+      }
+    });
+
+    // Cleanup function
+    return () => {
+      elementsToObserve.forEach((ref) => {
+        if (ref.current) {
+          observer.unobserve(ref.current);
+        }
+      });
+    };
+  }, []);
+
   // Handler function to display more or less achievements
   const handleToggleSeeMore = () => {
     if (showMore) {
@@ -95,41 +141,50 @@ function Achievements() {
   return (
     <LazyLoad>
       <StyledAchievements>
-        <Information>
-          <Caption>Turn that idea</Caption>
-          <Caption>into a website.</Caption>
-
+        <>
+          <Information>
+            <div ref={firstPerformanceRef} className="hidden">
+              <Caption>Turn that idea</Caption>
+            </div>
+            <div ref={secondPerformanceRef} className="hidden">
+              <Caption>into a website.</Caption>
+            </div>
+          </Information>
           <Information>
             <Title>From $49/mo.</Title>
             <Learn>Learn more</Learn>
           </Information>
+
           <br />
           <br />
           <br />
           <br />
           <br />
           <br />
-          <Title>Visit some of our clients</Title>
-        </Information>
-        <GridContainer>
-          {designs.slice(0, visibleAchievements).map((design, idx) => (
-            <Design design={design} key={idx} />
-          ))}
-        </GridContainer>
-        {showMore && designs.length > visibleAchievements && (
-          <Additional>
-            <SeeMoreButton onClick={handleToggleSeeMore}>
-              See more
-            </SeeMoreButton>
-          </Additional>
-        )}
-        {!showMore && (
-          <Additional>
-            <SeeMoreButton onClick={handleToggleSeeMore}>
-              See less
-            </SeeMoreButton>
-          </Additional>
-        )}
+          <Information>
+            <Title>Visit some of our clients</Title>
+          </Information>
+
+          <GridContainer>
+            {designs.slice(0, visibleAchievements).map((design, idx) => (
+              <Design design={design} key={idx} />
+            ))}
+          </GridContainer>
+          {showMore && designs.length > visibleAchievements && (
+            <Additional>
+              <SeeMoreButton onClick={handleToggleSeeMore}>
+                See more
+              </SeeMoreButton>
+            </Additional>
+          )}
+          {!showMore && (
+            <Additional>
+              <SeeMoreButton onClick={handleToggleSeeMore}>
+                See less
+              </SeeMoreButton>
+            </Additional>
+          )}
+        </>
       </StyledAchievements>
     </LazyLoad>
   );

@@ -23,6 +23,10 @@ import { useEffect, useRef } from 'react';
 // ------------------------------
 // This section has our React Component which handles the data
 function Home() {
+  // ------------------------------
+  // Animation Logic
+  // ------------------------------
+  // Animate using react hooks on components
   const sourceRef = useRef(null);
   const performanceRef = useRef(null);
 

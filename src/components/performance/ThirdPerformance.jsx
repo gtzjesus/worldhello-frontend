@@ -30,7 +30,7 @@ const Description = styled.span`
   opacity: 0.75;
 `;
 
-function ThirdPerformance({ handleScrollToFirst }) {
+function ThirdPerformance() {
   const sourceRef = useRef(null);
   const firstPerformanceRef = useRef(null);
   const secondPerformanceRef = useRef(null);
@@ -87,7 +87,7 @@ function ThirdPerformance({ handleScrollToFirst }) {
   return (
     <StyledFirstPerformance>
       <div ref={firstPerformanceRef} className="hidden">
-        <Information onClick={handleScrollToFirst}>
+        <Information>
           <Img src="/backgrounds/baggy.webp" alt="signin"></Img>
         </Information>
       </div>

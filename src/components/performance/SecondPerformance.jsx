@@ -30,7 +30,7 @@ const Description = styled.span`
   opacity: 0.75;
 `;
 
-function SecondPerformance({ handleScrollToFirst }) {
+function SecondPerformance() {
   const sourceRef = useRef(null);
   const firstPerformanceRef = useRef(null);
   const secondPerformanceRef = useRef(null);
@@ -87,7 +87,7 @@ function SecondPerformance({ handleScrollToFirst }) {
   return (
     <StyledFirstPerformance>
       <div ref={firstPerformanceRef} className="hidden">
-        <Information onClick={handleScrollToFirst}>
+        <Information>
           <Img src="/backgrounds/brand.webp" alt="signin"></Img>
         </Information>
       </div>
