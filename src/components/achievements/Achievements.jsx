@@ -84,6 +84,7 @@ function Achievements() {
   const secondPerformanceRef = useRef(null);
   const thirdPerformanceRef = useRef(null);
   const fourthPerformanceRef = useRef(null);
+  const fifthPerformanceRef = useRef(null);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -114,6 +115,9 @@ function Achievements() {
     if (fourthPerformanceRef.current) {
       observer.observe(fourthPerformanceRef.current);
     }
+    if (fifthPerformanceRef.current) {
+      observer.observe(fifthPerformanceRef.current);
+    }
 
     return () => {
       if (sourceRef.current) {
@@ -130,6 +134,9 @@ function Achievements() {
       }
       if (fourthPerformanceRef.current) {
         observer.unobserve(fourthPerformanceRef.current);
+      }
+      if (fifthPerformanceRef.current) {
+        observer.unobserve(fifthPerformanceRef.current);
       }
     };
   }, []);
@@ -166,11 +173,14 @@ function Achievements() {
           <br />
           <Title>Visit some of our clients</Title>
         </Information>
-        <GridContainer>
-          {designs.slice(0, visibleAchievements).map((design, idx) => (
-            <Design design={design} key={idx} />
-          ))}
-        </GridContainer>
+        <div ref={fifthPerformanceRef} className="hidden">
+          <GridContainer>
+            {designs.slice(0, visibleAchievements).map((design, idx) => (
+              <Design design={design} key={idx} />
+            ))}
+          </GridContainer>
+        </div>
+
         {visibleAchievements < designs.length && (
           <Additional>
             <SeeMoreButton onClick={handleSeeMore}>See more</SeeMoreButton>
