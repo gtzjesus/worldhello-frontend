@@ -54,6 +54,9 @@ function Home() {
     if (thirdPerformanceRef.current) {
       observer.observe(thirdPerformanceRef.current);
     }
+    if (fourthPerformanceRef.current) {
+      observer.observe(fourthPerformanceRef.current);
+    }
 
     return () => {
       if (sourceRef.current) {
@@ -67,6 +70,9 @@ function Home() {
       }
       if (thirdPerformanceRef.current) {
         observer.unobserve(thirdPerformanceRef.current);
+      }
+      if (fourthPerformanceRef.current) {
+        observer.unobserve(fourthPerformanceRef.current);
       }
     };
   }, []);
@@ -97,7 +103,9 @@ function Home() {
 
       <div className="responsive-container">
         <Craft />
-        <Achievements />
+        <div ref={fourthPerformanceRef} className="hidden">
+          <Achievements />
+        </div>
 
         <Faqs />
         <Refer
