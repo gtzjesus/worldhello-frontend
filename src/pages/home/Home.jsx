@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 import Navigation from '../../components/navigation/Navigation';
 import Achievements from '../../components/achievements/Achievements';
 import Source from '../../components/source/Source';
@@ -12,7 +12,6 @@ import Landing from '../../components/landing/Landing';
 
 function Home() {
   const [isModalOpen, setIsModalOpen] = useState(false);
-
   const openModal = () => {
     setIsModalOpen(true);
   };
@@ -21,17 +20,32 @@ function Home() {
     setIsModalOpen(false);
   };
 
+  const hiddenRef = useRef(null);
+
   useEffect(() => {
-    if (isModalOpen) {
-      document.body.classList.add('modal-open');
-    } else {
-      document.body.classList.remove('modal-open');
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('show');
+          } else {
+            entry.target.classList.remove('show');
+          }
+        });
+      },
+      { threshold: 0.5 } // Adjust the threshold as needed
+    );
+
+    if (hiddenRef.current) {
+      observer.observe(hiddenRef.current);
     }
 
     return () => {
-      document.body.classList.remove('modal-open');
+      if (hiddenRef.current) {
+        observer.unobserve(hiddenRef.current);
+      }
     };
-  }, [isModalOpen]);
+  }, []);
 
   return (
     <>
@@ -41,7 +55,9 @@ function Home() {
         openModal={openModal}
         closeModal={closeModal}
       />
-      <Source />
+      <div ref={hiddenRef} className="hidden">
+        <Source />
+      </div>
       <div className="responsive-container">
         <Performance />
         <Craft />
