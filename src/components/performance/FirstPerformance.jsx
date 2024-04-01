@@ -3,7 +3,7 @@ import styled from 'styled-components';
 const StyledFirstPerformance = styled.div`
   background: var(--color-black);
   color: var(--color-white);
-  padding: var(--padding-medium);
+  padding: 0 var(--padding-large);
 `;
 
 const Information = styled.div`
@@ -19,14 +19,11 @@ const Intro = styled.div`
   text-transform: uppercase;
 `;
 
-const Img = styled.img`
-  padding: var(--padding-medium) 0;
-`;
+const Img = styled.img``;
 
 const Description = styled.span`
   font-size: var(--font-xxxsmall);
   letter-spacing: 0.05rem;
-  line-height: var(--line-height-xxsmall);
   text-transform: uppercase;
   opacity: 0.75;
 `;

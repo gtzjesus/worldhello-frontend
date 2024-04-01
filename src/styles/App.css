@@ -9,6 +9,15 @@
   overflow-x: hidden;
 }
 
+/* Media query for larger devices */
+@media (min-width: 768px) {
+  .responsive-container {
+    max-width: 600px; /* Adjust as needed */
+    margin: 0 auto; /* Center the container horizontally */
+  }
+}
+
+/* Animations */
 .hidden {
   opacity: 0;
   filter: blur(5px);
@@ -20,18 +29,12 @@
   filter: blur(0px);
 }
 
+/* Whole app*/
 body {
   background: var(--color-black);
 }
 
-/* Media query for larger devices */
-@media (min-width: 768px) {
-  .responsive-container {
-    max-width: 600px; /* Adjust as needed */
-    margin: 0 auto; /* Center the container horizontally */
-  }
-}
-
+/* Horizontal line */
 hr {
   height: 6px;
   border: 0;
@@ -44,16 +47,6 @@ hr {
 .body-overflow-hidden {
   overflow: hidden;
 }
-
-/* ::-webkit-scrollbar {
-  height: 4px;
-  width: 4px;
-  background: var(--color-white);
-}
-::-webkit-scrollbar-thumb:horizontal {
-  background: var(--color-white);
-  border-radius: 10px;
-} */
 
 /* // CAROUSEL */
 /* ACTIVE DESIGN STATE */
