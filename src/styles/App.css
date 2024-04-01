@@ -60,5 +60,5 @@ hr {
 .open .number,
 .open .title {
   color: var(--color-tan);
-  font-size: var(--font-medium);
+  font-size: var(--font-smmd);
 }
