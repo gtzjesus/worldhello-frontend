@@ -10,9 +10,7 @@
 // This section has all necessary imports for this component.
 
 import styled from 'styled-components';
-import TriggerButton from '../../ui/buttons/TriggerButton';
 import LazyLoad from 'react-lazyload';
-import Modal from '../../ui/modals/Modal';
 
 // ------------------------------
 // Styled Componenets
@@ -65,11 +63,8 @@ const Subtitle = styled.span`
 function Craft() {
   return (
     <LazyLoad>
-      {/* <!-- Main Container --> */}
       <StyledCraft>
-        {/* <!-- Hook Container --> */}
         <Hook>
-          {/* TODO: <!-- Span Elements Vertically Messy Implementation --> */}
           <Title>
             Join us <Subtitle>and</Subtitle>
           </Title>
