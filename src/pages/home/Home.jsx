@@ -16,29 +16,15 @@ import Faqs from '../../components/faqs/Faqs';
 import Craft from '../../components/craft/Craft';
 import Refer from '../../components/refer/Refer';
 import Landing from '../../components/landing/Landing';
-import FirstPerformance from '../../components/performance/FirstPerformance';
-import SecondPerformance from '../../components/performance/SecondPerformance';
-import ThirdPerformance from '../../components/performance/ThirdPerformance';
-import { useEffect, useRef, useState } from 'react';
-import TriggerButton from '../../ui/buttons/TriggerButton';
-import Modal from '../../ui/modals/Modal';
-
+import Performance from '../../components/performance/Performance';
+import { useEffect, useRef } from 'react';
 // ------------------------------
 // Component
 // ------------------------------
 // This section has our React Component which handles the data
 function Home() {
-  const [isModalOpen, setIsModalOpen] = useState(false);
-  const [showFixedButton, setShowFixedButton] = useState(false);
-
-  const openModal = () => setIsModalOpen(true);
-  const closeModal = () => setIsModalOpen(false);
-
   const sourceRef = useRef(null);
-  const firstPerformanceRef = useRef(null);
-  const secondPerformanceRef = useRef(null);
-  const thirdPerformanceRef = useRef(null);
-  const fourthPerformanceRef = useRef(null);
+  const performanceRef = useRef(null);
 
   // ------------------------------
   // useEffect
@@ -63,83 +49,36 @@ function Home() {
     if (sourceRef.current) {
       observer.observe(sourceRef.current);
     }
-    if (firstPerformanceRef.current) {
-      observer.observe(firstPerformanceRef.current);
-    }
-    if (secondPerformanceRef.current) {
-      observer.observe(secondPerformanceRef.current);
-    }
-    if (thirdPerformanceRef.current) {
-      observer.observe(thirdPerformanceRef.current);
-    }
-    if (fourthPerformanceRef.current) {
-      observer.observe(fourthPerformanceRef.current);
+    if (performanceRef.current) {
+      observer.observe(performanceRef.current);
     }
 
     return () => {
       if (sourceRef.current) {
         observer.unobserve(sourceRef.current);
       }
-      if (firstPerformanceRef.current) {
-        observer.unobserve(firstPerformanceRef.current);
-      }
-      if (secondPerformanceRef.current) {
-        observer.unobserve(secondPerformanceRef.current);
-      }
-      if (thirdPerformanceRef.current) {
-        observer.unobserve(thirdPerformanceRef.current);
-      }
-      if (fourthPerformanceRef.current) {
-        observer.unobserve(fourthPerformanceRef.current);
+      if (performanceRef.current) {
+        observer.unobserve(performanceRef.current);
       }
     };
   }, []);
-
   // Code Logic HTML (styled-components)
   return (
     <>
       <Navigation />
-      <Landing
-        isModalOpen={isModalOpen}
-        openModal={openModal}
-        closeModal={closeModal}
-      />
-      <div ref={sourceRef} className="hidden">
+      <Landing />
+      <div ref={performanceRef} className="hidden">
         <Source />
       </div>
-
       <div className="responsive-container">
-        <div ref={firstPerformanceRef} className="hidden">
-          <FirstPerformance />
-        </div>
-        <div ref={secondPerformanceRef} className="hidden">
-          <SecondPerformance />
-        </div>
-        <div ref={thirdPerformanceRef} className="hidden">
-          <ThirdPerformance />
-        </div>
-      </div>
-
-      <div className="responsive-container">
+        <Performance />
         <Craft />
-        <div ref={fourthPerformanceRef} className="hidden">
-          <Achievements />
-        </div>
+        <Achievements />
         <Faqs />
-        <Refer
-          isModalOpen={isModalOpen}
-          openModal={openModal}
-          closeModal={closeModal}
-        />
-        <Trial
-          isModalOpen={isModalOpen}
-          openModal={openModal}
-          closeModal={closeModal}
-        />
+        <Refer />
+        <Trial />
         <Footer />
       </div>
-      {showFixedButton && <TriggerButton openModal={openModal} text={`hi`} />}
-      {isModalOpen && <Modal closeModal={closeModal} />}
     </>
   );
 }

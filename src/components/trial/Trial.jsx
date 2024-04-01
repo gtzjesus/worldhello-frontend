@@ -10,8 +10,6 @@
 
 import styled from 'styled-components';
 import LazyLoad from 'react-lazyload';
-import TriggerButton from '../../ui/buttons/TriggerButton';
-import Modal from '../../ui/modals/Modal';
 
 // ------------------------------
 // Styled Componenets
@@ -53,7 +51,7 @@ const Special = styled.a`
 // ------------------------------
 // This section has our React Component which handles the  data
 
-function Trial({ isModalOpen, openModal, closeModal }) {
+function Trial() {
   return (
     <LazyLoad>
       {/* <!-- Main Container --> */}
@@ -65,8 +63,6 @@ function Trial({ isModalOpen, openModal, closeModal }) {
           <Description>
             <Special>no credit card required.</Special>
           </Description>
-          <TriggerButton openModal={openModal} text={`get started`} />
-          {isModalOpen && <Modal closeModal={closeModal} />}
         </Information>
         {/* <!-- Extra Container to end --> */}
       </StyledTrial>

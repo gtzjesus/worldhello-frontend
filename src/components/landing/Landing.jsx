@@ -10,9 +10,7 @@
 // This section has all necessary imports for this component.
 
 import styled from 'styled-components';
-import TriggerButton from '../../ui/buttons/TriggerButton';
 import LazyLoad from 'react-lazyload';
-import Modal from '../../ui/modals/Modal';
 
 // ------------------------------
 // Styled Componenets
@@ -66,14 +64,13 @@ const Subtitle = styled.span`
 // ------------------------------
 // This section has our React Component which handles the hook data
 
-function Landing({ isModalOpen, openModal, closeModal }) {
+function Landing() {
   return (
     <LazyLoad>
       {/* <!-- Main Container --> */}
       <StyledLanding>
         {/* <!-- Hook Container --> */}
         <Hook>
-          {/* TODO: <!-- Span Elements Vertically Messy Implementation --> */}
           <Title>Web</Title>
           <Title>Dev</Title>
           <Title>Agency</Title>
@@ -88,8 +85,6 @@ function Landing({ isModalOpen, openModal, closeModal }) {
           <Subtitle>your visitors</Subtitle>
           <Subtitle>into customers.</Subtitle>
           <br />
-          <TriggerButton openModal={openModal} text={`Click to begin`} />
-          {isModalOpen && <Modal closeModal={closeModal} />}
         </Hook>
       </StyledLanding>
     </LazyLoad>

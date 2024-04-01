@@ -1,9 +1,11 @@
+import { useEffect, useRef } from 'react';
 import styled from 'styled-components';
 
 const StyledFirstPerformance = styled.div`
   background: var(--color-black);
   color: var(--color-white);
   padding: 0 var(--padding-large);
+  padding-bottom: var(--padding-xxlarge);
 `;
 
 const Information = styled.div`
@@ -29,15 +31,79 @@ const Description = styled.span`
 `;
 
 function FirstPerformance({ handleScrollToFirst }) {
+  const sourceRef = useRef(null);
+  const firstPerformanceRef = useRef(null);
+  const secondPerformanceRef = useRef(null);
+  const thirdPerformanceRef = useRef(null);
+
+  // ------------------------------
+  // useEffect
+  // ------------------------------
+  // Code logic Animation for the whole app, a useEffect so that it happens once component mounts
+  useEffect(() => {
+    // Grab the Intersection Observer API
+    const observer = new IntersectionObserver(
+      // Check for each entry viewpoint based on user scroll
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('show');
+          } else {
+            entry.target.classList.remove('show');
+          }
+        });
+      },
+      { threshold: 0.5 } // Adjust the threshold as needed
+    );
+
+    if (sourceRef.current) {
+      observer.observe(sourceRef.current);
+    }
+    if (firstPerformanceRef.current) {
+      observer.observe(firstPerformanceRef.current);
+    }
+    if (secondPerformanceRef.current) {
+      observer.observe(secondPerformanceRef.current);
+    }
+    if (thirdPerformanceRef.current) {
+      observer.observe(thirdPerformanceRef.current);
+    }
+
+    return () => {
+      if (sourceRef.current) {
+        observer.unobserve(sourceRef.current);
+      }
+      if (firstPerformanceRef.current) {
+        observer.unobserve(firstPerformanceRef.current);
+      }
+      if (secondPerformanceRef.current) {
+        observer.unobserve(secondPerformanceRef.current);
+      }
+      if (thirdPerformanceRef.current) {
+        observer.unobserve(thirdPerformanceRef.current);
+      }
+    };
+  }, []);
   return (
     <StyledFirstPerformance>
-      <Information onClick={handleScrollToFirst}>
-        <Img src="/backgrounds/signin.webp" alt="signin"></Img>
+      <div ref={firstPerformanceRef} className="hidden">
+        <Information onClick={handleScrollToFirst}>
+          <Img src="/backgrounds/signin.webp" alt="signin"></Img>
+        </Information>
+      </div>
+
+      <Information>
         <Intro>
-          Grow <br /> clientele
+          <div ref={secondPerformanceRef} className="hidden">
+            Grow <br /> clientele
+          </div>
         </Intro>
+
         <Description>
-          Effortlessly have people subscribe and remain loyal, paying customers.
+          <div ref={thirdPerformanceRef} className="hidden">
+            Effortlessly have people subscribe and remain loyal, paying
+            customers.
+          </div>
         </Description>
       </Information>
     </StyledFirstPerformance>

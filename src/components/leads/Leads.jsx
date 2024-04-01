@@ -1,6 +1,4 @@
 import styled from 'styled-components';
-import TriggerButton from '../../ui/buttons/TriggerButton';
-import Modal from '../../ui/modals/Modal';
 
 const StyledLeads = styled.div`
   background-color: var(--color-black);
@@ -8,8 +6,6 @@ const StyledLeads = styled.div`
   height: fit-content;
   padding: var(--padding-xlarge) var(--padding-medium) var(--padding-medium)
     var(--padding-medium);
-
-
 `;
 
 const LeadsHook = styled.div`
@@ -26,7 +22,7 @@ const SubTitle = styled.span`
   font-size: var(--font-xxxsmall);
 `;
 
-function Leads({ isModalOpen, openModal, closeModal }) {
+function Leads() {
   return (
     <StyledLeads>
       <LeadsHook>
@@ -36,11 +32,6 @@ function Leads({ isModalOpen, openModal, closeModal }) {
           <br />
           <br />
           <br />
-          <TriggerButton
-            openModal={openModal}
-            text={`click to start for free`}
-          />
-          {isModalOpen && <Modal closeModal={closeModal} />}
         </SubTitle>
       </LeadsHook>
     </StyledLeads>

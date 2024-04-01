@@ -9,9 +9,7 @@
 // This section has all necessary imports for this component.
 
 import styled from 'styled-components';
-import TriggerButton from '../../ui/buttons/TriggerButton';
 import LazyLoad from 'react-lazyload';
-import Modal from '../../ui/modals/Modal';
 
 // ------------------------------
 // Styled Componenets
@@ -52,7 +50,7 @@ const Description = styled.span`
 // ------------------------------
 // This section has our React Component which handles the data
 
-function Refer({ isModalOpen, openModal, closeModal }) {
+function Refer() {
   return (
     <LazyLoad>
       {/* <!-- Main Container --> */}
@@ -83,8 +81,6 @@ function Refer({ isModalOpen, openModal, closeModal }) {
             <br />
             <br />
           </Description>
-          <TriggerButton openModal={openModal} text={`Clicking here`} />
-          {isModalOpen && <Modal closeModal={closeModal} />}
         </Information>
       </StyledRefer>
     </LazyLoad>
