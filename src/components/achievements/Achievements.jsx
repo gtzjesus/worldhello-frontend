@@ -78,56 +78,6 @@ function Achievements() {
   const { designs, isLoading, error } = useContext(DesignsContext);
   const [visibleAchievements, setVisibleAchievements] = useState(2);
 
-  // Animation
-  // Animation
-  const sourceRef = useRef(null);
-  const firstPerformanceRef = useRef(null);
-  const secondPerformanceRef = useRef(null);
-  const thirdPerformanceRef = useRef(null);
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('show');
-          } else {
-            entry.target.classList.remove('show');
-          }
-        });
-      },
-      { threshold: 0.5 } // Adjust the threshold as needed
-    );
-
-    if (sourceRef.current) {
-      observer.observe(sourceRef.current);
-    }
-    if (firstPerformanceRef.current) {
-      observer.observe(firstPerformanceRef.current);
-    }
-    if (secondPerformanceRef.current) {
-      observer.observe(secondPerformanceRef.current);
-    }
-    if (thirdPerformanceRef.current) {
-      observer.observe(thirdPerformanceRef.current);
-    }
-
-    return () => {
-      if (sourceRef.current) {
-        observer.unobserve(sourceRef.current);
-      }
-      if (firstPerformanceRef.current) {
-        observer.unobserve(firstPerformanceRef.current);
-      }
-      if (secondPerformanceRef.current) {
-        observer.unobserve(secondPerformanceRef.current);
-      }
-      if (thirdPerformanceRef.current) {
-        observer.unobserve(thirdPerformanceRef.current);
-      }
-    };
-  }, []);
-
   // Handler function to display more achievements
   const handleSeeMore = () => {
     setVisibleAchievements((prevVisible) => prevVisible + 4);
@@ -140,12 +90,8 @@ function Achievements() {
     <LazyLoad>
       <StyledAchievements>
         <Information>
-          <div ref={firstPerformanceRef} className="hidden">
-            <Caption>Turn that idea</Caption>
-          </div>
-          <div ref={firstPerformanceRef} className="hidden">
-            <Caption>into a website.</Caption>
-          </div>
+          <Caption>Turn that idea</Caption>
+          <Caption>into a website.</Caption>
 
           <Information>
             <Title>From $49/mo.</Title>
