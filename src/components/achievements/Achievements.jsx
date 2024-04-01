@@ -76,25 +76,57 @@ const SeeMoreButton = styled.button`
 // This section has our React Component which displays our achievements (websites)
 function Achievements() {
   const { designs, isLoading, error } = useContext(DesignsContext);
-  const [index, setIndex] = useState(0);
   const [visibleAchievements, setVisibleAchievements] = useState(2);
 
-  // Ref to hold the interval ID
-  const intervalRef = useRef(null);
+  // Animation
+  // Animation
+  const sourceRef = useRef(null);
+  const firstPerformanceRef = useRef(null);
+  const secondPerformanceRef = useRef(null);
+  const thirdPerformanceRef = useRef(null);
 
   useEffect(() => {
-    // Start the interval to auto-slide
-    intervalRef.current = setInterval(() => {
-      setIndex((prevIndex) =>
-        prevIndex === designs.length - 1 ? 0 : prevIndex + 1
-      );
-    }, 7500); // Adjust the interval time as needed
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('show');
+          } else {
+            entry.target.classList.remove('show');
+          }
+        });
+      },
+      { threshold: 0.5 } // Adjust the threshold as needed
+    );
 
-    // Cleanup function to clear the interval when the component unmounts or when designs change
+    if (sourceRef.current) {
+      observer.observe(sourceRef.current);
+    }
+    if (firstPerformanceRef.current) {
+      observer.observe(firstPerformanceRef.current);
+    }
+    if (secondPerformanceRef.current) {
+      observer.observe(secondPerformanceRef.current);
+    }
+    if (thirdPerformanceRef.current) {
+      observer.observe(thirdPerformanceRef.current);
+    }
+
     return () => {
-      clearInterval(intervalRef.current);
+      if (sourceRef.current) {
+        observer.unobserve(sourceRef.current);
+      }
+      if (firstPerformanceRef.current) {
+        observer.unobserve(firstPerformanceRef.current);
+      }
+      if (secondPerformanceRef.current) {
+        observer.unobserve(secondPerformanceRef.current);
+      }
+      if (thirdPerformanceRef.current) {
+        observer.unobserve(thirdPerformanceRef.current);
+      }
     };
-  }, [designs]); // Re-run effect when designs change
+  }, []);
 
   // Handler function to display more achievements
   const handleSeeMore = () => {
@@ -108,8 +140,12 @@ function Achievements() {
     <LazyLoad>
       <StyledAchievements>
         <Information>
-          <Caption>Turn that idea</Caption>
-          <Caption>into a website.</Caption>
+          <div ref={firstPerformanceRef} className="hidden">
+            <Caption>Turn that idea</Caption>
+          </div>
+          <div ref={firstPerformanceRef} className="hidden">
+            <Caption>into a website.</Caption>
+          </div>
 
           <Information>
             <Title>From $49/mo.</Title>
