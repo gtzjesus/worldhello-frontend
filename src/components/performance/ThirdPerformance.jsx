@@ -4,6 +4,7 @@ const StyledThirdPerformance = styled.div`
   background: var(--color-black);
   color: var(--color-white);
   padding: var(--padding-medium);
+  padding-bottom: var(--padding-xxlarge);
 `;
 
 const Information = styled.div`
