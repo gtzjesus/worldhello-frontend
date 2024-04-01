@@ -92,7 +92,9 @@ function Home() {
         <div ref={thirdPerformanceRef} className="hidden">
           <ThirdPerformance />
         </div>
+      </div>
 
+      <div className="responsive-container">
         <Craft />
         <Achievements />
         <Faqs />

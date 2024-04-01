@@ -1,34 +1,15 @@
-// ------------------------------
-// File: Craft.js
-// ------------------------------
-// Description: React component for displaying Craft page (first thing USER sees).
-// ------------------------------
-
-// ------------------------------
-// Imports
-// ------------------------------
-// This section has all necessary imports for this component.
-
+import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
 import LazyLoad from 'react-lazyload';
 
-// ------------------------------
-// Styled Componenets
-// ------------------------------
-// This section has all CSS styles configured for every HTML element.
-
 const StyledCraft = styled.div`
-  // Code logic for setting the background
-  // Design background from Figma software
   background: url('backgrounds/craft.webp');
   background-size: contain;
   background-repeat: no-repeat;
-  // Code logic for covering full-screen devices
   height: 100vh;
 `;
 
 const Hook = styled.div`
-  // Code logic for positioning all information inside our hook
   position: absolute;
   display: flex;
   flex-direction: column;
@@ -37,17 +18,14 @@ const Hook = styled.div`
 `;
 
 const Title = styled.span`
-  // Code logic for title element
   font-size: var(--font-large);
   letter-spacing: var(--spacing-title);
-  // Code logic shadow beneath text (more visibility)
   text-shadow: var(--text-shadow-font);
   text-transform: uppercase;
   overflow: hidden;
 `;
 
 const Subtitle = styled.span`
-  // Code logic for subtitle element
   font-size: var(--font-xxxsmall);
   letter-spacing: 0.05rem;
   line-height: var(--line-height-xxsmall);
@@ -55,12 +33,24 @@ const Subtitle = styled.span`
   opacity: 0.75;
 `;
 
-// ------------------------------
-// Component
-// ------------------------------
-// This section has our React Component which handles the hook data
+const SlideText = styled.span`
+  font-size: var(--font-medium);
+  opacity: 0.75;
+  transition: opacity 5s ease-in-out;
+`;
 
 function Craft() {
+  const [slideIndex, setSlideIndex] = useState(0);
+  const slideTexts = ['Support', 'Data Analytics', 'Collaboration', 'Hosting'];
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setSlideIndex((prevIndex) => (prevIndex + 1) % slideTexts.length);
+    }, 2500); // Change text every 3 seconds
+
+    return () => clearInterval(interval);
+  }, []);
+
   return (
     <LazyLoad>
       <StyledCraft>
@@ -73,11 +63,13 @@ function Craft() {
             Expand your business <br /> by harnessing <br /> our combined
             resources.
           </Subtitle>
+          <br />
+          <Subtitle>such as</Subtitle>
+          <SlideText>{slideTexts[slideIndex]}</SlideText>
         </Hook>
       </StyledCraft>
     </LazyLoad>
   );
 }
 
-// Export the Component (reusable)
 export default Craft;
