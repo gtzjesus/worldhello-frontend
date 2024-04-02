@@ -13,11 +13,6 @@ import styled, { keyframes } from 'styled-components';
 import { useEffect, useState } from 'react';
 import { Link } from 'react-scroll';
 
-// ------------------------------
-// Styled Componenets
-// ------------------------------
-// This section has all CSS styles configured for every HTML element.
-
 // Define keyframe animations
 const fadeIn = keyframes`
   from {
@@ -37,6 +32,10 @@ const slideIn = keyframes`
   }
 `;
 
+// ------------------------------
+// Styled Components
+// ------------------------------
+// This section has all necessary styled components
 const StyledNav = styled.nav`
   display: flex;
   align-items: center;
@@ -59,6 +58,7 @@ const Object = styled.div`
 
 const Icon = styled.a`
   height: var(--font-small);
+  cursor: pointer; /* Add cursor pointer */
 `;
 
 const Logo = styled.img`
@@ -158,6 +158,27 @@ function Navigation() {
     setIsMenuOpen(!isMenuOpen);
   }
 
+  // Function to handle scrolling to the top
+  function scrollToTop() {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth', // Smooth scrolling behavior
+    });
+  }
+
+  useEffect(() => {
+    function handleScroll() {
+      const scrollTop = window.scrollY;
+      setIsScrolled(scrollTop > 0);
+    }
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
   useEffect(() => {
     function handleClick() {
       setIsMenuOpen(false);
@@ -217,7 +238,7 @@ function Navigation() {
       {/* <!-- Nav Container , the header --> */}
       <StyledNav isScrolled={isScrolled}>
         <Object>
-          <Icon target="_blank" href="https://www.worldhello.us/">
+          <Icon onClick={scrollToTop}>
             {/* <!--  Container for logo and title --> */}
             <Logo src="/logos/helloworld.webp" alt="worldhello"></Logo>
           </Icon>
