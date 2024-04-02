@@ -23,7 +23,7 @@ const StyledFooter = styled.footer`
   background-color: var(--color-black);
   color: var(--color-white);
   padding: var(--padding-large);
-  padding-bottom: var(--padding-small);
+  padding-bottom: var(--padding-xlarge);
   gap: var(--gap-large);
 `;
 
@@ -50,15 +50,9 @@ const Signature = styled.div`
   gap: var(--gap-small);
 `;
 
-const Logo = styled.img`
-  // Code logic to modify logo
-  height: var(--logo-height);
-`;
-
-const Brand = styled.a`
-  font-size: var(--font-small);
-  text-transform: uppercase;
-  padding: 0 var(--padding-xxsmall);
+const Copyright = styled.a`
+  font-size: var(--font-xxxsmall);
+  padding-bottom: var(--padding-xsmall);
 `;
 
 // ------------------------------
@@ -90,9 +84,7 @@ function Footer() {
         </Tag>
       </SocialMedia>
       <Signature>
-        {/* <!-- Brand Container --> */}
-        <Logo src="/logos/helloworld.png" alt="globe"></Logo>
-        <Brand href="https://worldhello.us">WorldHello </Brand>
+        <Copyright>&copy; WorldHello</Copyright>
       </Signature>
     </StyledFooter>
   );

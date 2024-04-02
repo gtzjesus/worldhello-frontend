@@ -10,8 +10,9 @@
 import Navigation from '../../navigation/Navigation';
 import Achievements from '../../components/achievements/Achievements';
 import Source from '../../components/source/Source';
-import Footer from '../../components/footer/Footer';
 import Faqs from '../../components/faqs/Faqs';
+import Footer from '../../footer/Footer';
+
 import Craft from '../../components/craft/Craft';
 import Landing from '../../components/landing/Landing';
 import Performance from '../../components/performance/Performance';
