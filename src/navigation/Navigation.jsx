@@ -12,6 +12,7 @@
 import styled, { keyframes } from 'styled-components';
 import { useEffect, useState } from 'react';
 import { Link } from 'react-scroll';
+import TriggerButton from '../ui/buttons/TriggerButton';
 
 // Define keyframe animations
 const fadeIn = keyframes`
@@ -269,6 +270,9 @@ function Navigation() {
             >
               About
             </Link>
+            <br />
+            <br />
+
             <Link
               to="join-section"
               smooth={true}
@@ -279,6 +283,9 @@ function Navigation() {
             >
               Join
             </Link>
+            <br />
+            <br />
+
             <Link
               to="portfolio-section"
               smooth={true}
@@ -289,16 +296,7 @@ function Navigation() {
             >
               Portfolio
             </Link>
-            <Link
-              to="contact-section"
-              smooth={true}
-              duration={500}
-              spy={true}
-              exact="true"
-              offset={-80}
-            >
-              Contact
-            </Link>
+            <br />
           </MenuItem>
         </MenuContent>
       </MenuContainer>
