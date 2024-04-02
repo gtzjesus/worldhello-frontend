@@ -2,6 +2,7 @@
 import styled from 'styled-components';
 
 const Button = styled.button`
+  position: fixed;
   bottom: 20px; /* Adjust the distance from the bottom as needed */
   left: 50%;
   transform: translateX(-50%);
@@ -21,7 +22,6 @@ const Button = styled.button`
 `;
 
 const TriggerButton = ({ openModal, text }) => {
-  console.log(text); // Add this line to check the value of the text prop
   return <Button onClick={openModal}>{text}</Button>;
 };
 
