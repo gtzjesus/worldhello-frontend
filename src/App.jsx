@@ -6,7 +6,6 @@ import { DesignsProvider } from './context/DesignsContext';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 
-import Contact from './pages/contact/Contact';
 import ErrorBoundary from './components/errors/ErrorBoundary';
 
 // REACT QUERY INTEGRATION
@@ -23,10 +22,6 @@ const router = createBrowserRouter([
   {
     path: '/',
     element: <Home />,
-  },
-  {
-    path: '/contact',
-    element: <Contact />,
   },
 ]);
 

@@ -1,4 +1,4 @@
-// File: Navigation.js
+// File: Navigation.jsx
 // Description: React navigation Component (header).
 // LazyLoading from React for optimization (images & web app loading time).
 // Global Styles from /src/styles/ used for global variables.
@@ -11,6 +11,7 @@
 
 import styled, { keyframes } from 'styled-components';
 import { useEffect, useState } from 'react';
+import { Link } from 'react-scroll';
 
 // ------------------------------
 // Styled Componenets
@@ -33,15 +34,6 @@ const slideIn = keyframes`
   }
   to {
     transform: translateY(0);
-  }
-`;
-
-const rotateIn = keyframes`
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
   }
 `;
 
@@ -144,6 +136,7 @@ const MenuItem = styled.a`
   color: var(--color-white);
   text-decoration: none;
   font-size: var(--font-links);
+  cursor: pointer;
 `;
 
 const MenuImg = styled.img`
@@ -165,6 +158,23 @@ function Navigation() {
     setIsMenuOpen(!isMenuOpen);
   }
 
+  useEffect(() => {
+    function handleClick() {
+      setIsMenuOpen(false);
+    }
+
+    const menuItems = document.querySelectorAll('.menu-item');
+    menuItems.forEach((item) => {
+      item.addEventListener('click', handleClick);
+    });
+
+    return () => {
+      menuItems.forEach((item) => {
+        item.removeEventListener('click', handleClick);
+      });
+    };
+  }, []);
+
   // useEffect to handle our scroll events
   useEffect(() => {
     // Create function to handle scroll
@@ -177,6 +187,28 @@ function Navigation() {
 
     return () => {
       window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
+  useEffect(() => {
+    function scrollToHashSection() {
+      const hash = window.location.hash;
+      if (hash) {
+        const sectionId = hash.substring(1);
+        const section = document.getElementById(sectionId);
+        console.log(section);
+        if (section) {
+          section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      }
+    }
+
+    // Scroll to the section when the component mounts and when the hash changes
+    scrollToHashSection();
+    window.addEventListener('hashchange', scrollToHashSection);
+
+    return () => {
+      window.removeEventListener('hashchange', scrollToHashSection);
     };
   }, []);
 
@@ -206,7 +238,18 @@ function Navigation() {
       </StyledNav>
       <MenuContainer isOpen={isMenuOpen}>
         <MenuContent>
-          <MenuItem>Contact</MenuItem>
+          <MenuItem className="menu-item">
+            <Link
+              to="contact-section"
+              smooth={true}
+              duration={500}
+              spy={true}
+              exact="true"
+              offset={-80}
+            >
+              contact
+            </Link>
+          </MenuItem>
         </MenuContent>
       </MenuContainer>
     </>

@@ -59,7 +59,7 @@ function FaqsItem({ num, title, currentOpen, onOpen, children }) {
   // ------------------------------
   // useEffect
   // ------------------------------
-  // Code logic Animation for the whole app, a useEffect so that it happens once component mounts
+  // Code logic Animation , a useEffect so that happens once component mounts
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {

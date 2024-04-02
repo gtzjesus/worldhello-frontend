@@ -9,14 +9,6 @@
   overflow-x: hidden;
 }
 
-/* Media query for larger devices */
-@media (min-width: 768px) {
-  .responsive-container {
-    max-width: 600px; /* Adjust as needed */
-    margin: 0 auto; /* Center the container horizontally */
-  }
-}
-
 /* Animations */
 .hidden {
   opacity: 0;

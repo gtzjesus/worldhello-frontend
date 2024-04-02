@@ -48,7 +48,6 @@ const Title = styled.span`
   letter-spacing: var(--spacing-title);
   text-transform: uppercase;
   overflow: hidden;
-  z-index: var(--z-top);
 `;
 
 const Subtitle = styled.span`

@@ -7,17 +7,26 @@
 // Imports
 // ------------------------------
 // This section has all necessary imports for this component.
-import Navigation from '../../components/navigation/Navigation';
+import Navigation from '../../navigation/Navigation';
 import Achievements from '../../components/achievements/Achievements';
 import Source from '../../components/source/Source';
 import Trial from '../../components/trial/Trial';
 import Footer from '../../components/footer/Footer';
 import Faqs from '../../components/faqs/Faqs';
 import Craft from '../../components/craft/Craft';
-import Refer from '../../components/refer/Refer';
 import Landing from '../../components/landing/Landing';
 import Performance from '../../components/performance/Performance';
 import { useEffect, useRef } from 'react';
+import styled from 'styled-components';
+/* Media query for larger devices */
+const ResponsiveContainer = styled.div`
+  @media (min-width: 768px) {
+    max-width: 600px; /* Adjust as needed */
+    margin: 0 auto; /* Center the container horizontally */
+    padding: 0 20px;
+  }
+`;
+
 // ------------------------------
 // Component
 // ------------------------------
@@ -70,20 +79,21 @@ function Home() {
     <>
       <Navigation />
       <Landing />
-      <div ref={firstPerformanceRef} className="hidden">
+      <ResponsiveContainer>
         <Source />
-      </div>
-      <div className="responsive-container">
+      </ResponsiveContainer>
+      <ResponsiveContainer>
         <Performance />
         <Craft />
-        <div ref={secondPerformanceRef} className="hidden">
+        <div ref={firstPerformanceRef} className="hidden">
           <Achievements />
         </div>
-        <Faqs />
-        <Refer />
+        <ResponsiveContainer id="contact-section">
+          <Faqs />
+        </ResponsiveContainer>
         <Trial />
         <Footer />
-      </div>
+      </ResponsiveContainer>
     </>
   );
 }
