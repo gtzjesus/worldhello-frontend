@@ -12,7 +12,7 @@
 import styled, { keyframes } from 'styled-components';
 import { useEffect, useState } from 'react';
 import { Link } from 'react-scroll';
-import TriggerButton from '../ui/buttons/TriggerButton';
+// import TriggerButton from '../ui/buttons/TriggerButton';
 
 // Define keyframe animations
 const fadeIn = keyframes`
@@ -297,6 +297,9 @@ function Navigation() {
               Portfolio
             </Link>
             <br />
+            <br />
+            {/* <TriggerButton openModal={openModal} text={`Click to start`} />
+            {isModalOpen && <Modal closeModal={closeModal} />} */}
           </MenuItem>
         </MenuContent>
       </MenuContainer>

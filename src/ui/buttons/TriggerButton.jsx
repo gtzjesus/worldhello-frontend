@@ -22,6 +22,7 @@ const Button = styled.button`
 `;
 
 const TriggerButton = ({ openModal, text }) => {
+  console.log(text); // Add this line to check the value of the text prop
   return <Button onClick={openModal}>{text}</Button>;
 };
 

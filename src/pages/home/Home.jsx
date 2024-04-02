@@ -11,12 +11,14 @@ import Navigation from '../../navigation/Navigation';
 import Achievements from '../../components/achievements/Achievements';
 import Source from '../../components/source/Source';
 import Faqs from '../../components/faqs/Faqs';
-import Footer from '../../footer/Footer';
-
+import { useState } from 'react';
+import Modal from '../../ui/modals/Modal';
+import TriggerButton from '../../ui/buttons/TriggerButton';
 import Craft from '../../components/craft/Craft';
 import Landing from '../../components/landing/Landing';
 import Performance from '../../components/performance/Performance';
 import { useEffect, useRef } from 'react';
+import Footer from '../../footer/Footer';
 import styled from 'styled-components';
 /* Media query for larger devices */
 const ResponsiveContainer = styled.div`
@@ -32,6 +34,10 @@ const ResponsiveContainer = styled.div`
 // ------------------------------
 // This section has our React Component which handles the data
 function Home() {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const openModal = () => setIsModalOpen(true);
+  const closeModal = () => setIsModalOpen(false);
   // ------------------------------
   // Animation Logic
   // ------------------------------
@@ -92,6 +98,8 @@ function Home() {
             <Achievements />
           </ResponsiveContainer>
         </div>
+        <TriggerButton openModal={openModal} text={`Click to start`} />
+        {isModalOpen && <Modal closeModal={closeModal} />}
         <Faqs />
         <Footer />
       </ResponsiveContainer>
