@@ -7,6 +7,7 @@ import ErrorBoundary from './components/errors/ErrorBoundary';
 import Home from './pages/home/Home';
 import { DesignsProvider } from './context/DesignsContext';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
+import NotFound from './components/errors/NotFound';
 
 // REACT QUERY INTEGRATION
 const queryClient = new QueryClient({
@@ -29,16 +30,11 @@ function App() {
       <QueryClientProvider client={queryClient}>
         <DesignsProvider>
           <GlobalStyles />
-          {/* Ensure that the Router component is properly initialized */}
           <Router history={history}>
-            {/* Wrap your routes in the Routes component */}
             <Routes>
-              {/* Define your routes here */}
               <Route path="/" element={<Home />} />
-              {/* Add more routes here as needed */}
-              {/* Example: <Route path="/about" element={<About />} /> */}
-              {/* Add a catch-all route for 404 */}
-              {/* You can render a Not Found component or handle the 404 error as needed */}
+              {/* Add a route for NotFound component */}
+              <Route path="*" element={<NotFound />} />
             </Routes>
           </Router>
         </DesignsProvider>
