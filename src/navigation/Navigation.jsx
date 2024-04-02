@@ -225,7 +225,6 @@ function Navigation() {
         <Object>
           {/* <!-- Menu Container for links --> */}
           <Menu onClick={toggleMenu}>
-            {' '}
             {isMenuOpen ? (
               <MenuImg src="/icons/close.webp" alt="Close"></MenuImg>
             ) : (
@@ -240,6 +239,36 @@ function Navigation() {
         <MenuContent>
           <MenuItem className="menu-item">
             <Link
+              to="about-section"
+              smooth={true}
+              duration={500}
+              spy={true}
+              exact="true"
+              offset={-80}
+            >
+              About
+            </Link>
+            <Link
+              to="join-section"
+              smooth={true}
+              duration={500}
+              spy={true}
+              exact="true"
+              offset={-80}
+            >
+              Join
+            </Link>
+            <Link
+              to="portfolio-section"
+              smooth={true}
+              duration={500}
+              spy={true}
+              exact="true"
+              offset={-80}
+            >
+              Portfolio
+            </Link>
+            <Link
               to="contact-section"
               smooth={true}
               duration={500}
@@ -247,7 +276,7 @@ function Navigation() {
               exact="true"
               offset={-80}
             >
-              contact
+              Contact
             </Link>
           </MenuItem>
         </MenuContent>

@@ -7,7 +7,7 @@
 // Imports
 // ------------------------------
 // This section has all necessary imports for this component.
-import { useContext, useEffect, useRef, useState } from 'react';
+import { useContext, useState } from 'react';
 import Spinner from '../../ui/spinners/Spinner';
 import Design from '../designs/Design';
 import styled from 'styled-components';
@@ -32,12 +32,6 @@ const GridContainer = styled.div`
 
 const Title = styled.span`
   font-size: var(--font-xxsmall);
-`;
-
-const Learn = styled.a`
-  font-size: var(--font-xxxsmall);
-  color: var(--color-link);
-  cursor: pointer;
 `;
 
 const Caption = styled.span`
@@ -98,13 +92,9 @@ function Achievements() {
         <Information>
           <Caption>Turn that idea</Caption>
           <Caption>into a website.</Caption>
-
           <Information>
             <Title>From $49/mo.</Title>
-            <Learn>Learn more</Learn>
           </Information>
-          <br />
-          <br />
           <br />
           <br />
           <br />

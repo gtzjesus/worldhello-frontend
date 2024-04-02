@@ -10,7 +10,6 @@
 import Navigation from '../../navigation/Navigation';
 import Achievements from '../../components/achievements/Achievements';
 import Source from '../../components/source/Source';
-import Trial from '../../components/trial/Trial';
 import Footer from '../../components/footer/Footer';
 import Faqs from '../../components/faqs/Faqs';
 import Craft from '../../components/craft/Craft';
@@ -79,19 +78,20 @@ function Home() {
     <>
       <Navigation />
       <Landing />
-      <ResponsiveContainer>
+      <ResponsiveContainer id="about-section">
         <Source />
       </ResponsiveContainer>
       <ResponsiveContainer>
         <Performance />
-        <Craft />
-        <div ref={firstPerformanceRef} className="hidden">
-          <Achievements />
-        </div>
-        <ResponsiveContainer id="contact-section">
-          <Faqs />
+        <ResponsiveContainer id="join-section">
+          <Craft />
         </ResponsiveContainer>
-        <Trial />
+        <div ref={firstPerformanceRef} className="hidden">
+          <ResponsiveContainer id="portfolio-section">
+            <Achievements />
+          </ResponsiveContainer>
+        </div>
+        <Faqs />
         <Footer />
       </ResponsiveContainer>
     </>
