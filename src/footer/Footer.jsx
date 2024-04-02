@@ -23,8 +23,12 @@ const StyledFooter = styled.footer`
   background-color: var(--color-black);
   color: var(--color-white);
   padding: var(--padding-large);
-  padding-bottom: var(--padding-xlarge);
+  padding-bottom: var(--padding-large);
   gap: var(--gap-large);
+`;
+
+const Logo = styled.img`
+  height: var(--font-medium);
 `;
 
 const SocialMedia = styled.div`
@@ -44,10 +48,7 @@ const Icon = styled.img`
 
 const Signature = styled.div`
   display: flex;
-  margin: 0 auto;
-  align-items: center;
-
-  gap: var(--gap-small);
+  justify-content: center;
 `;
 
 const Copyright = styled.a`
@@ -83,8 +84,12 @@ function Footer() {
           <Icon src="/icons/linkedin.png" alt="linkedin"></Icon>
         </Tag>
       </SocialMedia>
+      <hr />
       <Signature>
-        <Copyright>&copy; WorldHello</Copyright>
+        <Logo src="/logos/helloworld.webp" alt="worldhello"></Logo>
+      </Signature>
+      <Signature>
+        <Copyright>WorldHello &copy; 2024 All rights reserved </Copyright>
       </Signature>
     </StyledFooter>
   );
