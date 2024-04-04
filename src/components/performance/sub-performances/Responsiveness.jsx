@@ -26,6 +26,7 @@ const StyledResponsiveness = styled.div`
 
   // Code logic for covering full-screen devices
   min-height: 100vh;
+  min-width: 800px;
 `;
 
 const Hook = styled.div`
