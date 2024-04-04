@@ -30,31 +30,6 @@ const StyledResponsiveness = styled.div`
   min-height: 100vh;
 `;
 
-const Hook = styled.div`
-  // Code logic for positioning all information inside our hook
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding: var(--padding-small);
-  color: var(--color-white);
-`;
-
-const Title = styled.span`
-  line-height: var(--line-height-small);
-  font-size: var(--font-large);
-  letter-spacing: var(--spacing-title);
-  text-transform: uppercase;
-  overflow: hidden;
-`;
-
-const Subtitle = styled.span`
-  // Code logic for subtitle element
-  font-size: var(--font-xsmall);
-  letter-spacing: var(--spacing-subtitle);
-  line-height: var(--line-height-xsmall);
-  overflow: hidden;
-`;
-
 // ------------------------------
 // Component
 // ------------------------------
@@ -63,14 +38,7 @@ const Subtitle = styled.span`
 function Responsiveness() {
   return (
     <LazyLoad>
-      {/* <!-- Main Container --> */}
-      <StyledResponsiveness>
-        {/* <!-- Hook Container --> */}
-        <Hook>
-          <Title>Look Good </Title>
-          <Subtitle>on all screens</Subtitle>
-        </Hook>
-      </StyledResponsiveness>
+      <StyledResponsiveness />
     </LazyLoad>
   );
 }
