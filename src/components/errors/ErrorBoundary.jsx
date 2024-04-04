@@ -1,5 +1,11 @@
 import { Component } from 'react';
+import styled from 'styled-components';
 
+const StyledNotFound = styled.div`
+  display: flex;
+  justify-content: center;
+  padding: var(--padding-medium);
+`;
 class ErrorBoundary extends Component {
   constructor(props) {
     super(props);
@@ -18,12 +24,12 @@ class ErrorBoundary extends Component {
     if (this.state.hasError) {
       // Render fallback UI when an error occurs
       return (
-        <div>
+        <StyledNotFound>
           <h1>Oops! Something went wrong.</h1>
           <p>Error: {this.state.error.toString()}</p>
           <p>Component Stack Trace: {this.state.errorInfo.componentStack}</p>
           <p>Please refresh the page.</p>
-        </div>
+        </StyledNotFound>
       );
     }
 

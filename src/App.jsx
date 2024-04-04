@@ -1,6 +1,5 @@
 import { useEffect } from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'; // Import Routes
-import { createBrowserHistory } from 'history';
 import GlobalStyles from './styles/GlobalStyles';
 import './styles/App.css';
 import ErrorBoundary from './components/errors/ErrorBoundary';
@@ -17,7 +16,6 @@ const queryClient = new QueryClient({
     },
   },
 });
-const history = createBrowserHistory();
 
 function App() {
   // Load all webpages on top automatically
@@ -30,7 +28,7 @@ function App() {
       <QueryClientProvider client={queryClient}>
         <DesignsProvider>
           <GlobalStyles />
-          <Router history={history}>
+          <Router>
             <Routes>
               <Route path="/" element={<Home />} />
               {/* Add a route for NotFound component */}

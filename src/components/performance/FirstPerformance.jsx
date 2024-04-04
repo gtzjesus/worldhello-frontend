@@ -18,7 +18,6 @@ const Intro = styled.div`
   font-size: var(--font-smmd);
   padding: var(--padding-small) 0;
   line-height: var(--line-height-xsmall);
-  text-transform: uppercase;
 `;
 
 const Img = styled.img``;
@@ -26,7 +25,6 @@ const Img = styled.img``;
 const Description = styled.span`
   font-size: var(--font-xxxsmall);
   letter-spacing: 0.05rem;
-  text-transform: uppercase;
   opacity: 0.75;
 `;
 
