@@ -3,8 +3,7 @@ import styled from 'styled-components';
 
 const GrowClientele = styled.div`
   color: var(--color-white);
-  padding: 0 var(--padding-large);
-  padding-bottom: var(--padding-xxlarge);
+  padding: var(--padding-xxlarge) var(--padding-large);
 `;
 
 const Information = styled.div`
