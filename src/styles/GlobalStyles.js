@@ -46,6 +46,7 @@ const GlobalStyles = createGlobalStyle`
     --color-black: #121212;
     --color-yellow: #e7e167;
     --color-white: #F5F5F5;
+    --color-super-white: #FFFF
     --color-blue: #455e71;
     --color-link: #006ED4;
     --color-green: #6A7744;

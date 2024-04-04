@@ -7,6 +7,7 @@ import GrowClientele from './sub-performances/GrowClientele';
 import Responsiveness from './sub-performances/Responsiveness';
 import ShowcaseProducts from './sub-performances/ShowcaseProducts';
 import CollectPayments from './sub-performances/CollectPayments';
+import Dashboard from './sub-performances/Dashboard';
 
 // ------------------------------
 // Imports
@@ -17,6 +18,7 @@ function Performance() {
   return (
     <>
       <ShowcaseProducts />
+      <Dashboard />
       <Responsiveness />
       <GrowClientele />
       <CollectPayments />

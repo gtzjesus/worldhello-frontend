@@ -17,13 +17,12 @@ import LazyLoad from 'react-lazyload';
 // ------------------------------
 // This section has all CSS styles configured for every HTML element.
 
-const StyledResponsiveness = styled.div`
+const StyledDashboard = styled.div`
   // Code logic for setting the background
   // Design background from Figma software
-  background: url('backgrounds/responsiveness.png');
+  background: url('backgrounds/responsiveness.webp');
   background-size: contain;
   background-repeat: no-repeat;
-  background-color: red;
 
   // Code logic for covering full-screen devices
   min-height: 100vh;
@@ -58,20 +57,20 @@ const Subtitle = styled.span`
 // ------------------------------
 // This section has our React Component which handles the hook data
 
-function Responsiveness() {
+function Dashboard() {
   return (
     <LazyLoad>
       {/* <!-- Main Container --> */}
-      <StyledResponsiveness>
+      <StyledDashboard>
         {/* <!-- Hook Container --> */}
         <Hook>
-          <Title>Responsive </Title>
+          <Title>Look Good </Title>
           <Subtitle>on all screens</Subtitle>
         </Hook>
-      </StyledResponsiveness>
+      </StyledDashboard>
     </LazyLoad>
   );
 }
 
 // Export the Component (reusable)
-export default Responsiveness;
+export default Dashboard;

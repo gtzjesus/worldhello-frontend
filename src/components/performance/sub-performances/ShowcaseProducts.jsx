@@ -12,10 +12,11 @@ const Information = styled.div`
   flex-direction: column;
 `;
 
-const Intro = styled.div`
+const Intro = styled.span`
   font-size: var(--font-smmd);
   padding: var(--padding-small) 0;
   line-height: var(--line-height-xsmall);
+  overflow-y: hidden;
 `;
 
 const Img = styled.img``;
