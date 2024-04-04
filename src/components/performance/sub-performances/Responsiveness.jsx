@@ -1,80 +1,75 @@
+// ------------------------------
+// File: Responsiveness.js
+// ------------------------------
+// Description: React component for displaying Responsiveness page (first thing USER sees).
+// ------------------------------
+
+// ------------------------------
+// Imports
+// ------------------------------
+// This section has all necessary imports for this component.
+
 import styled from 'styled-components';
 import LazyLoad from 'react-lazyload';
-import { useEffect, useRef } from 'react';
+
+// ------------------------------
+// Styled Componenets
+// ------------------------------
+// This section has all CSS styles configured for every HTML element.
 
 const StyledResponsiveness = styled.div`
-  position: relative;
-  overflow: hidden;
-  height: 75vh;
-  color: var(--color-white);
-`;
-
-const Background = styled.div`
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background-image: url('/backgrounds/responsiveness.webp');
-  background-size: cover;
+  // Code logic for setting the background
+  // Design background from Figma software
+  background: url('backgrounds/responsiveness.png');
+  background-size: contain;
   background-repeat: no-repeat;
+  background-color: red;
+
+  // Code logic for covering full-screen devices
+  min-height: 100vh;
 `;
 
-const Information = styled.div`
+const Hook = styled.div`
+  // Code logic for positioning all information inside our hook
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 1;
   display: flex;
   flex-direction: column;
-  text-align: center;
+  justify-content: center;
+  padding: var(--padding-xlarge) var(--padding-small);
 `;
 
 const Title = styled.span`
+  line-height: var(--line-height-small);
   font-size: var(--font-large);
-  font-weight: bold; /* Add font weight for emphasis */
-  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5); /* Add a subtle text shadow */
+  letter-spacing: var(--spacing-title);
+  text-transform: uppercase;
+  overflow: hidden;
 `;
 
-const Last = styled.div`
-  margin-top: var(--margin-xlarge);
+const Subtitle = styled.span`
+  // Code logic for subtitle element
+  font-size: var(--font-xsmall);
+  letter-spacing: var(--spacing-subtitle);
+  line-height: var(--line-height-xsmall);
+  overflow: hidden;
 `;
 
-const Ending = styled.span`
-  font-size: var(--font-links); /* Increase font size for readability */
-  line-height: 1.5; /* Increase line spacing */
-`;
+// ------------------------------
+// Component
+// ------------------------------
+// This section has our React Component which handles the hook data
 
 function Responsiveness() {
-  const backgroundRef = useRef(null);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      const scrollPosition = window.scrollY;
-      backgroundRef.current.style.transform = `translateY(-${
-        scrollPosition * 0.2
-      }px)`;
-    };
-
-    window.addEventListener('scroll', handleScroll);
-
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, []);
-
   return (
     <LazyLoad>
+      {/* <!-- Main Container --> */}
       <StyledResponsiveness>
-        <Background ref={backgroundRef} />
-        <Information>
-          <Title>Be seen</Title>
-          <Last>
-            <Ending>with a website accessible all over the world.</Ending>
-          </Last>
-        </Information>
+        {/* <!-- Hook Container --> */}
+        <Hook></Hook>
       </StyledResponsiveness>
     </LazyLoad>
   );
 }
 
+// Export the Component (reusable)
 export default Responsiveness;
