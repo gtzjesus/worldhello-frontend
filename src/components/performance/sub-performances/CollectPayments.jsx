@@ -1,7 +1,7 @@
 import { useEffect, useRef } from 'react';
 import styled from 'styled-components';
 
-const StyledFirstPerformance = styled.div`
+const CollectPayments = styled.div`
   color: var(--color-white);
   padding: 0 var(--padding-large);
   padding-bottom: var(--padding-xxlarge);
@@ -25,8 +25,7 @@ const Description = styled.span`
   letter-spacing: 0.05rem;
   opacity: 0.8;
 `;
-
-function FirstPerformance() {
+function ThirdPerformance() {
   const firstPerformanceRef = useRef(null);
   const secondPerformanceRef = useRef(null);
   const thirdPerformanceRef = useRef(null);
@@ -70,31 +69,30 @@ function FirstPerformance() {
       });
     };
   }, []);
-
   return (
-    <StyledFirstPerformance>
+    <CollectPayments>
       <div ref={firstPerformanceRef} className="hidden">
         <Information>
-          <Img src="/backgrounds/signin.webp" alt="signin"></Img>
+          <Img src="/backgrounds/baggy.webp" alt="signin"></Img>
         </Information>
       </div>
 
       <Information>
         <Intro>
           <div ref={secondPerformanceRef} className="hidden">
-            Grow <br /> Clientele
+            Collect <br /> Payments
           </div>
         </Intro>
 
         <Description>
           <div ref={thirdPerformanceRef} className="hidden">
-            Effortlessly have people subscribe and remain loyal, paying
-            customers.
+            Monetize your products or services with a revenue-generating
+            platform.
           </div>
         </Description>
       </Information>
-    </StyledFirstPerformance>
+    </CollectPayments>
   );
 }
 
-export default FirstPerformance;
+export default ThirdPerformance;

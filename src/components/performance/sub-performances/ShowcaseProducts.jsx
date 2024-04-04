@@ -1,7 +1,7 @@
 import { useEffect, useRef } from 'react';
 import styled from 'styled-components';
 
-const StyledThirdPerformance = styled.div`
+const ShowcaseProducts = styled.div`
   color: var(--color-white);
   padding: 0 var(--padding-large);
   padding-bottom: var(--padding-xxlarge);
@@ -25,7 +25,8 @@ const Description = styled.span`
   letter-spacing: 0.05rem;
   opacity: 0.8;
 `;
-function ThirdPerformance() {
+
+function SecondPerformance() {
   const firstPerformanceRef = useRef(null);
   const secondPerformanceRef = useRef(null);
   const thirdPerformanceRef = useRef(null);
@@ -69,30 +70,30 @@ function ThirdPerformance() {
       });
     };
   }, []);
+
   return (
-    <StyledThirdPerformance>
+    <ShowcaseProducts>
       <div ref={firstPerformanceRef} className="hidden">
         <Information>
-          <Img src="/backgrounds/baggy.webp" alt="signin"></Img>
+          <Img src="/backgrounds/brand.webp" alt="signin"></Img>
         </Information>
       </div>
 
       <Information>
         <Intro>
           <div ref={secondPerformanceRef} className="hidden">
-            Collect <br /> Payments
+            Showcase <br /> Products
           </div>
         </Intro>
 
         <Description>
           <div ref={thirdPerformanceRef} className="hidden">
-            Monetize your products or services with a revenue-generating
-            platform.
+            Deliver a unique experience while customers browse your products.
           </div>
         </Description>
       </Information>
-    </StyledThirdPerformance>
+    </ShowcaseProducts>
   );
 }
 
-export default ThirdPerformance;
+export default SecondPerformance;

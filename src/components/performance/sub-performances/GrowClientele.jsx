@@ -1,7 +1,7 @@
 import { useEffect, useRef } from 'react';
 import styled from 'styled-components';
 
-const StyledSecondPerformance = styled.div`
+const GrowClientele = styled.div`
   color: var(--color-white);
   padding: 0 var(--padding-large);
   padding-bottom: var(--padding-xxlarge);
@@ -26,7 +26,7 @@ const Description = styled.span`
   opacity: 0.8;
 `;
 
-function SecondPerformance() {
+function FirstPerformance() {
   const firstPerformanceRef = useRef(null);
   const secondPerformanceRef = useRef(null);
   const thirdPerformanceRef = useRef(null);
@@ -72,28 +72,29 @@ function SecondPerformance() {
   }, []);
 
   return (
-    <StyledSecondPerformance>
+    <GrowClientele>
       <div ref={firstPerformanceRef} className="hidden">
         <Information>
-          <Img src="/backgrounds/brand.webp" alt="signin"></Img>
+          <Img src="/backgrounds/signin.webp" alt="signin"></Img>
         </Information>
       </div>
 
       <Information>
         <Intro>
           <div ref={secondPerformanceRef} className="hidden">
-            Showcase <br /> Products
+            Grow <br /> Clientele
           </div>
         </Intro>
 
         <Description>
           <div ref={thirdPerformanceRef} className="hidden">
-            Deliver a unique experience while customers browse your products.
+            Effortlessly have people subscribe and remain loyal, paying
+            customers.
           </div>
         </Description>
       </Information>
-    </StyledSecondPerformance>
+    </GrowClientele>
   );
 }
 
-export default SecondPerformance;
+export default FirstPerformance;

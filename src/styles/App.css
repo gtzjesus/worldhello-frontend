@@ -9,15 +9,6 @@
   overflow-x: hidden;
 }
 
-.performance-container {
-  height: 400px; /* Adjust height as needed */
-  overflow-y: scroll;
-}
-
-.performance-scroll {
-  height: auto; /* Adjust height as needed */
-}
-
 /* Animations */
 .hidden {
   opacity: 0;

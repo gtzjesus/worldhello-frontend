@@ -3,9 +3,10 @@
 // ------------------------------
 // Description: React complete Home page
 
-import FirstPerformance from './FirstPerformance';
-import SecondPerformance from './SecondPerformance';
-import ThirdPerformance from './ThirdPerformance';
+import GrowClientele from './sub-performances/GrowClientele';
+import Responsiveness from './sub-performances/Responsiveness';
+import ShowcaseProducts from './sub-performances/ShowcaseProducts';
+import CollectPayments from './sub-performances/CollectPayments';
 
 // ------------------------------
 // Imports
@@ -15,9 +16,10 @@ import ThirdPerformance from './ThirdPerformance';
 function Performance() {
   return (
     <>
-      <FirstPerformance />
-      <SecondPerformance />
-      <ThirdPerformance />
+      <ShowcaseProducts />
+      <Responsiveness />
+      <GrowClientele />
+      <CollectPayments />
     </>
   );
 }
