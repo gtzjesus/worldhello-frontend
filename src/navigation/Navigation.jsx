@@ -55,6 +55,11 @@ const StyledNav = styled.nav`
 
 const Object = styled.div`
   padding: 0 var(--padding-small);
+  // @MEDIAQUERY logic for bigger devices 980px
+  @media (min-width: 61.25em) {
+    // Design background from Figma software
+    padding: 0 var(--padding-xxlarge);
+  }
 `;
 
 const Icon = styled.a`

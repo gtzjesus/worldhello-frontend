@@ -40,6 +40,12 @@ const Hook = styled.div`
   flex-direction: column;
   justify-content: center;
   padding: var(--padding-xlarge) var(--padding-small);
+
+  // @MEDIAQUERY logic for bigger devices 980px
+  @media (min-width: 61.25em) {
+    // Design background from Figma software
+    padding: var(--padding-xlarge) var(--padding-large);
+  }
 `;
 
 const Title = styled.span`
@@ -48,6 +54,13 @@ const Title = styled.span`
   letter-spacing: var(--spacing-title);
   text-transform: uppercase;
   overflow: hidden;
+
+  // @MEDIAQUERY logic for bigger devices 980px
+  @media (min-width: 61.25em) {
+    // Design background from Figma software
+    font-size: var(--font-xlarge);
+    line-height: var(--line-height-medium);
+  }
 `;
 
 const Subtitle = styled.span`
@@ -56,6 +69,13 @@ const Subtitle = styled.span`
   letter-spacing: var(--spacing-subtitle);
   line-height: var(--line-height-xsmall);
   overflow: hidden;
+
+  // @MEDIAQUERY logic for bigger devices 980px
+  @media (min-width: 61.25em) {
+    // Design background from Figma software
+    font-size: var(--font-medium);
+    line-height: var(--line-height-small);
+  }
 `;
 
 // ------------------------------

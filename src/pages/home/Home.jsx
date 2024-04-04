@@ -29,6 +29,8 @@ const ResponsiveContainer = styled.div`
   }
 `;
 
+const SourceContainer = styled.div``;
+
 // ------------------------------
 // Component
 // ------------------------------
@@ -85,9 +87,9 @@ function Home() {
     <>
       <Navigation />
       <Landing />
-      <ResponsiveContainer id="about-section">
+      <SourceContainer id="about-section">
         <Source />
-      </ResponsiveContainer>
+      </SourceContainer>
       <ResponsiveContainer>
         <Performance />
         <ResponsiveContainer id="join-section">
