@@ -23,7 +23,7 @@ const Intro = styled.div`
 const Img = styled.img``;
 
 const Description = styled.span`
-  font-size: var(--font-xxxsmall);
+  font-size: var(--font-xxsmall);
   letter-spacing: 0.05rem;
   opacity: 0.75;
 `;
@@ -84,7 +84,7 @@ function FirstPerformance() {
       <Information>
         <Intro>
           <div ref={secondPerformanceRef} className="hidden">
-            Grow <br /> clientele
+            Grow <br /> Clientele
           </div>
         </Intro>
 
