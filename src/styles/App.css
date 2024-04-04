@@ -6,7 +6,15 @@
   padding: 0;
   text-decoration: none;
   color: inherit;
-  overflow-x: hidden;
+}
+
+.performance-container {
+  height: 400px; /* Adjust height as needed */
+  overflow-y: scroll;
+}
+
+.performance-scroll {
+  height: auto; /* Adjust height as needed */
 }
 
 /* Animations */
