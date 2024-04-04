@@ -20,10 +20,9 @@ import LazyLoad from 'react-lazyload';
 const StyledResponsiveness = styled.div`
   // Code logic for setting the background
   // Design background from Figma software
-  background: url('backgrounds/responsiveness.png');
+  background: url('backgrounds/responsiveness.webp');
   background-size: contain;
   background-repeat: no-repeat;
-  background-color: red;
 
   // Code logic for covering full-screen devices
   min-height: 100vh;
@@ -65,7 +64,7 @@ function Responsiveness() {
       <StyledResponsiveness>
         {/* <!-- Hook Container --> */}
         <Hook>
-          <Title>Responsive </Title>
+          <Title>Look Good </Title>
           <Subtitle>on all screens</Subtitle>
         </Hook>
       </StyledResponsiveness>
