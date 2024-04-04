@@ -6,6 +6,7 @@
   padding: 0;
   text-decoration: none;
   color: inherit;
+  overflow-x: hidden;
 }
 
 .performance-container {
@@ -32,7 +33,6 @@
 /* Whole app*/
 body {
   background: var(--color-black);
-  overflow-x: hidden;
 }
 
 /* Horizontal line */
