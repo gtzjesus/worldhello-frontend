@@ -22,11 +22,12 @@ const StyledResponsiveness = styled.div`
   // Design background from Figma software
   background: url('backgrounds/responsiveness.webp');
   background-size: contain;
+  background-position: center;
+
   background-repeat: no-repeat;
 
   // Code logic for covering full-screen devices
   min-height: 100vh;
-  min-width: 800px;
 `;
 
 const Hook = styled.div`
@@ -35,6 +36,7 @@ const Hook = styled.div`
   flex-direction: column;
   justify-content: center;
   padding: var(--padding-small);
+  color: var(--color-white);
 `;
 
 const Title = styled.span`
