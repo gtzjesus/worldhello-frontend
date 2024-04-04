@@ -31,11 +31,9 @@ const StyledResponsiveness = styled.div`
 
 const Hook = styled.div`
   // Code logic for positioning all information inside our hook
-  position: absolute;
   display: flex;
-  flex-direction: column;
   justify-content: center;
-  padding: var(--padding-xlarge) var(--padding-small);
+  padding: var(--padding-small) 0;
 `;
 
 const Title = styled.span`
@@ -65,7 +63,10 @@ function Responsiveness() {
       {/* <!-- Main Container --> */}
       <StyledResponsiveness>
         {/* <!-- Hook Container --> */}
-        <Hook></Hook>
+        <Hook>
+          <Title>Responsive </Title>
+          <Subtitle>on all screens</Subtitle>
+        </Hook>
       </StyledResponsiveness>
     </LazyLoad>
   );
