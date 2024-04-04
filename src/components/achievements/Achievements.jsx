@@ -33,6 +33,9 @@ const GridContainer = styled.div`
 const Title = styled.span`
   font-size: var(--font-xxsmall);
 `;
+const SubTitle = styled.span`
+  font-size: var(--font-xxxsmall);
+`;
 
 const Caption = styled.span`
   font-size: var(--font-medium);
@@ -94,12 +97,17 @@ function Achievements() {
           <Caption>into a website.</Caption>
           <Information>
             <Title>From $49/mo.</Title>
+            <br />
+            <SubTitle>Lowest subscription</SubTitle>
+            <SubTitle>
+              includes web, hosting, support, security & more.
+            </SubTitle>
           </Information>
           <br />
           <br />
           <br />
           <br />
-          <Title>Visit some of our clients</Title>
+          <Title>Browse some of our clients</Title>
         </Information>
         <GridContainer>
           {designs.slice(0, visibleAchievements).map((design, idx) => (

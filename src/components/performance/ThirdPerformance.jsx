@@ -1,8 +1,7 @@
 import { useEffect, useRef } from 'react';
 import styled from 'styled-components';
 
-const StyledFirstPerformance = styled.div`
-  background: var(--color-black);
+const StyledThirdPerformance = styled.div`
   color: var(--color-white);
   padding: 0 var(--padding-large);
   padding-bottom: var(--padding-xxlarge);
@@ -11,14 +10,12 @@ const StyledFirstPerformance = styled.div`
 const Information = styled.div`
   display: flex;
   flex-direction: column;
-  gap: var(--gap-medium);
 `;
 
 const Intro = styled.div`
   font-size: var(--font-smmd);
   padding: var(--padding-small) 0;
   line-height: var(--line-height-xsmall);
-  text-transform: uppercase;
 `;
 
 const Img = styled.img``;
@@ -26,10 +23,8 @@ const Img = styled.img``;
 const Description = styled.span`
   font-size: var(--font-xxxsmall);
   letter-spacing: 0.05rem;
-  text-transform: uppercase;
-  opacity: 0.75;
+  opacity: 0.8;
 `;
-
 function ThirdPerformance() {
   const firstPerformanceRef = useRef(null);
   const secondPerformanceRef = useRef(null);
@@ -75,7 +70,7 @@ function ThirdPerformance() {
     };
   }, []);
   return (
-    <StyledFirstPerformance>
+    <StyledThirdPerformance>
       <div ref={firstPerformanceRef} className="hidden">
         <Information>
           <Img src="/backgrounds/baggy.webp" alt="signin"></Img>
@@ -85,7 +80,7 @@ function ThirdPerformance() {
       <Information>
         <Intro>
           <div ref={secondPerformanceRef} className="hidden">
-            Collect <br /> payments
+            Collect <br /> Payments
           </div>
         </Intro>
 
@@ -96,7 +91,7 @@ function ThirdPerformance() {
           </div>
         </Description>
       </Information>
-    </StyledFirstPerformance>
+    </StyledThirdPerformance>
   );
 }
 

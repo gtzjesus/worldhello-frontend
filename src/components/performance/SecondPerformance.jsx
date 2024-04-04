@@ -1,8 +1,7 @@
 import { useEffect, useRef } from 'react';
 import styled from 'styled-components';
 
-const StyledFirstPerformance = styled.div`
-  background: var(--color-black);
+const StyledSecondPerformance = styled.div`
   color: var(--color-white);
   padding: 0 var(--padding-large);
   padding-bottom: var(--padding-xxlarge);
@@ -11,14 +10,12 @@ const StyledFirstPerformance = styled.div`
 const Information = styled.div`
   display: flex;
   flex-direction: column;
-  gap: var(--gap-medium);
 `;
 
 const Intro = styled.div`
   font-size: var(--font-smmd);
   padding: var(--padding-small) 0;
   line-height: var(--line-height-xsmall);
-  text-transform: uppercase;
 `;
 
 const Img = styled.img``;
@@ -26,8 +23,7 @@ const Img = styled.img``;
 const Description = styled.span`
   font-size: var(--font-xxxsmall);
   letter-spacing: 0.05rem;
-  text-transform: uppercase;
-  opacity: 0.75;
+  opacity: 0.8;
 `;
 
 function SecondPerformance() {
@@ -76,7 +72,7 @@ function SecondPerformance() {
   }, []);
 
   return (
-    <StyledFirstPerformance>
+    <StyledSecondPerformance>
       <div ref={firstPerformanceRef} className="hidden">
         <Information>
           <Img src="/backgrounds/brand.webp" alt="signin"></Img>
@@ -86,7 +82,7 @@ function SecondPerformance() {
       <Information>
         <Intro>
           <div ref={secondPerformanceRef} className="hidden">
-            Showcase <br /> products
+            Showcase <br /> Products
           </div>
         </Intro>
 
@@ -96,7 +92,7 @@ function SecondPerformance() {
           </div>
         </Description>
       </Information>
-    </StyledFirstPerformance>
+    </StyledSecondPerformance>
   );
 }
 

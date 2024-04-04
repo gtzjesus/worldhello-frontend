@@ -10,7 +10,6 @@ const StyledFirstPerformance = styled.div`
 const Information = styled.div`
   display: flex;
   flex-direction: column;
-  gap: var(--gap-medium);
 `;
 
 const Intro = styled.div`
@@ -22,9 +21,9 @@ const Intro = styled.div`
 const Img = styled.img``;
 
 const Description = styled.span`
-  font-size: var(--font-xxsmall);
+  font-size: var(--font-xxxsmall);
   letter-spacing: 0.05rem;
-  opacity: 0.75;
+  opacity: 0.8;
 `;
 
 function FirstPerformance() {
