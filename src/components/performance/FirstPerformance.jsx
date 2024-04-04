@@ -2,7 +2,6 @@ import { useEffect, useRef } from 'react';
 import styled from 'styled-components';
 
 const StyledFirstPerformance = styled.div`
-  background: var(--color-black);
   color: var(--color-white);
   padding: 0 var(--padding-large);
   padding-bottom: var(--padding-xxlarge);
