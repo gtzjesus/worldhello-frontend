@@ -40,7 +40,7 @@ const Last = styled.div`
 `;
 
 const Ending = styled.span`
-  font-size: var(--font-smmd); /* Increase font size for readability */
+  font-size: var(--font-links); /* Increase font size for readability */
   line-height: 1.5; /* Increase line spacing */
 `;
 
