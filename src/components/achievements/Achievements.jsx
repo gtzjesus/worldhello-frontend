@@ -97,11 +97,6 @@ function Achievements() {
           <Caption>into a website.</Caption>
           <Information>
             <Title>From $49/mo.</Title>
-            <br />
-            <SubTitle>Lowest subscription</SubTitle>
-            <SubTitle>
-              includes web, hosting, support, security & more.
-            </SubTitle>
           </Information>
           <br />
           <br />
@@ -128,6 +123,10 @@ function Achievements() {
             </SeeMoreButton>
           </Additional>
         )}
+        <Information>
+          <SubTitle>Lowest subscription $49/mo.</SubTitle>
+          <SubTitle>includes web, hosting, support, security & more.</SubTitle>
+        </Information>
       </StyledAchievements>
     </LazyLoad>
   );
