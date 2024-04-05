@@ -6,10 +6,11 @@ const StyledGifResponsive = styled.div`
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
-  min-height: 35vh;
+  min-height: 40vh;
+  padding: var(--padding-giant) 0;
 
   /* Apply CSS filter to make the background black and white */
-  filter: contrast(250%);
+  filter: saturate(1250%);
 
   /* Add additional styles to control the zoom effect */
   transition: transform 0.5s ease;
@@ -31,8 +32,8 @@ function GifResponsive() {
   return (
     <LazyLoad>
       <StyledGifResponsive>
-        <Title>Accessibility </Title>
-        <Title>across all devices</Title>
+        {/* <Title>Accessibility </Title>
+        <Title>across all devices</Title> */}
       </StyledGifResponsive>
     </LazyLoad>
   );
