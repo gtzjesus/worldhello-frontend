@@ -18,12 +18,12 @@ import GifResponsive from './sub-performances/GifResponsive';
 function Performance() {
   return (
     <>
-      <ShowcaseProducts />
       <Responsiveness />
       <GifResponsive />
+      <ShowcaseProducts />
       <GrowClientele />
-      <EarthZoom />
       <CollectPayments />
+      <EarthZoom />
     </>
   );
 }

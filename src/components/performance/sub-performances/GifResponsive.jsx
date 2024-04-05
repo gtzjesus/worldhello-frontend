@@ -11,10 +11,6 @@ const StyledGifResponsive = styled.div`
 
   /* Apply CSS filter to make the background black and white */
   filter: saturate(1250%);
-
-  /* Add additional styles to control the zoom effect */
-  transition: transform 0.5s ease;
-  transform-origin: center;
 `;
 
 const Title = styled.span`
@@ -24,11 +20,12 @@ const Title = styled.span`
   color: var(--color-white);
   font-weight: bold; /* Add font weight for emphasis */
   text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5); /* Add a subtle text shadow */
+  text-transform: uppercase;
 `;
 
 const SubTitle = styled.span`
   display: flex;
-  justify-content: center;
+  justify-content: left;
   font-size: var(--font-small);
   color: var(--color-white);
   font-weight: bold; /* Add font weight for emphasis */
@@ -39,9 +36,8 @@ function GifResponsive() {
   return (
     <LazyLoad>
       <StyledGifResponsive>
-        <Title>
-          Accessibility <SubTitle>Across all devices</SubTitle>{' '}
-        </Title>
+        <Title>Accessible</Title>
+        <SubTitle>across all devices.</SubTitle>
       </StyledGifResponsive>
     </LazyLoad>
   );

@@ -69,7 +69,9 @@ function Source() {
         <Information>
           <Title>Be seen</Title>
           <Last>
-            <Ending>with a website accessible all over the world.</Ending>
+            <Ending>
+              with a website that is available all over the world.
+            </Ending>
           </Last>
         </Information>
       </StyledSource>
