@@ -20,7 +20,7 @@ function EarthZoom() {
   useEffect(() => {
     const handleScroll = () => {
       const scrollPosition = window.scrollY;
-      const zoomLevel = 1 + scrollPosition * 0.0001; // Adjust the factor for desired zoom speed
+      const zoomLevel = 1 + scrollPosition * 0.0005; // Adjust the factor for desired zoom speed
 
       // Apply zoom effect using CSS transform
       earthRef.current.style.transform = `scale(${zoomLevel})`;
