@@ -1,4 +1,3 @@
-import React, { useRef, useEffect } from 'react';
 import styled from 'styled-components';
 import LazyLoad from 'react-lazyload';
 
