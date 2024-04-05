@@ -24,12 +24,12 @@ class ErrorBoundary extends Component {
     if (this.state.hasError) {
       // Render fallback UI when an error occurs
       return (
-        <StyledNotFound>
+        <div>
           <h1>Oops! Something went wrong.</h1>
           <p>Error: {this.state.error.toString()}</p>
           <p>Component Stack Trace: {this.state.errorInfo.componentStack}</p>
           <p>Please refresh the page.</p>
-        </StyledNotFound>
+        </div>
       );
     }
 
