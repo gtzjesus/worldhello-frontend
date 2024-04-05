@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import LazyLoad from 'react-lazyload';
 
 const StyledEarthZoom = styled.div`
-  background: url('backgrounds/earthzoom.png');
+  background: url('backgrounds/earthzoom.webp');
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
@@ -15,26 +15,9 @@ const StyledEarthZoom = styled.div`
 `;
 
 function EarthZoom() {
-  const earthRef = useRef(null);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      const scrollPosition = window.scrollY;
-      const zoomLevel = 1 + scrollPosition * 0.0005; // Adjust the factor for desired zoom speed
-
-      // Apply zoom effect using CSS transform
-      earthRef.current.style.transform = `scale(${zoomLevel})`;
-    };
-
-    window.addEventListener('scroll', handleScroll);
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, []);
-
   return (
     <LazyLoad>
-      <StyledEarthZoom ref={earthRef} />
+      <StyledEarthZoom />
     </LazyLoad>
   );
 }
