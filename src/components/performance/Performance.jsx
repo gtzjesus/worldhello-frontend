@@ -9,6 +9,7 @@ import ShowcaseProducts from './sub-performances/ShowcaseProducts';
 import CollectPayments from './sub-performances/CollectPayments';
 import EarthZoom from './sub-performances/EarthZoom';
 import GifResponsive from './sub-performances/GifResponsive';
+import Email from './sub-performances/Email';
 
 // ------------------------------
 // Imports
@@ -21,6 +22,7 @@ function Performance() {
       <Responsiveness />
       <GifResponsive />
       <GrowClientele />
+      <Email />
       <ShowcaseProducts />
       <CollectPayments />
       <EarthZoom />
