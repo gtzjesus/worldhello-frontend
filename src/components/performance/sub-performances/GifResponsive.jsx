@@ -10,9 +10,8 @@ const StyledGifResponsive = styled.div`
   padding: var(--padding-xxlarge) var(--padding-small);
 
   /* Apply CSS filter to make the background black and white */
-  /* filter: saturate(1250%); */
-  /* filter: invert(100%); */
-  filter: hue-rotate(90deg);
+  filter: invert(100%);
+  /* filter: hue-rotate(90deg); */
 `;
 
 const SubTitle = styled.span`
