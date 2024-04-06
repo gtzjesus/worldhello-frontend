@@ -8,6 +8,7 @@ const StyledEmail = styled.div`
   background-repeat: no-repeat;
   width: 175vw;
   min-height: 55vh;
+  margin-bottom: var(--padding-xxlarge);
 
   // @MEDIAQUERY logic for bigger devices 980px
   @media (min-width: 47.25em) {

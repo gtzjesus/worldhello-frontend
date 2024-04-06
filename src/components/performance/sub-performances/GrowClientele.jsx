@@ -112,6 +112,8 @@ function FirstPerformance() {
           </Intro>
           <div ref={fifthPerformanceRef} className="hidden">
             Via emails, newsletters, promotions, or personalized notifications.
+            <br />
+            <br />
             Gain leads from anywhere.
           </div>
         </Description>
