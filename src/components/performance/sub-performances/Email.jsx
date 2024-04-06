@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import LazyLoad from 'react-lazyload';
 
 const StyledEmail = styled.div`
-  background: url('backgrounds/monitor.jpg');
+  background: url('backgrounds/monitor.png');
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
