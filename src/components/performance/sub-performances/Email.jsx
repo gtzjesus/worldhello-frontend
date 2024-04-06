@@ -7,7 +7,7 @@ const StyledEmail = styled.div`
   background-position: center;
   background-repeat: no-repeat;
   width: 175vw;
-  min-height: 35vh;
+  min-height: 55vh;
 
   /* Add additional styles to control the zoom effect */
   transition: transform 0.5s ease;
