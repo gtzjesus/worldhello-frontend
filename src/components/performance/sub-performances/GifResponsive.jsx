@@ -15,6 +15,8 @@ const StyledGifResponsive = styled.div`
 
 const Title = styled.span`
   display: flex;
+  position: absolute;
+  top: 0;
   justify-content: left;
   font-size: var(--font-large);
   color: var(--color-white);
@@ -24,6 +26,8 @@ const Title = styled.span`
 `;
 
 const SubTitle = styled.span`
+  position: absolute;
+  top: 50;
   display: flex;
   justify-content: left;
   font-size: var(--font-small);
@@ -36,8 +40,10 @@ function GifResponsive() {
   return (
     <LazyLoad>
       <StyledGifResponsive>
-        <Title>Accessible</Title>
-        <SubTitle>across all devices.</SubTitle>
+        <Title>
+          <SubTitle>A web</SubTitle> Accessible
+        </Title>
+        <SubTitle>across all devices.</SubTitle>z
       </StyledGifResponsive>
     </LazyLoad>
   );

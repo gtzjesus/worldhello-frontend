@@ -87,11 +87,11 @@ function Home() {
     <>
       <Navigation />
       <Landing />
-      <SourceContainer id="about-section">
+      <SourceContainer>
         <Source />
       </SourceContainer>
       <ResponsiveContainer>
-        <Performance />
+        <Performance id="about-section" />
         <ResponsiveContainer id="join-section">
           <Craft />
         </ResponsiveContainer>
