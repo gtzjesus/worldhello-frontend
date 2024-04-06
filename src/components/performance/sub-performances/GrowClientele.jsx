@@ -102,7 +102,6 @@ function FirstPerformance() {
       <br />
       <br />
       <br />
-
       <Information>
         <Description>
           <Intro>
