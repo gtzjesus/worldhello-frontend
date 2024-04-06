@@ -20,8 +20,8 @@ function Performance() {
     <>
       <Responsiveness />
       <GifResponsive />
-      <ShowcaseProducts />
       <GrowClientele />
+      <ShowcaseProducts />
       <CollectPayments />
       <EarthZoom />
     </>
