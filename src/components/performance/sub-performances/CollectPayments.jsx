@@ -80,7 +80,7 @@ function ThirdPerformance() {
       <Information>
         <Intro>
           <div ref={secondPerformanceRef} className="hidden">
-            Collect <br /> Payments
+            Collect <br /> Payments.
           </div>
         </Intro>
 

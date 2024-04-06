@@ -83,7 +83,7 @@ function SecondPerformance() {
       <Information>
         <Intro>
           <div ref={secondPerformanceRef} className="hidden">
-            Showcase <br /> Products
+            Showcase <br /> Products.
           </div>
         </Intro>
 

@@ -29,6 +29,8 @@ function FirstPerformance() {
   const firstPerformanceRef = useRef(null);
   const secondPerformanceRef = useRef(null);
   const thirdPerformanceRef = useRef(null);
+  const fourthPerformanceRef = useRef(null);
+  const fifthPerformanceRef = useRef(null);
 
   // ------------------------------
   // useEffect
@@ -53,6 +55,8 @@ function FirstPerformance() {
       firstPerformanceRef,
       secondPerformanceRef,
       thirdPerformanceRef,
+      fourthPerformanceRef,
+      fifthPerformanceRef,
     ];
     elementsToObserve.forEach((ref) => {
       if (ref.current) {
@@ -81,14 +85,34 @@ function FirstPerformance() {
       <Information>
         <Intro>
           <div ref={secondPerformanceRef} className="hidden">
-            Grow <br /> Clientele
+            Grow <br /> Clientele.
           </div>
         </Intro>
 
         <Description>
           <div ref={thirdPerformanceRef} className="hidden">
             Effortlessly have people subscribe and remain loyal, paying
-            customers.
+            customers where you can then
+          </div>
+        </Description>
+      </Information>
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+
+      <Information>
+        <Description>
+          <Intro>
+            <div ref={fourthPerformanceRef} className="hidden">
+              Grow your <br /> Audience.
+            </div>
+          </Intro>
+          <div ref={fifthPerformanceRef} className="hidden">
+            Via emails, newsletters, promotions, or personalized notifications.
+            Gain leads from anywhere.
           </div>
         </Description>
       </Information>
