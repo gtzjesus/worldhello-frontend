@@ -1,8 +1,12 @@
 // ------------------------------
 // File: Performance.jsx
 // ------------------------------
-// Description: React complete Home page
+// Description: React complete Performance section for usability and readability
 
+// ------------------------------
+// Imports
+// ------------------------------
+// This section has all necessary additional components with animations
 import GrowClientele from './sub-performances/GrowClientele';
 import Responsiveness from './sub-performances/Responsiveness';
 import ShowcaseProducts from './sub-performances/ShowcaseProducts';
@@ -12,10 +16,9 @@ import GifResponsive from './sub-performances/GifResponsive';
 import Email from './sub-performances/Email';
 
 // ------------------------------
-// Imports
+// Return Components here for Home page
 // ------------------------------
-// This section has all necessary additional components with animations
-
+// This section has all necessary additional components
 function Performance() {
   return (
     <>
