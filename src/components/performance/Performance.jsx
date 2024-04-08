@@ -37,7 +37,9 @@ function Performance() {
         <GrowClientele />
       </ResponsiveContainer>
       <Email />
-      <ShowcaseProducts />
+      <ResponsiveContainer>
+        <ShowcaseProducts />
+      </ResponsiveContainer>
       <CollectPayments />
       <EarthZoom />
     </>

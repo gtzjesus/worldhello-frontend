@@ -4,7 +4,6 @@ import styled from 'styled-components';
 const ShowcaseProducts = styled.div`
   color: var(--color-white);
   padding: 0 var(--padding-large);
-  padding-bottom: var(--padding-xxlarge);
 `;
 
 const Information = styled.div`
@@ -19,7 +18,9 @@ const Intro = styled.span`
   overflow-y: hidden;
 `;
 
-const Img = styled.img``;
+const Img = styled.img`
+  padding: 0 var(--padding-large);
+`;
 
 const Description = styled.span`
   font-size: var(--font-xxxsmall);
