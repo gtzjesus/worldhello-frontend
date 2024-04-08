@@ -114,19 +114,18 @@ function FirstPerformance() {
       <br />
       <br />
       <br />
-      <br />
-      <br />
+
       <Information>
         <Description>
           <Intro>
             <div ref={fourthPerformanceRef} className="hidden">
-              Grow your <br /> Audience.
+              <Title>Grow your Audience.</Title>
             </div>
           </Intro>
           <div ref={fifthPerformanceRef} className="hidden">
             <SubTitle>
               Via emails, newsletters, promotions, or personalized notifications
-              that will help you
+              .
             </SubTitle>
           </div>
           <br />
@@ -136,9 +135,17 @@ function FirstPerformance() {
           <br />
           <br />
           <br />
-
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
           <div ref={sixthPerformanceRef} className="hidden">
-            <SubTitle>Gain leads from anywhere right in your inbox.</SubTitle>
+            <Title>
+              Gain leads <br /> from anywhere <br /> right in your inbox.
+            </Title>
           </div>
         </Description>
       </Information>
