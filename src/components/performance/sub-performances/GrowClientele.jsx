@@ -31,6 +31,7 @@ const Description = styled.span`
   font-size: var(--font-xxxsmall);
   letter-spacing: 0.05rem;
   opacity: 0.8;
+  padding-bottom: var(--padding-giant);
 `;
 
 function FirstPerformance() {
@@ -38,8 +39,6 @@ function FirstPerformance() {
   const secondPerformanceRef = useRef(null);
   const thirdPerformanceRef = useRef(null);
   const fourthPerformanceRef = useRef(null);
-  const fifthPerformanceRef = useRef(null);
-  const sixthPerformanceRef = useRef(null);
 
   // ------------------------------
   // useEffect
@@ -65,8 +64,6 @@ function FirstPerformance() {
       secondPerformanceRef,
       thirdPerformanceRef,
       fourthPerformanceRef,
-      fifthPerformanceRef,
-      sixthPerformanceRef,
     ];
     elementsToObserve.forEach((ref) => {
       if (ref.current) {
@@ -105,44 +102,14 @@ function FirstPerformance() {
           <div ref={thirdPerformanceRef} className="hidden">
             <SubTitle>
               Effortlessly have people subscribe and remain loyal, paying
-              customers where you can then
+              customers.
             </SubTitle>
           </div>
         </Description>
       </Information>
-      <br />
-      <br />
-      <br />
-      <br />
-
       <Information>
         <Description>
-          <Intro>
-            <div ref={fourthPerformanceRef} className="hidden">
-              <Title>Grow your Audience.</Title>
-            </div>
-          </Intro>
-          <div ref={fifthPerformanceRef} className="hidden">
-            <SubTitle>
-              Via emails, newsletters, promotions, or personalized notifications
-              .
-            </SubTitle>
-          </div>
-          <br />
-          <br />
-          <br />
-          <br />
-          <br />
-          <br />
-          <br />
-          <br />
-          <br />
-          <br />
-          <br />
-          <br />
-          <br />
-          <br />
-          <div ref={sixthPerformanceRef} className="hidden">
+          <div ref={fourthPerformanceRef} className="hidden">
             <Title>
               Gain leads <br /> from anywhere <br /> right in your inbox.
             </Title>
