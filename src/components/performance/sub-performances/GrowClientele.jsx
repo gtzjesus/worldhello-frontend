@@ -21,6 +21,10 @@ const Title = styled.span`
   font-size: var(--font-medium);
 `;
 
+const SpecialTitle = styled.span`
+  font-size: var(--font-large);
+`;
+
 const SubTitle = styled.span`
   font-size: var(--font-xxxsmall);
 `;
@@ -110,10 +114,10 @@ function FirstPerformance() {
       <Information>
         <Description>
           <div ref={fourthPerformanceRef} className="hidden">
-            <Title>
+            <SpecialTitle>
               Gain <br /> leads <br /> from <br /> anywhere <br /> right <br />{' '}
               in your <br /> inbox.
-            </Title>
+            </SpecialTitle>
           </div>
         </Description>
       </Information>
