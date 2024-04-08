@@ -31,7 +31,7 @@ const Description = styled.span`
   font-size: var(--font-xxxsmall);
   letter-spacing: 0.05rem;
   opacity: 0.8;
-  padding-bottom: var(--padding-giant);
+  padding-bottom: var(--padding-xxxlarge);
 `;
 
 function FirstPerformance() {
