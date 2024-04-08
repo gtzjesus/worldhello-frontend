@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 const ShowcaseProducts = styled.div`
   color: var(--color-white);
-  padding: 0 var(--padding-large);
+  padding: var(--padding-large);
 `;
 
 const Information = styled.div`

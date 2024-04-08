@@ -111,7 +111,8 @@ function FirstPerformance() {
         <Description>
           <div ref={fourthPerformanceRef} className="hidden">
             <Title>
-              Gain leads <br /> from anywhere <br /> right in your inbox.
+              Gain <br /> leads <br /> from <br /> anywhere <br /> right <br />{' '}
+              in your <br /> inbox.
             </Title>
           </div>
         </Description>
