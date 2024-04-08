@@ -13,7 +13,6 @@ const StyledEmail = styled.div`
   // @MEDIAQUERY logic for bigger devices 980px
   @media (min-width: 47.25em) {
     width: 100%;
-    min-height: 100vh;
   }
 
   /* Add additional styles to control the zoom effect */

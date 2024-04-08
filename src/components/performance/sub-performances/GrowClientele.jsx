@@ -17,6 +17,14 @@ const Intro = styled.div`
   line-height: var(--line-height-xsmall);
 `;
 
+const Title = styled.span`
+  font-size: var(--font-medium);
+`;
+
+const SubTitle = styled.span`
+  font-size: var(--font-xxxsmall);
+`;
+
 const Img = styled.img``;
 
 const Description = styled.span`
@@ -31,6 +39,7 @@ function FirstPerformance() {
   const thirdPerformanceRef = useRef(null);
   const fourthPerformanceRef = useRef(null);
   const fifthPerformanceRef = useRef(null);
+  const sixthPerformanceRef = useRef(null);
 
   // ------------------------------
   // useEffect
@@ -57,6 +66,7 @@ function FirstPerformance() {
       thirdPerformanceRef,
       fourthPerformanceRef,
       fifthPerformanceRef,
+      sixthPerformanceRef,
     ];
     elementsToObserve.forEach((ref) => {
       if (ref.current) {
@@ -85,14 +95,18 @@ function FirstPerformance() {
       <Information>
         <Intro>
           <div ref={secondPerformanceRef} className="hidden">
-            Grow <br /> Clientele.
+            <Title>
+              Grow <br /> Clientele.
+            </Title>
           </div>
         </Intro>
 
         <Description>
           <div ref={thirdPerformanceRef} className="hidden">
-            Effortlessly have people subscribe and remain loyal, paying
-            customers where you can then
+            <SubTitle>
+              Effortlessly have people subscribe and remain loyal, paying
+              customers where you can then
+            </SubTitle>
           </div>
         </Description>
       </Information>
@@ -110,12 +124,21 @@ function FirstPerformance() {
             </div>
           </Intro>
           <div ref={fifthPerformanceRef} className="hidden">
-            Via emails, newsletters, promotions, or personalized notifications.
-            <br />
-            <br />
-            <br />
-            <br />
-            Gain leads from anywhere right in your inbox.
+            <SubTitle>
+              Via emails, newsletters, promotions, or personalized notifications
+              that will help you
+            </SubTitle>
+          </div>
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
+
+          <div ref={sixthPerformanceRef} className="hidden">
+            <SubTitle>Gain leads from anywhere right in your inbox.</SubTitle>
           </div>
         </Description>
       </Information>
