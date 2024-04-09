@@ -15,6 +15,7 @@ import EarthZoom from './sub-performances/EarthZoom';
 import GifResponsive from './sub-performances/GifResponsive';
 import Email from './sub-performances/Email';
 import styled from 'styled-components';
+import Analytics from './sub-performances/Analytics';
 
 /* Media query for larger devices */
 const ResponsiveContainer = styled.div`
@@ -40,6 +41,7 @@ function Performance() {
       <ResponsiveContainer>
         <ShowcaseProducts />
       </ResponsiveContainer>
+      <Analytics />
       <CollectPayments />
       <EarthZoom />
     </>
