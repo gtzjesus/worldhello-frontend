@@ -43,6 +43,12 @@ function FirstPerformance() {
   const secondPerformanceRef = useRef(null);
   const thirdPerformanceRef = useRef(null);
   const fourthPerformanceRef = useRef(null);
+  const fivethPerformanceRef = useRef(null);
+  const sixthPerformanceRef = useRef(null);
+  const seventhPerformanceRef = useRef(null);
+  const eighthPerformanceRef = useRef(null);
+  const ninththPerformanceRef = useRef(null);
+  const tenthPerformanceRef = useRef(null);
 
   // ------------------------------
   // useEffect
@@ -68,6 +74,12 @@ function FirstPerformance() {
       secondPerformanceRef,
       thirdPerformanceRef,
       fourthPerformanceRef,
+      fivethPerformanceRef,
+      sixthPerformanceRef,
+      seventhPerformanceRef,
+      eighthPerformanceRef,
+      ninththPerformanceRef,
+      tenthPerformanceRef,
     ];
     elementsToObserve.forEach((ref) => {
       if (ref.current) {
@@ -115,8 +127,37 @@ function FirstPerformance() {
         <Description>
           <div ref={fourthPerformanceRef} className="hidden">
             <SpecialTitle>
-              Gain <br /> leads <br /> from <br /> anywhere <br /> right <br />{' '}
-              in your <br /> inbox.
+              Gain <br />
+            </SpecialTitle>
+          </div>
+          <div ref={fivethPerformanceRef} className="hidden">
+            <SpecialTitle>
+              leads <br />
+            </SpecialTitle>
+          </div>
+          <div ref={sixthPerformanceRef} className="hidden">
+            <SpecialTitle>
+              from <br />
+            </SpecialTitle>
+          </div>
+          <div ref={seventhPerformanceRef} className="hidden">
+            <SpecialTitle>
+              anywhere <br />
+            </SpecialTitle>
+          </div>
+          <div ref={eighthPerformanceRef} className="hidden">
+            <SpecialTitle>
+              right <br />
+            </SpecialTitle>
+          </div>
+          <div ref={ninththPerformanceRef} className="hidden">
+            <SpecialTitle>
+              in your <br />
+            </SpecialTitle>
+          </div>
+          <div ref={tenthPerformanceRef} className="hidden">
+            <SpecialTitle>
+              mailbox. <br />
             </SpecialTitle>
           </div>
         </Description>
