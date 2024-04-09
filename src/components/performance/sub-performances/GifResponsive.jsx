@@ -27,7 +27,9 @@ function GifResponsive() {
   return (
     <LazyLoad>
       <StyledGifResponsive>
-        <SubTitle>Connect across the world.</SubTitle>
+        <SubTitle>
+          Connect with <br /> the world.
+        </SubTitle>
       </StyledGifResponsive>
     </LazyLoad>
   );
