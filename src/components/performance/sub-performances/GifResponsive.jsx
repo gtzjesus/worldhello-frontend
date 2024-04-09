@@ -31,11 +31,10 @@ function GifResponsive() {
     <LazyLoad>
       <StyledGifResponsive>
         <SubTitle>
-          Connect with <br /> the world.
+          What better <br /> way to start <br /> other than
         </SubTitle>
         <br />
-        <br />
-        <SpiderTitle>Need a</SpiderTitle>
+        <SpiderTitle>With a</SpiderTitle>
       </StyledGifResponsive>
     </LazyLoad>
   );
