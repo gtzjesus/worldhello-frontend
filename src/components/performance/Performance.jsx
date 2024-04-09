@@ -33,8 +33,6 @@ function Performance() {
   return (
     <>
       <ResponsiveContainer>
-        <Responsiveness />
-        <GifResponsive />
         <GrowClientele />
       </ResponsiveContainer>
       <Email />
@@ -42,9 +40,12 @@ function Performance() {
         <Analytics />
       </ResponsiveContainer>
       <ShowcaseProducts />
-
       <CollectPayments />
       <EarthZoom />
+      <ResponsiveContainer>
+        <Responsiveness />
+        <GifResponsive />
+      </ResponsiveContainer>
     </>
   );
 }
