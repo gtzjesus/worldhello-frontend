@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import LazyLoad from 'react-lazyload';
 
 const StyledAnalytics = styled.div`
-  background: url('backgrounds/monitor.webp');
+  background: url('backgrounds/analytics.webp');
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
@@ -20,9 +20,32 @@ const StyledAnalytics = styled.div`
   transform-origin: center;
 `;
 
+const Details = styled.div`
+  padding: 0 var(--padding-medium);
+  color: var(--color-white);
+`;
+
+const Title = styled.span`
+  font-size: var(--font-medium);
+`;
+
+const SubTitle = styled.span`
+  font-size: var(--font-xxxsmall);
+`;
+
 function Analytics() {
   return (
     <LazyLoad>
+      <Details>
+        <Title>High Performance</Title>
+        <br />
+        <SubTitle>
+          Our websites priority is performance and how users interact with you
+          webstie, we use tools to ensure that our websites are top notch in
+          performance + we have analytical data that helps us see how we perform
+          with your brand new website today!
+        </SubTitle>
+      </Details>
       <StyledAnalytics />
     </LazyLoad>
   );
