@@ -40,7 +40,9 @@ function Performance() {
         <GifResponsive />
       </ResponsiveContainer>
       <Analytics />
-      <ShowcaseProducts />
+      <ResponsiveContainer>
+        <ShowcaseProducts />
+      </ResponsiveContainer>
       <CollectPayments />
       <EarthZoom />
       <ResponsiveContainer>

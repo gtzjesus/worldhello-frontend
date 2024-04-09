@@ -9,7 +9,7 @@ const Button = styled.button`
   cursor: pointer;
   border: none;
   border-radius: 50px;
-  padding: 10px 20px;
+  padding: 10px 25px;
   background-color: #007bff; /* Blue color, you can change it to match your theme */
   color: white;
   font-size: 16px;
