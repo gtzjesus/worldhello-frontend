@@ -1,6 +1,15 @@
 import styled from 'styled-components';
 import LazyLoad from 'react-lazyload';
 
+/* Media query for larger devices */
+const ResponsiveContainer = styled.div`
+  @media (min-width: 768px) {
+    max-width: 600px; /* Adjust as needed */
+    margin: 0 auto; /* Center the container horizontally */
+    padding: 0 20px;
+  }
+`;
+
 const StyledAnalytics = styled.div`
   background: url('backgrounds/analytics.webp');
   background-size: contain;
@@ -39,22 +48,24 @@ const SubTitle = styled.span`
 function Analytics() {
   return (
     <LazyLoad>
-      <Details>
-        <Title>
-          Experience <br /> Peak
-        </Title>
+      <ResponsiveContainer>
+        <Details>
+          <Title>
+            Experience <br /> Peak
+          </Title>
 
-        <br />
-        <SubTitle>Website performance.</SubTitle>
-        <br />
-        <br />
-        <br />
-        <br />
-        <SubTitle>
-          We ensure your website operates efficiently while providing invaluable
-          insights into its performance.
-        </SubTitle>
-      </Details>
+          <br />
+          <SubTitle>Website performance.</SubTitle>
+          <br />
+          <br />
+          <br />
+          <br />
+          <SubTitle>
+            We ensure your website operates efficiently while providing
+            invaluable analytics.
+          </SubTitle>
+        </Details>
+      </ResponsiveContainer>
       <StyledAnalytics />
     </LazyLoad>
   );
