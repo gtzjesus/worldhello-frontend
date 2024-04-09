@@ -39,9 +39,10 @@ function Performance() {
       </ResponsiveContainer>
       <Email />
       <ResponsiveContainer>
-        <ShowcaseProducts />
+        <Analytics />
       </ResponsiveContainer>
-      <Analytics />
+      <ShowcaseProducts />
+
       <CollectPayments />
       <EarthZoom />
     </>

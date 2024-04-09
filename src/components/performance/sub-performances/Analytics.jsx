@@ -31,19 +31,24 @@ const Title = styled.span`
 
 const SubTitle = styled.span`
   font-size: var(--font-xxxsmall);
+  letter-spacing: 0.05rem;
+  opacity: 0.8;
 `;
 
 function Analytics() {
   return (
     <LazyLoad>
       <Details>
-        <Title>High Performance</Title>
+        <Title>Experience peak</Title>
+        <br />
+        <SubTitle>website performance.</SubTitle>
+        <br />
+        <br />
+        <br />
         <br />
         <SubTitle>
-          Our websites priority is performance and how users interact with you
-          webstie, we use tools to ensure that our websites are top notch in
-          performance + we have analytical data that helps us see how we perform
-          with your brand new website today!
+          We ensure your website operates efficiently while providing invaluable
+          insights.
         </SubTitle>
       </Details>
       <StyledAnalytics />
