@@ -127,32 +127,32 @@ function FirstPerformance() {
         <Description>
           <div ref={fourthPerformanceRef} className="hidden">
             <SpecialTitle>
-              Gain <br />
+              A web <br />
             </SpecialTitle>
           </div>
           <div ref={fivethPerformanceRef} className="hidden">
             <SpecialTitle>
-              leads <br />
+              that <br />
             </SpecialTitle>
           </div>
           <div ref={sixthPerformanceRef} className="hidden">
             <SpecialTitle>
-              from <br />
+              leads <br />
             </SpecialTitle>
           </div>
           <div ref={seventhPerformanceRef} className="hidden">
             <SpecialTitle>
-              anywhere <br />
+              visitors <br />
             </SpecialTitle>
           </div>
           <div ref={eighthPerformanceRef} className="hidden">
             <SpecialTitle>
-              right <br />
+              into <br />
             </SpecialTitle>
           </div>
           <div ref={ninththPerformanceRef} className="hidden">
             <SpecialTitle>
-              in your <br />
+              your <br />
             </SpecialTitle>
           </div>
           <div ref={tenthPerformanceRef} className="hidden">
