@@ -1,6 +1,5 @@
 import styled from 'styled-components';
 import LazyLoad from 'react-lazyload';
-import { useEffect, useRef } from 'react';
 
 const StyledAnalytics = styled.div`
   background: url('backgrounds/analytics.webp');
@@ -27,7 +26,8 @@ const Details = styled.div`
 `;
 
 const Title = styled.span`
-  font-size: var(--font-medium);
+  font-size: var(--font-large);
+  line-height: 2rem;
 `;
 
 const SubTitle = styled.span`
@@ -37,69 +37,24 @@ const SubTitle = styled.span`
 `;
 
 function Analytics() {
-  const firstPerformanceRef = useRef(null);
-  const secondPerformanceRef = useRef(null);
-  const thirdPerformanceRef = useRef(null);
-
-  // ------------------------------
-  // useEffect
-  // ------------------------------
-  // Code logic Animation for the whole app, a useEffect so that it happens once component mounts
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('show');
-          } else {
-            entry.target.classList.remove('show');
-          }
-        });
-      },
-      { threshold: 0.5 }
-    );
-
-    // Observing all elements of interest
-    const elementsToObserve = [
-      firstPerformanceRef,
-      secondPerformanceRef,
-      thirdPerformanceRef,
-    ];
-    elementsToObserve.forEach((ref) => {
-      if (ref.current) {
-        observer.observe(ref.current);
-      }
-    });
-
-    // Cleanup function
-    return () => {
-      elementsToObserve.forEach((ref) => {
-        if (ref.current) {
-          observer.unobserve(ref.current);
-        }
-      });
-    };
-  }, []);
   return (
     <LazyLoad>
       <Details>
-        <div ref={firstPerformanceRef} className="hidden">
-          <Title>Experience peak</Title>
-        </div>
+        <Title>
+          Experience <br /> Peak
+        </Title>
         <br />
-        <div ref={secondPerformanceRef} className="hidden">
-          <SubTitle>website performance.</SubTitle>
-        </div>
+        <SubTitle>website performance.</SubTitle>
         <br />
         <br />
+
         <br />
         <br />
-        <div ref={thirdPerformanceRef} className="hidden">
-          <SubTitle>
-            We ensure your website operates efficiently while providing
-            invaluable insights.
-          </SubTitle>
-        </div>
+
+        <SubTitle>
+          We ensure your website operates efficiently while providing invaluable
+          insights into its performance.
+        </SubTitle>
       </Details>
       <StyledAnalytics />
     </LazyLoad>
