@@ -33,7 +33,6 @@ function GifResponsive() {
         <SubTitle>
           What better <br /> way to start <br /> other than
         </SubTitle>
-        <br />
         <SpiderTitle>With a</SpiderTitle>
       </StyledGifResponsive>
     </LazyLoad>
