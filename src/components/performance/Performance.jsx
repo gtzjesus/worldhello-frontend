@@ -43,8 +43,8 @@ function Performance() {
       <ResponsiveContainer>
         <ShowcaseProducts />
       </ResponsiveContainer>
-      <CollectPayments />
       <EarthZoom />
+      <CollectPayments />
       <ResponsiveContainer>
         <Responsiveness />
       </ResponsiveContainer>
