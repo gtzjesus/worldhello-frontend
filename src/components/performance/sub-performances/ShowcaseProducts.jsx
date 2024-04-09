@@ -3,7 +3,8 @@ import styled from 'styled-components';
 
 const ShowcaseProducts = styled.div`
   color: var(--color-white);
-  padding: var(--padding-large);
+  padding: 0 var(--padding-large);
+  padding-bottom: var(--padding-xxlarge);
 `;
 
 const Information = styled.div`
@@ -15,12 +16,9 @@ const Intro = styled.span`
   font-size: var(--font-smmd);
   padding: var(--padding-small) 0;
   line-height: var(--line-height-xsmall);
-  overflow-y: hidden;
 `;
 
-const Img = styled.img`
-  padding: 0 var(--padding-large);
-`;
+const Img = styled.img``;
 
 const Description = styled.span`
   font-size: var(--font-xxxsmall);
@@ -84,7 +82,7 @@ function SecondPerformance() {
       <Information>
         <Intro>
           <div ref={secondPerformanceRef} className="hidden">
-            Showcase <br /> Products.
+            Showcase <br /> Products
           </div>
         </Intro>
 
