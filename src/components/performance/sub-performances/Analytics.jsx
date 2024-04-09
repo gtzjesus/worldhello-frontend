@@ -21,7 +21,7 @@ const StyledAnalytics = styled.div`
 `;
 
 const Details = styled.div`
-  padding: 0 var(--padding-medium);
+  padding: var(--padding-xxlarge) var(--padding-medium);
   color: var(--color-white);
 `;
 
@@ -44,7 +44,7 @@ function Analytics() {
           Experience <br /> Peak
         </Title>
         <br />
-        <SubTitle>website performance.</SubTitle>
+        <SubTitle>Website performance.</SubTitle>
         <br />
         <br />
         <br />
