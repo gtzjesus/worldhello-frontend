@@ -27,7 +27,7 @@ function GifResponsive() {
   return (
     <LazyLoad>
       <StyledGifResponsive>
-        <SubTitle>Across all devices.</SubTitle>
+        <SubTitle>Connect across the world.</SubTitle>
       </StyledGifResponsive>
     </LazyLoad>
   );
