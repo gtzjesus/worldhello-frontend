@@ -1,31 +1,33 @@
 import { useEffect, useRef } from 'react';
 import styled from 'styled-components';
 
-const CollectPayments = styled.div`
+const StyledCollectPayments = styled.div`
   color: var(--color-white);
-  padding: 0 var(--padding-large);
-  padding-bottom: var(--padding-xxlarge);
 `;
 
 const Information = styled.div`
-  display: flex;
-  flex-direction: column;
+  padding: var(--padding-medium);
 `;
 
-const Intro = styled.div`
+const Intro = styled.span`
   font-size: var(--font-smmd);
-  padding: var(--padding-small) 0;
   line-height: var(--line-height-xsmall);
 `;
 
-const Img = styled.img``;
+const Img = styled.img`
+  display: flex;
+  margin: 0 auto;
+  max-width: 50%; /* Set the maximum width to 100% of its container */
+  max-height: 50%; /* Set the maximum height to 100% of its container */
+`;
 
 const Description = styled.span`
   font-size: var(--font-xxxsmall);
   letter-spacing: 0.05rem;
   opacity: 0.8;
 `;
-function ThirdPerformance() {
+
+function CollectPayments() {
   const firstPerformanceRef = useRef(null);
   const secondPerformanceRef = useRef(null);
   const thirdPerformanceRef = useRef(null);
@@ -69,21 +71,19 @@ function ThirdPerformance() {
       });
     };
   }, []);
-  return (
-    <CollectPayments>
-      <div ref={firstPerformanceRef} className="hidden">
-        <Information>
-          <Img src="/backgrounds/baggy.webp" alt="signin"></Img>
-        </Information>
-      </div>
 
+  return (
+    <StyledCollectPayments>
+      <div ref={firstPerformanceRef} className="hidden">
+        <Img src="/backgrounds/baggy.webp" alt="signin"></Img>
+      </div>
       <Information>
         <Intro>
           <div ref={secondPerformanceRef} className="hidden">
             Collect <br /> Payments.
           </div>
         </Intro>
-
+        <br />
         <Description>
           <div ref={thirdPerformanceRef} className="hidden">
             Monetize your products or services with a revenue-generating
@@ -91,8 +91,8 @@ function ThirdPerformance() {
           </div>
         </Description>
       </Information>
-    </CollectPayments>
+    </StyledCollectPayments>
   );
 }
 
-export default ThirdPerformance;
+export default CollectPayments;

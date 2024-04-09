@@ -1,7 +1,7 @@
 import { useEffect, useRef } from 'react';
 import styled from 'styled-components';
 
-const ShowcaseProducts = styled.div`
+const StyledShowcaseProducts = styled.div`
   color: var(--color-white);
 `;
 
@@ -27,7 +27,7 @@ const Description = styled.span`
   opacity: 0.8;
 `;
 
-function SecondPerformance() {
+function ShowcaseProducts() {
   const firstPerformanceRef = useRef(null);
   const secondPerformanceRef = useRef(null);
   const thirdPerformanceRef = useRef(null);
@@ -73,7 +73,7 @@ function SecondPerformance() {
   }, []);
 
   return (
-    <ShowcaseProducts>
+    <StyledShowcaseProducts>
       <div ref={firstPerformanceRef} className="hidden">
         <Img src="/backgrounds/brand.webp" alt="signin"></Img>
       </div>
@@ -90,8 +90,8 @@ function SecondPerformance() {
           </div>
         </Description>
       </Information>
-    </ShowcaseProducts>
+    </StyledShowcaseProducts>
   );
 }
 
-export default SecondPerformance;
+export default ShowcaseProducts;
