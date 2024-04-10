@@ -49,13 +49,13 @@ function Home() {
         <Source />
       </SourceContainer>
       <Performance />
-      <ResponsiveContainer id="join-section">
-        <Craft />
-      </ResponsiveContainer>
+
       <ResponsiveContainer id="portfolio-section">
         <Achievements />
       </ResponsiveContainer>
-
+      <ResponsiveContainer id="join-section">
+        <Craft />
+      </ResponsiveContainer>
       <ResponsiveContainer>
         <Faqs />
         <Footer />

@@ -52,10 +52,7 @@ function Analytics() {
         <Details>
           <SubTitle>Analytics &</SubTitle>
           <br />
-          <br />
-          <Title>
-            Website <br /> Performance.
-          </Title>
+          <Title>Performance.</Title>
 
           <br />
           <br />
