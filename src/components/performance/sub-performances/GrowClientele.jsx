@@ -127,27 +127,27 @@ function FirstPerformance() {
         <Description>
           <div ref={fourthPerformanceRef} className="hidden">
             <SpecialTitle>
-              Receive <br />
+              Have <br />
             </SpecialTitle>
           </div>
           <div ref={fivethPerformanceRef} className="hidden">
             <SpecialTitle>
-              leads <br />
+              visitors <br />
             </SpecialTitle>
           </div>
           <div ref={sixthPerformanceRef} className="hidden">
             <SpecialTitle>
-              directly <br />
+              contact <br />
             </SpecialTitle>
           </div>
           <div ref={seventhPerformanceRef} className="hidden">
             <SpecialTitle>
-              to your <br />
+              you <br />
             </SpecialTitle>
           </div>
           <div ref={eighthPerformanceRef} className="hidden">
             <SpecialTitle>
-              inbox <br />
+              directly <br />
             </SpecialTitle>
           </div>
           <div ref={ninththPerformanceRef} className="hidden">
@@ -157,7 +157,7 @@ function FirstPerformance() {
           </div>
           <div ref={tenthPerformanceRef} className="hidden">
             <SpecialTitle>
-              website visits. <br />
+              your new web. <br />
             </SpecialTitle>
           </div>
         </Description>
