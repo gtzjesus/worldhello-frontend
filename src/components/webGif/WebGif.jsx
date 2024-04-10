@@ -1,13 +1,13 @@
 import styled from 'styled-components';
 import LazyLoad from 'react-lazyload';
 
-const StyledGifResponsive = styled.div`
+const StyledWebGif = styled.div`
   background: url('backgrounds/gifresponsive.gif');
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
   min-height: 40vh;
-  padding: var(--padding-xxlarge) var(--padding-small);
+  padding: var(--padding-xlarge) var(--padding-small);
 
   /* Apply CSS filter to make the background black and white */
   filter: invert(100%);
@@ -26,17 +26,17 @@ const SpiderTitle = styled.span`
   font-size: var(--font-medium);
 `;
 
-function GifResponsive() {
+function WebGif() {
   return (
     <LazyLoad>
-      <StyledGifResponsive>
+      <StyledWebGif>
         <SubTitle>
           What better <br /> way to start <br /> other than
         </SubTitle>
         <SpiderTitle>With a</SpiderTitle>
-      </StyledGifResponsive>
+      </StyledWebGif>
     </LazyLoad>
   );
 }
 
-export default GifResponsive;
+export default WebGif;

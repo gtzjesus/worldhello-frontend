@@ -12,7 +12,6 @@ import Responsiveness from './sub-performances/Responsiveness';
 import ShowcaseProducts from './sub-performances/ShowcaseProducts';
 import CollectPayments from './sub-performances/CollectPayments';
 import EarthZoom from './sub-performances/EarthZoom';
-import GifResponsive from './sub-performances/GifResponsive';
 import Email from './sub-performances/Email';
 import styled from 'styled-components';
 import Analytics from './sub-performances/Analytics';
@@ -45,9 +44,7 @@ function Performance() {
       <ResponsiveContainer>
         <CollectPayments />
       </ResponsiveContainer>
-      <ResponsiveContainer>
-        <GifResponsive />
-      </ResponsiveContainer>
+
       {/* <ResponsiveContainer>
         <Responsiveness />
       </ResponsiveContainer> */}

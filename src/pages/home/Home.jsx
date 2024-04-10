@@ -19,6 +19,7 @@ import Landing from '../../components/landing/Landing';
 import Performance from '../../components/performance/Performance';
 import Footer from '../../footer/Footer';
 import styled from 'styled-components';
+import WebGif from '../../components/webGif/WebGif';
 /* Media query for larger devices */
 const ResponsiveContainer = styled.div`
   @media (min-width: 768px) {
@@ -49,14 +50,12 @@ function Home() {
         <Source />
       </SourceContainer>
       <Performance />
-
       <ResponsiveContainer id="portfolio-section">
         <Achievements />
       </ResponsiveContainer>
       <ResponsiveContainer id="join-section">
         <Craft />
-      </ResponsiveContainer>
-      <ResponsiveContainer>
+        <WebGif />
         <Faqs />
         <Footer />
       </ResponsiveContainer>
