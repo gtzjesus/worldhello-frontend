@@ -4,6 +4,7 @@ import styled from 'styled-components';
 const GrowClientele = styled.div`
   color: var(--color-white);
   padding: 0 var(--padding-medium);
+  padding-top: var(--padding-xxxlarge);
 `;
 
 const Information = styled.div`

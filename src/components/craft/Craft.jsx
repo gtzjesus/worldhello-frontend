@@ -47,7 +47,7 @@ function Craft() {
     <LazyLoad>
       <StyledCraft>
         <Hook>
-          <Subtitle>With your own</Subtitle>
+          <Subtitle>Your very own</Subtitle>
           <SlideText>
             {slideTexts[slideIndex]} <Subtitle>Website. </Subtitle>
           </SlideText>
