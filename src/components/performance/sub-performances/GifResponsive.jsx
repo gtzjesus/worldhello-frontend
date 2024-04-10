@@ -7,7 +7,8 @@ const StyledGifResponsive = styled.div`
   background-position: center;
   background-repeat: no-repeat;
   min-height: 40vh;
-  padding: var(--padding-xxlarge) var(--padding-small);
+  padding: 0 var(--padding-small);
+  padding-top: var(--padding-xxxlarge);
 
   /* Apply CSS filter to make the background black and white */
   filter: invert(100%);

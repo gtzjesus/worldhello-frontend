@@ -14,21 +14,13 @@ const Hook = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: var(--padding-small);
-`;
-
-const Title = styled.span`
-  font-size: var(--font-large);
-  letter-spacing: var(--spacing-title);
-  text-transform: uppercase;
-  overflow: hidden;
+  padding: var(--padding-xlarge) var(--padding-medium);
 `;
 
 const Subtitle = styled.span`
   font-size: var(--font-xxxsmall);
   letter-spacing: 0.05rem;
   line-height: var(--line-height-xxsmall);
-  text-transform: uppercase;
   opacity: 0.75;
 `;
 
@@ -55,17 +47,6 @@ function Craft() {
     <LazyLoad>
       <StyledCraft>
         <Hook>
-          <Title>
-            Join us <Subtitle>and</Subtitle>
-          </Title>
-          <br />
-          <Subtitle>
-            Expand your business <br /> by harnessing <br /> our combined
-            resources.
-          </Subtitle>
-          <br />
-          <br />
-
           <Subtitle>With your own</Subtitle>
           <SlideText>
             {slideTexts[slideIndex]} <Subtitle>Website. </Subtitle>
