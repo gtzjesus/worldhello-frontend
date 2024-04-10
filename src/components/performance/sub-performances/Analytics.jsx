@@ -16,7 +16,7 @@ const StyledAnalytics = styled.div`
   background-position: center;
   background-repeat: no-repeat;
   width: 100%;
-  min-height: 35vh;
+  min-height: 45vh;
   margin-bottom: var(--padding-xxlarge);
 
   // @MEDIAQUERY logic for bigger devices 980px
@@ -63,7 +63,7 @@ function Analytics() {
           <br />
           <SubTitle>
             We ensure your website operates efficiently while providing
-            invaluable analytics.
+            invaluable data.
           </SubTitle>
         </Details>
       </ResponsiveContainer>
