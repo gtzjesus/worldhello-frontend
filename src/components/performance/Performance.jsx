@@ -48,9 +48,9 @@ function Performance() {
       <ResponsiveContainer>
         <GifResponsive />
       </ResponsiveContainer>
-      <ResponsiveContainer>
+      {/* <ResponsiveContainer>
         <Responsiveness />
-      </ResponsiveContainer>
+      </ResponsiveContainer> */}
     </>
   );
 }
