@@ -59,7 +59,7 @@ function Analytics() {
           <br />
           <br />
           <SubTitle>
-            We ensure your website operates efficiently while providing
+            Ensuring that your website operates efficiently while providing
             invaluable data.
           </SubTitle>
         </Details>

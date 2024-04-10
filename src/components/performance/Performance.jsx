@@ -7,14 +7,13 @@
 // Imports
 // ------------------------------
 // This section has all necessary additional components with animations
-import GrowClientele from './sub-performances/GrowClientele';
-import Responsiveness from './sub-performances/Responsiveness';
-import ShowcaseProducts from './sub-performances/ShowcaseProducts';
-import CollectPayments from './sub-performances/CollectPayments';
-import EarthZoom from './sub-performances/EarthZoom';
-import Email from './sub-performances/Email';
+import GrowClientele from './sub-performances/clientele/GrowClientele';
+import ShowcaseProducts from './sub-performances/products/ShowcaseProducts';
+import CollectPayments from './sub-performances/payments/CollectPayments';
+import EarthZoom from './sub-performances/products/EarthZoom';
+import ClientEmail from './sub-performances/clientele/ClientEmail';
 import styled from 'styled-components';
-import Analytics from './sub-performances/Analytics';
+import Analytics from './sub-performances/analytics/Analytics';
 
 /* Media query for larger devices */
 const ResponsiveContainer = styled.div`
@@ -34,8 +33,7 @@ function Performance() {
       <ResponsiveContainer>
         <GrowClientele />
       </ResponsiveContainer>
-      <Email />
-
+      <ClientEmail />
       <Analytics />
       <ResponsiveContainer>
         <ShowcaseProducts />
@@ -44,10 +42,6 @@ function Performance() {
       <ResponsiveContainer>
         <CollectPayments />
       </ResponsiveContainer>
-
-      {/* <ResponsiveContainer>
-        <Responsiveness />
-      </ResponsiveContainer> */}
     </>
   );
 }

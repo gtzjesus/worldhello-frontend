@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import LazyLoad from 'react-lazyload';
 
-const StyledEmail = styled.div`
+const StyledClientEmail = styled.div`
   background: url('backgrounds/monitor.webp');
   background-size: contain;
   background-position: center;
@@ -19,12 +19,12 @@ const StyledEmail = styled.div`
   transform-origin: center;
 `;
 
-function Email() {
+function ClientEmail() {
   return (
     <LazyLoad>
-      <StyledEmail />
+      <StyledClientEmail />
     </LazyLoad>
   );
 }
 
-export default Email;
+export default ClientEmail;

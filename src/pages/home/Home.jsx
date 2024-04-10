@@ -49,7 +49,9 @@ function Home() {
       <SourceContainer>
         <Source />
       </SourceContainer>
+      {/* Performance component has many sub-components making up most of the app */}
       <Performance />
+      {/* Performance component has many sub-components making up most of the app */}
       <ResponsiveContainer id="portfolio-section">
         <Achievements />
       </ResponsiveContainer>
