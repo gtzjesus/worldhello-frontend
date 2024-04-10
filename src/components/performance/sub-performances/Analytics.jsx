@@ -30,13 +30,13 @@ const StyledAnalytics = styled.div`
 `;
 
 const Details = styled.div`
-  padding: var(--padding-xxlarge) var(--padding-medium);
+  padding: 0 var(--padding-medium);
   color: var(--color-white);
 `;
 
 const Title = styled.span`
   font-size: var(--font-large);
-  line-height: 2rem;
+  line-height: 1.5rem;
 `;
 
 const SubTitle = styled.span`
@@ -50,12 +50,13 @@ function Analytics() {
     <LazyLoad>
       <ResponsiveContainer>
         <Details>
+          <SubTitle>Analytics &</SubTitle>
+          <br />
+          <br />
           <Title>
-            Experience <br /> Peak
+            Website <br /> Performance.
           </Title>
 
-          <br />
-          <SubTitle>Website performance.</SubTitle>
           <br />
           <br />
           <br />

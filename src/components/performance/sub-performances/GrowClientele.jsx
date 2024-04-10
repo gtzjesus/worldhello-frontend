@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 const GrowClientele = styled.div`
   color: var(--color-white);
-  padding: var(--padding-xxlarge) var(--padding-large);
+  padding: 0 var(--padding-medium);
 `;
 
 const Information = styled.div`
@@ -127,37 +127,37 @@ function FirstPerformance() {
         <Description>
           <div ref={fourthPerformanceRef} className="hidden">
             <SpecialTitle>
-              A web <br />
+              Receive <br />
             </SpecialTitle>
           </div>
           <div ref={fivethPerformanceRef} className="hidden">
             <SpecialTitle>
-              that <br />
+              leads <br />
             </SpecialTitle>
           </div>
           <div ref={sixthPerformanceRef} className="hidden">
             <SpecialTitle>
-              leads <br />
+              directly <br />
             </SpecialTitle>
           </div>
           <div ref={seventhPerformanceRef} className="hidden">
             <SpecialTitle>
-              visitors <br />
+              to your <br />
             </SpecialTitle>
           </div>
           <div ref={eighthPerformanceRef} className="hidden">
             <SpecialTitle>
-              into <br />
+              inbox <br />
             </SpecialTitle>
           </div>
           <div ref={ninththPerformanceRef} className="hidden">
             <SpecialTitle>
-              your <br />
+              from <br />
             </SpecialTitle>
           </div>
           <div ref={tenthPerformanceRef} className="hidden">
             <SpecialTitle>
-              mailbox. <br />
+              website visits. <br />
             </SpecialTitle>
           </div>
         </Description>
