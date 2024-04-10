@@ -2,6 +2,7 @@ import { useEffect, useRef } from 'react';
 import styled from 'styled-components';
 
 const StyledShowcaseProducts = styled.div`
+  padding-top: var(--padding-xxxlarge);
   color: var(--color-white);
 `;
 

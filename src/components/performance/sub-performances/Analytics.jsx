@@ -30,7 +30,7 @@ const StyledAnalytics = styled.div`
 
 const Details = styled.div`
   padding: 0 var(--padding-medium);
-  margin-top: var(--margin-xlarge);
+  padding-top: var(--padding-xxxlarge);
   color: var(--color-white);
 `;
 

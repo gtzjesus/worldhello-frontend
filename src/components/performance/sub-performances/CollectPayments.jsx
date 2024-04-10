@@ -3,6 +3,7 @@ import styled from 'styled-components';
 
 const StyledCollectPayments = styled.div`
   color: var(--color-white);
+  padding-top: var(--padding-xxxlarge);
 `;
 
 const Information = styled.div`
