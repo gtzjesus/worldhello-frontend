@@ -7,7 +7,7 @@ const StyledEmail = styled.div`
   background-position: center;
   background-repeat: no-repeat;
   width: 175vw;
-  min-height: 50vh;
+  min-height: 40vh;
 
   // @MEDIAQUERY logic for bigger devices 980px
   @media (min-width: 47.25em) {

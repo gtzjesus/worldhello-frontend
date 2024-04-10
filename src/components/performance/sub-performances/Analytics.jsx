@@ -17,7 +17,6 @@ const StyledAnalytics = styled.div`
   background-repeat: no-repeat;
   width: 100%;
   min-height: 45vh;
-  margin-bottom: var(--padding-xxlarge);
 
   // @MEDIAQUERY logic for bigger devices 980px
   @media (min-width: 47.25em) {
@@ -31,6 +30,7 @@ const StyledAnalytics = styled.div`
 
 const Details = styled.div`
   padding: 0 var(--padding-medium);
+  margin-top: var(--margin-xlarge);
   color: var(--color-white);
 `;
 
