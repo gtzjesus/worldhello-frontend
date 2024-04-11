@@ -39,7 +39,7 @@ function Bookings() {
         <Title>Quite</Title>
         <Title>the</Title>
         <Title>Booking</Title>
-        <Title>System</Title>
+        <Title>System.</Title>
         <SubTitle>
           Your customers can make bookings at any time, even outside business
           hours.

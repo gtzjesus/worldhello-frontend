@@ -28,7 +28,7 @@ const StyledAchievements = styled.div`
 const GridContainer = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr;
-  padding: var(--padding-xlarge) 0;
+  padding: var(--padding-medium) 0;
 `;
 
 const Title = styled.span`
@@ -114,6 +114,10 @@ function Achievements() {
             </SeeMoreButton>
           </Additional>
         )}
+        <br />
+        <br />
+        <br />
+        <br />
 
         <Information>
           <Caption>Turn that idea</Caption>
