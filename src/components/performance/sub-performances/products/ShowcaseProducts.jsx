@@ -87,7 +87,7 @@ function ShowcaseProducts() {
         <br />
         <Description>
           <div ref={thirdPerformanceRef} className="hidden">
-            Deliver a unique experience while customers browse your products
+            Deliver a unique experience while customers browse your products.
           </div>
         </Description>
       </Information>

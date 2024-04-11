@@ -12,13 +12,11 @@
 /* Animations */
 .hidden {
   opacity: 0;
-  filter: blur(5px);
-  transition: all 2s;
+  transition: all 5s;
 }
 
 .show {
   opacity: 1;
-  filter: blur(0px);
 }
 
 /* Whole app*/

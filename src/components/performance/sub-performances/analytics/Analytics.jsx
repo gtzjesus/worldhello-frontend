@@ -60,7 +60,7 @@ function Analytics() {
           <br />
           <SubTitle>
             Ensuring that your website operates efficiently while providing
-            invaluable data.
+            valuable data.
           </SubTitle>
         </Details>
       </ResponsiveContainer>
