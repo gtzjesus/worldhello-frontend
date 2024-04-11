@@ -28,13 +28,13 @@ const StyledAchievements = styled.div`
 const GridContainer = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr;
+  padding: var(--padding-xlarge) 0;
 `;
 
 const Title = styled.span`
-  font-size: var(--font-xxsmall);
-`;
-const SubTitle = styled.span`
   font-size: var(--font-xxxsmall);
+  letter-spacing: 0.05rem;
+  opacity: 0.8;
 `;
 
 const Caption = styled.span`
@@ -93,15 +93,6 @@ function Achievements() {
     <LazyLoad>
       <StyledAchievements>
         <Information>
-          <Caption>Turn that idea</Caption>
-          <Caption>into a website.</Caption>
-          <Information>
-            <Title>From $49/mo.</Title>
-          </Information>
-          <br />
-          <br />
-          <br />
-          <br />
           <Title>Browse some of our clients</Title>
         </Information>
         <GridContainer>
@@ -123,9 +114,18 @@ function Achievements() {
             </SeeMoreButton>
           </Additional>
         )}
+
         <Information>
-          <SubTitle>Lowest subscription $49/mo.</SubTitle>
-          <SubTitle>includes web, hosting, support, security & more.</SubTitle>
+          <Caption>Turn that idea</Caption>
+          <Caption>into a website.</Caption>
+          <Information>
+            <Title>From $49/mo.</Title>
+          </Information>
+        </Information>
+
+        <Information>
+          <Title>Lowest subscription $49/mo.</Title>
+          <Title>includes web, hosting, support, security & more.</Title>
         </Information>
       </StyledAchievements>
     </LazyLoad>
