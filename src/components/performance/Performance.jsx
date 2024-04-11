@@ -14,6 +14,7 @@ import EarthZoom from './sub-performances/products/EarthZoom';
 import ClientEmail from './sub-performances/clientele/ClientEmail';
 import styled from 'styled-components';
 import Analytics from './sub-performances/analytics/Analytics';
+import Bookings from './sub-performances/bookings/Bookings';
 
 /* Media query for larger devices */
 const ResponsiveContainer = styled.div`
@@ -41,6 +42,7 @@ function Performance() {
       <EarthZoom />
       <ResponsiveContainer>
         <CollectPayments />
+        <Bookings />
       </ResponsiveContainer>
     </>
   );
