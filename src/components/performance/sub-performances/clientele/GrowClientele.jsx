@@ -32,7 +32,7 @@ const SubTitle = styled.span`
 
 const Img = styled.img``;
 
-const Description = styled.span`
+const Description = styled.div`
   font-size: var(--font-xxxsmall);
   letter-spacing: 0.05rem;
   opacity: 0.8;

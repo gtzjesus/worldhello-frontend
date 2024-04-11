@@ -6,7 +6,7 @@ const StyledEarthZoom = styled.div`
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
-  min-height: 70vh;
+  min-height: 50vh;
   padding-top: var(--padding-xxxlarge);
 
   /* Add additional styles to control the zoom effect */
