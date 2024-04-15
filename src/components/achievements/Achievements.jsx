@@ -76,7 +76,7 @@ const Description = styled.div`
   font-size: var(--font-xxxsmall);
   letter-spacing: 0.05rem;
   opacity: 0.8;
-  padding-bottom: var(--padding-large);
+  padding-bottom: var(--padding-xlarge);
 `;
 
 // ------------------------------
@@ -192,6 +192,7 @@ function Achievements() {
         <Information>
           <Caption>Turn that idea</Caption>
           <Caption>into a website.</Caption>
+          <br />
           <Caption>as low as $49/mo.</Caption>
         </Information>
         <Information>
