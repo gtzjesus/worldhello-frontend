@@ -89,7 +89,7 @@ function Footer() {
         <Logo src="/logos/helloworld.webp" alt="worldhello"></Logo>
       </Signature>
       <Signature>
-        <Copyright>WorldHello &copy; 2024 All rights reserved </Copyright>
+        <Copyright>worldhello &copy; 2024 all rights reserved </Copyright>
       </Signature>
     </StyledFooter>
   );

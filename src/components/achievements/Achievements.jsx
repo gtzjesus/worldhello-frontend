@@ -75,7 +75,7 @@ const Description = styled.div`
   font-size: var(--font-xxxsmall);
   letter-spacing: 0.05rem;
   opacity: 0.8;
-  padding-bottom: var(--padding-xxxlarge);
+  padding-bottom: var(--padding-large);
 `;
 
 // ------------------------------
