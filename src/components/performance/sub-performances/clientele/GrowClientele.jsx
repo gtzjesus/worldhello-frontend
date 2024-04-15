@@ -48,8 +48,6 @@ function FirstPerformance() {
   const sixthPerformanceRef = useRef(null);
   const seventhPerformanceRef = useRef(null);
   const eighthPerformanceRef = useRef(null);
-  const ninththPerformanceRef = useRef(null);
-  const tenthPerformanceRef = useRef(null);
 
   // ------------------------------
   // useEffect
@@ -79,8 +77,6 @@ function FirstPerformance() {
       sixthPerformanceRef,
       seventhPerformanceRef,
       eighthPerformanceRef,
-      ninththPerformanceRef,
-      tenthPerformanceRef,
     ];
     elementsToObserve.forEach((ref) => {
       if (ref.current) {
@@ -147,19 +143,7 @@ function FirstPerformance() {
             </SpecialTitle>
           </div>
           <div ref={eighthPerformanceRef} className="hidden">
-            <SpecialTitle>
-              directly <br />
-            </SpecialTitle>
-          </div>
-          <div ref={ninththPerformanceRef} className="hidden">
-            <SpecialTitle>
-              from <br />
-            </SpecialTitle>
-          </div>
-          <div ref={tenthPerformanceRef} className="hidden">
-            <SpecialTitle>
-              your new web. <br />
-            </SpecialTitle>
+            <SpecialTitle>directly.</SpecialTitle>
           </div>
         </Description>
       </Information>
