@@ -5,7 +5,7 @@ const StyledWebGif = styled.div`
   background: url('backgrounds/gifresponsive.gif');
   background-size: contain;
   background-repeat: no-repeat;
-  min-height: 100vh;
+  min-height: 50vh;
   padding: var(--padding-xlarge) var(--padding-small);
 
   /* Apply CSS filter to make the background black and white */
