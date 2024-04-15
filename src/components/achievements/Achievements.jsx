@@ -192,14 +192,13 @@ function Achievements() {
         <Information>
           <Caption>Turn that idea</Caption>
           <Caption>into a website.</Caption>
-          <Information>
-            <Title>From $49/mo.</Title>
-          </Information>
+          <Caption>As low as $49/mo.</Caption>
         </Information>
-
         <Information>
           <Title>Lowest subscription $49/mo.</Title>
-          <Title>includes web, hosting, support, security & more.</Title>
+          <Title>
+            includes design, web, hosting, support, security & more.
+          </Title>
         </Information>
       </StyledAchievements>
     </LazyLoad>
