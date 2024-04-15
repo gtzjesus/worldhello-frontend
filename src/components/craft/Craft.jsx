@@ -33,7 +33,7 @@ const SlideText = styled.span`
 
 function Craft() {
   const [slideIndex, setSlideIndex] = useState(0);
-  const slideTexts = ['Hosted', 'Monetized', 'Performant', 'Eye-catching'];
+  const slideTexts = ['Hosted', 'Monetized', 'Performant'];
 
   useEffect(() => {
     const interval = setInterval(() => {

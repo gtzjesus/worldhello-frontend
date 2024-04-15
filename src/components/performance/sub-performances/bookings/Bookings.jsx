@@ -36,11 +36,9 @@ function Bookings() {
   return (
     <LazyLoad>
       <Details>
-        <Title>Functionalities</Title>
-        <Title>available,</Title>
-        <br />
-        <Title>such as</Title>
-        <Title>Bookings.</Title>
+        <Title>Allow</Title>
+        <Title>users to book</Title>
+        <Title>your services.</Title>
         <SubTitle>
           Your customers can make bookings at any time, even outside business
           hours.
