@@ -50,6 +50,7 @@ const Information = styled.div`
   flex-direction: column;
   text-align: center;
   padding: var(--padding-small);
+  padding-top: var(--padding-xlarge);
 `;
 
 const Additional = styled.div`
