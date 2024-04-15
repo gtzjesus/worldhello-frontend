@@ -192,10 +192,11 @@ function Achievements() {
         <Information>
           <Caption>Turn that idea</Caption>
           <Caption>into a website.</Caption>
-          <Caption>As low as $49/mo.</Caption>
+          <Caption>as low as $49/mo.</Caption>
         </Information>
         <Information>
           <Title>Lowest subscription $49/mo.</Title>
+          <br />
           <Title>
             includes design, web, hosting, support, security & more.
           </Title>
