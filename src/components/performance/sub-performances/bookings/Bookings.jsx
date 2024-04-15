@@ -36,8 +36,8 @@ function Bookings() {
   return (
     <LazyLoad>
       <Details>
-        <Title>Quite</Title>
-        <Title>the</Title>
+        <Title>Let&apos;s</Title>
+        <Title>add a</Title>
         <Title>Booking</Title>
         <Title>System.</Title>
         <SubTitle>

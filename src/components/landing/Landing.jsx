@@ -91,7 +91,6 @@ function Landing() {
         {/* <!-- Hook Container --> */}
         <Hook>
           <Title>Web</Title>
-          <Title>Dev</Title>
           <Title>Agency</Title>
           <br />
           <br />

@@ -7,7 +7,7 @@
 // Imports
 // ------------------------------
 // This section has all necessary imports for this component.
-import { useContext, useState } from 'react';
+import { useContext, useEffect, useRef, useState } from 'react';
 import Spinner from '../../ui/spinners/Spinner';
 import Design from '../designs/Design';
 import styled from 'styled-components';
@@ -31,10 +31,20 @@ const GridContainer = styled.div`
   padding: var(--padding-medium) 0;
 `;
 
+const StartingTitle = styled.span`
+  font-size: var(--font-medium);
+  letter-spacing: 0.05rem;
+  opacity: 0.8;
+`;
+
 const Title = styled.span`
   font-size: var(--font-xxxsmall);
   letter-spacing: 0.05rem;
   opacity: 0.8;
+`;
+
+const SpecialTitle = styled.span`
+  font-size: var(--font-large);
 `;
 
 const Caption = styled.span`
@@ -67,11 +77,23 @@ const SeeMoreButton = styled.button`
   padding: 0.8rem 1.2rem;
 `;
 
+const Description = styled.div`
+  font-size: var(--font-xxxsmall);
+  letter-spacing: 0.05rem;
+  opacity: 0.8;
+  padding-bottom: var(--padding-xxxlarge);
+`;
+
 // ------------------------------
 // Component
 // ------------------------------
 // This section has our React Component which displays our achievements (websites)
 function Achievements() {
+  const firstPerformanceRef = useRef(null);
+  const secondPerformanceRef = useRef(null);
+  const thirdPerformanceRef = useRef(null);
+  const fourthPerformanceRef = useRef(null);
+  const fivethPerformanceRef = useRef(null);
   const { designs, isLoading, error } = useContext(DesignsContext);
   const [visibleAchievements, setVisibleAchievements] = useState(2);
   const [showMore, setShowMore] = useState(true); // Track whether to show more or less
@@ -86,6 +108,48 @@ function Achievements() {
     setShowMore(!showMore); // Toggle the state
   };
 
+  // ------------------------------
+  // useEffect
+  // ------------------------------
+  // Code logic Animation for the whole app, a useEffect so that it happens once component mounts
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('show');
+          } else {
+            entry.target.classList.remove('show');
+          }
+        });
+      },
+      { threshold: 0.5 }
+    );
+
+    // Observing all elements of interest
+    const elementsToObserve = [
+      firstPerformanceRef,
+      secondPerformanceRef,
+      thirdPerformanceRef,
+      fourthPerformanceRef,
+      fivethPerformanceRef,
+    ];
+    elementsToObserve.forEach((ref) => {
+      if (ref.current) {
+        observer.observe(ref.current);
+      }
+    });
+
+    // Cleanup function
+    return () => {
+      elementsToObserve.forEach((ref) => {
+        if (ref.current) {
+          observer.unobserve(ref.current);
+        }
+      });
+    };
+  }, []);
+
   if (isLoading) return <Spinner />;
   if (error) throw new Error('Failed to grab designs');
 
@@ -93,7 +157,33 @@ function Achievements() {
     <LazyLoad>
       <StyledAchievements>
         <Information>
-          <Title>Browse some of our clients</Title>
+          <Information>
+            <Description>
+              <div ref={firstPerformanceRef} className="hidden">
+                <SpecialTitle>
+                  Have <br />
+                </SpecialTitle>
+              </div>
+              <div ref={secondPerformanceRef} className="hidden">
+                <SpecialTitle>
+                  visitors <br />
+                </SpecialTitle>
+              </div>
+              <div ref={thirdPerformanceRef} className="hidden">
+                <SpecialTitle>
+                  contact <br />
+                </SpecialTitle>
+              </div>
+              <div ref={fourthPerformanceRef} className="hidden">
+                <SpecialTitle>
+                  you <br />
+                </SpecialTitle>
+              </div>
+              <div ref={fivethPerformanceRef} className="hidden">
+                <SpecialTitle>directly.</SpecialTitle>
+              </div>
+            </Description>
+          </Information>
         </Information>
         <GridContainer>
           {designs.slice(0, visibleAchievements).map((design, idx) => (
