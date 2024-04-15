@@ -28,13 +28,7 @@ const StyledAchievements = styled.div`
 const GridContainer = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr;
-  padding: var(--padding-medium) 0;
-`;
-
-const StartingTitle = styled.span`
-  font-size: var(--font-medium);
-  letter-spacing: 0.05rem;
-  opacity: 0.8;
+  padding: var(--padding-small) 0;
 `;
 
 const Title = styled.span`
@@ -158,29 +152,16 @@ function Achievements() {
       <StyledAchievements>
         <Information>
           <Description>
-            <div ref={firstPerformanceRef} className="hidden">
-              <SpecialTitle>
-                Have <br />
-              </SpecialTitle>
-            </div>
-            <div ref={secondPerformanceRef} className="hidden">
-              <SpecialTitle>
-                visitors <br />
-              </SpecialTitle>
-            </div>
-            <div ref={thirdPerformanceRef} className="hidden">
-              <SpecialTitle>
-                contact <br />
-              </SpecialTitle>
-            </div>
-            <div ref={fourthPerformanceRef} className="hidden">
-              <SpecialTitle>
-                you <br />
-              </SpecialTitle>
-            </div>
-            <div ref={fivethPerformanceRef} className="hidden">
-              <SpecialTitle>directly.</SpecialTitle>
-            </div>
+            <SpecialTitle>
+              Browse <br />
+            </SpecialTitle>
+            <SpecialTitle>
+              some <br />
+            </SpecialTitle>
+            <SpecialTitle>
+              of our <br />
+            </SpecialTitle>
+            <SpecialTitle>clients.</SpecialTitle>
           </Description>
         </Information>
         <GridContainer>
