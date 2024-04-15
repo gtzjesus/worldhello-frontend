@@ -7,11 +7,10 @@ const StyledEarthZoom = styled.div`
   background-position: center;
   background-repeat: no-repeat;
   min-height: 50vh;
-  padding-top: var(--padding-xxxlarge);
-
   /* Add additional styles to control the zoom effect */
   transition: transform 0.5s ease;
   transform-origin: center;
+  margin: var(--padding-xxxlarge) 0;
 `;
 
 function EarthZoom() {

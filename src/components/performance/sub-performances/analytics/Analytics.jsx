@@ -3,8 +3,6 @@ import LazyLoad from 'react-lazyload';
 
 /* Media query for larger devices */
 const ResponsiveContainer = styled.div`
-  background-color: var(--color-white);
-
   @media (min-width: 768px) {
     max-width: 600px; /* Adjust as needed */
     margin: 0 auto; /* Center the container horizontally */
@@ -19,7 +17,6 @@ const StyledAnalytics = styled.div`
   background-color: var(--color-white);
 
   background-repeat: no-repeat;
-  width: 100%;
   min-height: 45vh;
 
   // @MEDIAQUERY logic for bigger devices 980px
@@ -34,8 +31,8 @@ const StyledAnalytics = styled.div`
 
 const Details = styled.div`
   padding: 0 var(--padding-medium);
-  padding-top: var(--padding-xlarge);
-  color: var(--color-black);
+  padding-top: var(--padding-xxxlarge);
+  color: var(--color-white);
 `;
 
 const Title = styled.span`
@@ -71,6 +68,10 @@ function Analytics() {
           </SubTitle>
         </Details>
       </ResponsiveContainer>
+      <br />
+      <br />
+      <br />
+      <br />
       <StyledAnalytics />
     </LazyLoad>
   );
