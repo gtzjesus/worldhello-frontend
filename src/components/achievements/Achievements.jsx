@@ -157,33 +157,31 @@ function Achievements() {
     <LazyLoad>
       <StyledAchievements>
         <Information>
-          <Information>
-            <Description>
-              <div ref={firstPerformanceRef} className="hidden">
-                <SpecialTitle>
-                  Have <br />
-                </SpecialTitle>
-              </div>
-              <div ref={secondPerformanceRef} className="hidden">
-                <SpecialTitle>
-                  visitors <br />
-                </SpecialTitle>
-              </div>
-              <div ref={thirdPerformanceRef} className="hidden">
-                <SpecialTitle>
-                  contact <br />
-                </SpecialTitle>
-              </div>
-              <div ref={fourthPerformanceRef} className="hidden">
-                <SpecialTitle>
-                  you <br />
-                </SpecialTitle>
-              </div>
-              <div ref={fivethPerformanceRef} className="hidden">
-                <SpecialTitle>directly.</SpecialTitle>
-              </div>
-            </Description>
-          </Information>
+          <Description>
+            <div ref={firstPerformanceRef} className="hidden">
+              <SpecialTitle>
+                Have <br />
+              </SpecialTitle>
+            </div>
+            <div ref={secondPerformanceRef} className="hidden">
+              <SpecialTitle>
+                visitors <br />
+              </SpecialTitle>
+            </div>
+            <div ref={thirdPerformanceRef} className="hidden">
+              <SpecialTitle>
+                contact <br />
+              </SpecialTitle>
+            </div>
+            <div ref={fourthPerformanceRef} className="hidden">
+              <SpecialTitle>
+                you <br />
+              </SpecialTitle>
+            </div>
+            <div ref={fivethPerformanceRef} className="hidden">
+              <SpecialTitle>directly.</SpecialTitle>
+            </div>
+          </Description>
         </Information>
         <GridContainer>
           {designs.slice(0, visibleAchievements).map((design, idx) => (
