@@ -40,7 +40,7 @@ const Details = styled.div`
 
 const Title = styled.span`
   font-size: var(--font-large);
-  line-height: 1.5rem;
+  line-height: 2rem;
 `;
 
 const SubTitle = styled.span`
@@ -56,15 +56,18 @@ function Analytics() {
         <Details>
           <SubTitle>Analytics &</SubTitle>
           <br />
-          <Title>Performance.</Title>
+          <Title>Performance</Title>
+          <br />
+
+          <Title>Stats.</Title>
 
           <br />
           <br />
           <br />
           <br />
           <SubTitle>
-            Ensuring that your website operates efficiently while providing
-            valuable data.
+            Useful resources that ensure your website operates efficiently
+            across all categories while providing valuable data.
           </SubTitle>
         </Details>
       </ResponsiveContainer>
