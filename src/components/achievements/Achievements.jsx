@@ -31,18 +31,8 @@ const GridContainer = styled.div`
   padding: var(--padding-small) 0;
 `;
 
-const Title = styled.span`
-  font-size: var(--font-xxxsmall);
-  letter-spacing: 0.05rem;
-  opacity: 0.8;
-`;
-
 const SpecialTitle = styled.span`
   font-size: var(--font-large);
-`;
-
-const Caption = styled.span`
-  font-size: var(--font-medium);
 `;
 
 const Information = styled.div`
