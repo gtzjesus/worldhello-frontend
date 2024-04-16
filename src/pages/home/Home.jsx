@@ -47,7 +47,7 @@ function Home() {
     <>
       <Navigation />
       <Landing />
-      <SourceContainer id="performance-section">
+      <SourceContainer>
         <Source />
       </SourceContainer>
       {/* Performance component has many sub-components making up most of the app */}

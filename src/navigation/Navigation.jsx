@@ -268,7 +268,7 @@ function Navigation() {
             <Link
               to="performance-section"
               smooth={true}
-              duration={500}
+              duration={5000}
               spy={true}
               exact="true"
               offset={-80}
@@ -281,10 +281,10 @@ function Navigation() {
             <Link
               to="clients-section"
               smooth={true}
-              duration={500}
+              duration={3000}
               spy={true}
               exact="true"
-              offset={-80}
+              offset={-1100}
             >
               Clients
             </Link>

@@ -37,7 +37,7 @@ function Performance() {
         <GrowClientele />
       </ResponsiveContainer>
       <ClientEmail />
-      <AnalyticsContainer>
+      <AnalyticsContainer id="performance-section">
         <Analytics />
       </AnalyticsContainer>
 
