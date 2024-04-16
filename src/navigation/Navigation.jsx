@@ -265,46 +265,19 @@ function Navigation() {
       <MenuContainer isOpen={isMenuOpen}>
         <MenuContent>
           <MenuItem className="menu-item">
-            <Link
-              to="performance-section"
-              smooth={true}
-              duration={5000}
-              spy={true}
-              exact="true"
-              offset={-80}
-            >
+            <Link to="performance-section" smooth={true}>
               Performance
             </Link>
             <br />
             <br />
 
-            <Link
-              to="clients-section"
-              smooth={true}
-              duration={3000}
-              spy={true}
-              exact="true"
-              offset={-1100}
-            >
-              Clients
-            </Link>
+            <Link to="clients-section">Clients</Link>
             <br />
             <br />
 
-            <Link
-              to="pricing-section"
-              smooth={true}
-              duration={500}
-              spy={true}
-              exact="true"
-              offset={-80}
-            >
-              Pricing
-            </Link>
+            <Link to="pricing-section">Pricing</Link>
             <br />
             <br />
-            {/* <TriggerButton openModal={openModal} text={`Click to start`} />
-            {isModalOpen && <Modal closeModal={closeModal} />} */}
           </MenuItem>
         </MenuContent>
       </MenuContainer>
