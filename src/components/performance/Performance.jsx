@@ -40,14 +40,10 @@ function Performance() {
       <AnalyticsContainer id="performance-section">
         <Analytics />
       </AnalyticsContainer>
-      <ResponsiveContainer>
-        <ShowcaseProducts />
-      </ResponsiveContainer>
+      <ShowcaseProducts />
       <EarthZoom />
-      <ResponsiveContainer>
-        <CollectPayments />
-        <Bookings />
-      </ResponsiveContainer>
+      <CollectPayments />
+      <Bookings />
     </>
   );
 }
