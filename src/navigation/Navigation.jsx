@@ -265,9 +265,7 @@ function Navigation() {
       <MenuContainer isOpen={isMenuOpen}>
         <MenuContent>
           <MenuItem className="menu-item">
-            <Link to="performance-section" smooth={true}>
-              Performance
-            </Link>
+            <Link to="performance-section">Performance</Link>
             <br />
             <br />
 

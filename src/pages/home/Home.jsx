@@ -56,10 +56,10 @@ function Home() {
       <ResponsiveContainer id="clients-section">
         <Achievements />
       </ResponsiveContainer>
-      <ResponsiveContainer>
+      <ResponsiveContainer id="pricing-section">
         <Craft />
       </ResponsiveContainer>
-      <ResponsiveContainer id="pricing-section">
+      <ResponsiveContainer>
         <Pricing />
       </ResponsiveContainer>
       <ResponsiveContainer>
