@@ -51,12 +51,12 @@ function Analytics() {
     <LazyLoad>
       <ResponsiveContainer>
         <Details>
-          <SubTitle>Analytics &</SubTitle>
+          <SubTitle>Receive Analytics &</SubTitle>
           <br />
           <Title>Performance</Title>
           <br />
 
-          <Title>Stats.</Title>
+          <Title>Statistics.</Title>
 
           <br />
           <br />

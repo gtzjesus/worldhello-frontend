@@ -52,10 +52,10 @@ function Home() {
       {/* Performance component has many sub-components making up most of the app */}
       <Performance />
       {/* Performance component has many sub-components making up most of the app */}
-      <ResponsiveContainer id="portfolio-section">
+      <ResponsiveContainer id="clients-section">
         <Achievements />
       </ResponsiveContainer>
-      <ResponsiveContainer id="join-section">
+      <ResponsiveContainer id="pricing-section">
         <Craft />
         <WebGif />
         <Faqs />

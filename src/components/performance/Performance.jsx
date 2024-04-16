@@ -24,6 +24,7 @@ const ResponsiveContainer = styled.div`
     padding: 0 20px;
   }
 `;
+
 // ------------------------------
 // Return Components here for Home page
 // ------------------------------
@@ -36,7 +37,7 @@ function Performance() {
       </ResponsiveContainer>
       <ClientEmail />
       <Analytics />
-      <ResponsiveContainer>
+      <ResponsiveContainer id="performance-section">
         <ShowcaseProducts />
       </ResponsiveContainer>
       <EarthZoom />

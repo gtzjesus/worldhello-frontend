@@ -266,40 +266,40 @@ function Navigation() {
         <MenuContent>
           <MenuItem className="menu-item">
             <Link
-              to="about-section"
+              to="performance-section"
               smooth={true}
               duration={500}
               spy={true}
               exact="true"
               offset={-80}
             >
-              About
+              Performance
             </Link>
             <br />
             <br />
 
             <Link
-              to="join-section"
+              to="clients-section"
               smooth={true}
               duration={500}
               spy={true}
               exact="true"
               offset={-80}
             >
-              Join
+              Clients
             </Link>
             <br />
             <br />
 
             <Link
-              to="portfolio-section"
+              to="pricing-section"
               smooth={true}
               duration={500}
               spy={true}
               exact="true"
               offset={-80}
             >
-              Portfolio
+              Pricing
             </Link>
             <br />
             <br />
