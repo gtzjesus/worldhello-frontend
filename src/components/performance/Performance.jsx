@@ -25,6 +25,7 @@ const ResponsiveContainer = styled.div`
   }
 `;
 
+const AnalyticsContainer = styled.div``;
 // ------------------------------
 // Return Components here for Home page
 // ------------------------------
@@ -36,8 +37,11 @@ function Performance() {
         <GrowClientele />
       </ResponsiveContainer>
       <ClientEmail />
-      <Analytics />
-      <ResponsiveContainer id="performance-section">
+      <AnalyticsContainer id="performance-section">
+        <Analytics />
+      </AnalyticsContainer>
+
+      <ResponsiveContainer>
         <ShowcaseProducts />
       </ResponsiveContainer>
       <EarthZoom />
