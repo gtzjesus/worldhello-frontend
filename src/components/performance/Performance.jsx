@@ -37,9 +37,11 @@ function Performance() {
         <GrowClientele />
       </ResponsiveContainer>
       <ClientEmail />
-      <Analytics />
+      <AnalyticsContainer id="performance-section">
+        <Analytics />
+      </AnalyticsContainer>
 
-      <ResponsiveContainer id="performance-section">
+      <ResponsiveContainer>
         <ShowcaseProducts />
       </ResponsiveContainer>
       <EarthZoom />
