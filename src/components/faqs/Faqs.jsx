@@ -20,7 +20,7 @@ import LazyLoad from 'react-lazyload';
 const faqs = [
   {
     title: 'What is on the $49/mo.?',
-    text: 'This minimum monthly subscription gives you a complete custom website with Hosting, Security, Maintenance, Analytics, and more! Keep in mind there are other subscriptions available depending on project.',
+    text: 'This minimum monthly subscription gives you a complete custom design followed by a full website that includes Hosting, Security, Maintenance, Analytics, Performance, Testing, Emails and more! Keep in mind there are other higher subscriptions available, such that give you even more functionalities such as Payments, Databases, SEO and more depending on your needs.',
   },
   {
     title: 'What is the timeframe for my new website?',

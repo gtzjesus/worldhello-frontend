@@ -184,24 +184,6 @@ function Achievements() {
             </SeeMoreButton>
           </Additional>
         )}
-        <br />
-        <br />
-        <br />
-        <br />
-
-        <Information>
-          <Caption>Turn that idea</Caption>
-          <Caption>into a website.</Caption>
-          <br />
-          <Caption>as low as $49/mo.</Caption>
-        </Information>
-        <Information>
-          <Title>Lowest subscription $49/mo.</Title>
-          <br />
-          <Title>
-            includes design, web, hosting, support, security & more.
-          </Title>
-        </Information>
       </StyledAchievements>
     </LazyLoad>
   );

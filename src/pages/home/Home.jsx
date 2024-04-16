@@ -20,6 +20,7 @@ import Performance from '../../components/performance/Performance';
 import Footer from '../../footer/Footer';
 import styled from 'styled-components';
 import WebGif from '../../components/webGif/WebGif';
+import Pricing from '../../components/pricing/Pricing';
 /* Media query for larger devices */
 const ResponsiveContainer = styled.div`
   @media (min-width: 768px) {
@@ -55,13 +56,17 @@ function Home() {
       <ResponsiveContainer id="clients-section">
         <Achievements />
       </ResponsiveContainer>
-      <ResponsiveContainer id="pricing-section">
+      <ResponsiveContainer>
         <Craft />
+      </ResponsiveContainer>
+      <ResponsiveContainer id="pricing-section">
+        <Pricing />
+      </ResponsiveContainer>
+      <ResponsiveContainer>
         <WebGif />
         <Faqs />
         <Footer />
       </ResponsiveContainer>
-
       <TriggerButton openModal={openModal} text={`Click to start`} />
       {isModalOpen && <Modal closeModal={closeModal} />}
     </>
