@@ -52,7 +52,7 @@ function Home() {
         <Source />
       </SourceContainer>
 
-      <ResponsiveContainer id="pricing-section">
+      <ResponsiveContainer id="performance-section">
         <Performance />
       </ResponsiveContainer>
       <ResponsiveContainer id="clients-section">

@@ -205,12 +205,12 @@ function Navigation() {
           </MenuItem>
           <br />
           <br />
-          <MenuItem>
+          <MenuItem className="menu-item">
             <Link to="clients-section">Clients</Link>
           </MenuItem>
           <br />
           <br />
-          <MenuItem>
+          <MenuItem className="menu-item">
             <Link to="pricing-section">Pricing</Link>
           </MenuItem>
         </MenuContent>
