@@ -55,7 +55,8 @@ function Home() {
       <ResponsiveContainer>
         <Performance />
       </ResponsiveContainer>
-      <ResponsiveContainer id="clients-section">
+
+      <ResponsiveContainer>
         <Achievements />
       </ResponsiveContainer>
 
@@ -63,7 +64,7 @@ function Home() {
         <Craft />
       </ResponsiveContainer>
 
-      <ResponsiveContainer id="pricing-section">
+      <ResponsiveContainer>
         <Pricing />
       </ResponsiveContainer>
 

@@ -203,7 +203,7 @@ function Navigation() {
           <MenuItem className="menu-item">
             <Link to="performance-section">Performance</Link>
           </MenuItem>
-          <br />
+          {/* <br />
           <br />
           <MenuItem className="menu-item">
             <Link to="clients-section">Clients</Link>
@@ -212,7 +212,7 @@ function Navigation() {
           <br />
           <MenuItem className="menu-item">
             <Link to="pricing-section">Pricing</Link>
-          </MenuItem>
+          </MenuItem> */}
         </MenuContent>
       </MenuContainer>
     </>
