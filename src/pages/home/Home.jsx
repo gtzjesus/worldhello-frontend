@@ -7,7 +7,7 @@
 // Imports
 // ------------------------------
 // This section has all necessary imports for this component.
-import Navigation from '../../navigation/Navigation';
+import Navigation from '../../components/navigation/Navigation';
 import Achievements from '../../components/achievements/Achievements';
 import Source from '../../components/source/Source';
 import Faqs from '../../components/faqs/Faqs';
@@ -17,10 +17,10 @@ import TriggerButton from '../../ui/buttons/TriggerButton';
 import Craft from '../../components/craft/Craft';
 import Landing from '../../components/landing/Landing';
 import Performance from '../../components/performance/Performance';
-import Footer from '../../footer/Footer';
 import styled from 'styled-components';
 import WebGif from '../../components/webGif/WebGif';
 import Pricing from '../../components/pricing/Pricing';
+import Footer from '../../components/footer/Footer';
 /* Media query for larger devices */
 const ResponsiveContainer = styled.div`
   @media (min-width: 768px) {
@@ -47,26 +47,31 @@ function Home() {
     <>
       <Navigation />
       <Landing />
+
       <SourceContainer>
         <Source />
       </SourceContainer>
-      {/* Performance component has many sub-components making up most of the app */}
+
       <Performance />
-      {/* Performance component has many sub-components making up most of the app */}
+
       <ResponsiveContainer id="clients-section">
         <Achievements />
       </ResponsiveContainer>
+
       <ResponsiveContainer id="pricing-section">
         <Craft />
       </ResponsiveContainer>
+
       <ResponsiveContainer>
         <Pricing />
       </ResponsiveContainer>
+
       <ResponsiveContainer>
         <WebGif />
         <Faqs />
         <Footer />
       </ResponsiveContainer>
+
       <TriggerButton openModal={openModal} text={`Click to start`} />
       {isModalOpen && <Modal closeModal={closeModal} />}
     </>
