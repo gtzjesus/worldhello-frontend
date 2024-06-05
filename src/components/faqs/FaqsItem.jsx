@@ -1,5 +1,5 @@
 // ------------------------------
-// File: Business.js
+// File: FaqsItem.jsx
 // ------------------------------
 // Description: React component for displaying individual frequently asked question.
 

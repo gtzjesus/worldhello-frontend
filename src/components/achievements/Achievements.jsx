@@ -7,12 +7,11 @@
 // Imports
 // ------------------------------
 // This section has all necessary imports for this component.
-import { useContext, useEffect, useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import Spinner from '../../ui/spinners/Spinner';
 import Design from '../designs/Design';
 import styled from 'styled-components';
 import LazyLoad from 'react-lazyload';
-import { DesignsContext } from '../../context/DesignsContext';
 
 // ------------------------------
 // Styled Componenets
@@ -79,19 +78,18 @@ function Achievements() {
   const thirdPerformanceRef = useRef(null);
   const fourthPerformanceRef = useRef(null);
   const fivethPerformanceRef = useRef(null);
-  const { designs, isLoading, error } = useContext(DesignsContext);
   const [visibleAchievements, setVisibleAchievements] = useState(2);
   const [showMore, setShowMore] = useState(true); // Track whether to show more or less
 
   // Handler function to display more or less achievements
-  const handleToggleSeeMore = () => {
-    if (showMore) {
-      setVisibleAchievements(designs.length);
-    } else {
-      setVisibleAchievements(2);
-    }
-    setShowMore(!showMore); // Toggle the state
-  };
+  // const handleToggleSeeMore = () => {
+  //   if (showMore) {
+  //     setVisibleAchievements(designs.length);
+  //   } else {
+  //     setVisibleAchievements(2);
+  //   }
+  //   setShowMore(!showMore); // Toggle the state
+  // };
 
   // ------------------------------
   // useEffect
@@ -135,8 +133,8 @@ function Achievements() {
     };
   }, []);
 
-  if (isLoading) return <Spinner />;
-  if (error) throw new Error('Failed to grab designs');
+  // if (isLoading) return <Spinner />;
+  // if (error) throw new Error('Failed to grab designs');
 
   return (
     <LazyLoad>
@@ -156,11 +154,11 @@ function Achievements() {
           </Description>
         </Information>
         <GridContainer>
-          {designs.slice(0, visibleAchievements).map((design, idx) => (
+          {/* {designs.slice(0, visibleAchievements).map((design, idx) => (
             <Design design={design} key={idx} />
-          ))}
+          ))} */}
         </GridContainer>
-        {showMore && designs.length > visibleAchievements && (
+        {/* {showMore && designs.length > visibleAchievements && (
           <Additional>
             <SeeMoreButton onClick={handleToggleSeeMore}>
               See more
@@ -173,7 +171,7 @@ function Achievements() {
               See less
             </SeeMoreButton>
           </Additional>
-        )}
+        )} */}
       </StyledAchievements>
     </LazyLoad>
   );

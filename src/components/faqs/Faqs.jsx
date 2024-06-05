@@ -1,5 +1,5 @@
 // ------------------------------
-// File: Business.js
+// File: Faqs.jsx
 // ------------------------------
 // Description: React component for displaying our frequently asked questions.
 
