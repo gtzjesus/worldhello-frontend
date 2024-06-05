@@ -61,6 +61,12 @@ const Copyright = styled.a`
 // ------------------------------
 // This section has our React Component which handles footer
 function Footer() {
+  function scrollToTop() {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth',
+    });
+  }
   return (
     <StyledFooter>
       {/* <!-- All necessary social medias --> */}
@@ -85,7 +91,7 @@ function Footer() {
         </Tag>
       </SocialMedia>
       <hr />
-      <Signature>
+      <Signature onClick={scrollToTop}>
         <Logo src="/logos/helloworld.webp" alt="worldhello"></Logo>
       </Signature>
       <Signature>

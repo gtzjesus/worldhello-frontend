@@ -14,6 +14,12 @@ const Title = styled.span`
 
 const Caption = styled.span`
   font-size: var(--font-medium);
+
+  // @MEDIAQUERY logic for bigger devices 980px
+  @media (min-width: 61.25em) {
+    // Design background from Figma software
+    padding-top: var(--padding-medium);
+  }
 `;
 
 const Information = styled.div`
