@@ -12,6 +12,7 @@ import Spinner from '../../ui/spinners/Spinner';
 import Design from '../designs/Design';
 import styled from 'styled-components';
 import LazyLoad from 'react-lazyload';
+import ClientCard from './ClientCard';
 
 // ------------------------------
 // Styled Componenets
@@ -73,105 +74,38 @@ const Description = styled.div`
 // ------------------------------
 // This section has our React Component which displays our achievements (websites)
 function Achievements() {
-  const firstPerformanceRef = useRef(null);
-  const secondPerformanceRef = useRef(null);
-  const thirdPerformanceRef = useRef(null);
-  const fourthPerformanceRef = useRef(null);
-  const fivethPerformanceRef = useRef(null);
-  const [visibleAchievements, setVisibleAchievements] = useState(2);
-  const [showMore, setShowMore] = useState(true); // Track whether to show more or less
+  const [clients, setClients] = useState([]);
+  const [loading, setLoading] = useState(true);
 
-  // Handler function to display more or less achievements
-  // const handleToggleSeeMore = () => {
-  //   if (showMore) {
-  //     setVisibleAchievements(designs.length);
-  //   } else {
-  //     setVisibleAchievements(2);
-  //   }
-  //   setShowMore(!showMore); // Toggle the state
-  // };
-
-  // ------------------------------
-  // useEffect
-  // ------------------------------
-  // Code logic Animation for the whole app, a useEffect so that it happens once component mounts
   useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('show');
-          } else {
-            entry.target.classList.remove('show');
-          }
-        });
-      },
-      { threshold: 0.5 }
-    );
-
-    // Observing all elements of interest
-    const elementsToObserve = [
-      firstPerformanceRef,
-      secondPerformanceRef,
-      thirdPerformanceRef,
-      fourthPerformanceRef,
-      fivethPerformanceRef,
-    ];
-    elementsToObserve.forEach((ref) => {
-      if (ref.current) {
-        observer.observe(ref.current);
+    // Fetch clients data from backend
+    const fetchClients = async () => {
+      try {
+        const response = await fetch('http://localhost:3000/clients'); // API
+        const data = await response.json();
+        setClients(data);
+        setLoading(false);
+      } catch (error) {
+        console.error('Error fetching clients:', error);
+        setLoading(false);
       }
-    });
-
-    // Cleanup function
-    return () => {
-      elementsToObserve.forEach((ref) => {
-        if (ref.current) {
-          observer.unobserve(ref.current);
-        }
-      });
     };
-  }, []);
 
-  // if (isLoading) return <Spinner />;
-  // if (error) throw new Error('Failed to grab designs');
+    fetchClients();
+  }, []);
 
   return (
     <LazyLoad>
       <StyledAchievements>
-        <Information>
-          <Description>
-            <SpecialTitle>
-              Browse <br />
-            </SpecialTitle>
-            <SpecialTitle>
-              some <br />
-            </SpecialTitle>
-            <SpecialTitle>
-              of our <br />
-            </SpecialTitle>
-            <SpecialTitle>clients.</SpecialTitle>
-          </Description>
-        </Information>
-        <GridContainer>
-          {/* {designs.slice(0, visibleAchievements).map((design, idx) => (
-            <Design design={design} key={idx} />
-          ))} */}
-        </GridContainer>
-        {/* {showMore && designs.length > visibleAchievements && (
-          <Additional>
-            <SeeMoreButton onClick={handleToggleSeeMore}>
-              See more
-            </SeeMoreButton>
-          </Additional>
+        {loading ? (
+          <Spinner />
+        ) : (
+          <>
+            {clients.map((client) => (
+              <ClientCard key={client.id} client={client} />
+            ))}
+          </>
         )}
-        {!showMore && (
-          <Additional>
-            <SeeMoreButton onClick={handleToggleSeeMore}>
-              See less
-            </SeeMoreButton>
-          </Additional>
-        )} */}
       </StyledAchievements>
     </LazyLoad>
   );
