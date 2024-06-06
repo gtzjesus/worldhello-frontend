@@ -6,16 +6,14 @@
 // ------------------------------
 // Imports
 // ------------------------------
-// This section has all necessary imports for this component.
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useState } from 'react';
 import Spinner from '../../ui/spinners/Spinner';
-import Design from '../designs/Design';
 import styled from 'styled-components';
 import LazyLoad from 'react-lazyload';
 import ClientCard from './ClientCard';
 
 // ------------------------------
-// Styled Componenets
+// Styled Components
 // ------------------------------
 // This section has all CSS styles configured for every HTML element.
 
@@ -27,7 +25,8 @@ const StyledAchievements = styled.div`
 
 const GridContainer = styled.div`
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--padding-small); /* Optional: Add some gap between tiles */
   padding: var(--padding-small) 0;
 `;
 
@@ -39,6 +38,7 @@ const Information = styled.div`
   display: flex;
   flex-direction: column;
   text-align: center;
+  color: var(--color-white);
   padding: var(--padding-small);
   padding-top: var(--padding-xlarge);
 `;
@@ -96,15 +96,29 @@ function Achievements() {
 
   return (
     <LazyLoad>
+      <Information>
+        <Description>
+          <SpecialTitle>
+            Browse <br />
+          </SpecialTitle>
+          <SpecialTitle>
+            some <br />
+          </SpecialTitle>
+          <SpecialTitle>
+            of our <br />
+          </SpecialTitle>
+          <SpecialTitle>clients.</SpecialTitle>
+        </Description>
+      </Information>
       <StyledAchievements>
         {loading ? (
           <Spinner />
         ) : (
-          <>
+          <GridContainer>
             {clients.map((client) => (
               <ClientCard key={client.id} client={client} />
             ))}
-          </>
+          </GridContainer>
         )}
       </StyledAchievements>
     </LazyLoad>

@@ -8,7 +8,7 @@ const ClientName = styled.h2`
   /* Styles */
 `;
 
-const ClientEmail = styled.p`
+const ClientImg = styled.img`
   /* Styles */
 `;
 
@@ -16,7 +16,7 @@ function ClientCard({ client }) {
   return (
     <CardContainer>
       <ClientName>{client.name}</ClientName>
-      <ClientEmail>{client.email}</ClientEmail>
+      <ClientImg src={client.image} alt={client.name} />
       {/* Add more client information as needed */}
     </CardContainer>
   );
