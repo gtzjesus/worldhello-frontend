@@ -81,7 +81,7 @@ function Achievements() {
     // Fetch clients data from backend
     const fetchClients = async () => {
       try {
-        const response = await fetch('http://localhost:3000/clients'); // API
+        const response = await fetch('https://api.worldhello.us/clients'); // API
         const data = await response.json();
         setClients(data);
         setLoading(false);

@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 // Backend API for server && database
-const API_URL = 'http://localhost:3000/clients';
+const API_URL = 'https://api.worldhello.us/clients';
 
 // Get all clients
 export const getAllClients = async () => {
